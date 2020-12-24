@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index"
+    "start": "nodemon index & cd site && npm run dev",
+    "server": "nodemon index",
+    "next": "cd site && npm run dev"
   },
   "repository": {
     "type": "git",
@@ -30,5 +32,6 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
