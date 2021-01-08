@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="744" height="842" viewBox="0 0 744 842">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="4.087" gradientTransform="translate(0.445 0.45) scale(0.11 0.099)" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip-tkc_logo_floating">
+      <rect width="744" height="842"/>
+    </clipPath>
+  </defs>
+  <g id="tkc_logo_floating" clip-path="url(#clip-tkc_logo_floating)">
+    <g id="Group_3" data-name="Group 3" transform="translate(-628.799 10.124)">
+      <g id="Group_2" data-name="Group 2" transform="translate(667.236 -84.128)">
+        <g id="Group_1" data-name="Group 1" transform="translate(230.764 116.004)">
+          <path id="Path_1" data-name="Path 1" d="M424.877,587.983a10.21,10.21,0,0,1-5.022-1.315l-.365-.214-36.422-21.394-81.006-47.581a138.517,138.517,0,0,1-70.722-108.407q-.571-6.281-.577-12.716t.577-12.718V275.742a10.245,10.245,0,0,1,16.123-8.411l35.4,20.778-.01.009,83.447,49.01a96.242,96.242,0,0,1,10.259,6.6,139.254,139.254,0,0,1,36.854,38.628,134.281,134.281,0,0,1,21.706,72.683q.011.9.012,1.8V577.725A10.257,10.257,0,0,1,424.877,587.983Z" transform="translate(-230.764 -44.867)" fill="#96f"/>
+          <path id="Path_2" data-name="Path 2" d="M424.877,116a10.21,10.21,0,0,0-5.022,1.315l-.365.214-36.422,21.394-81.006,47.581a138.517,138.517,0,0,0-70.722,108.407q-.571,6.281-.577,12.716t.577,12.718V428.245a10.245,10.245,0,0,0,16.123,8.411l35.4-20.778-.01-.009,83.447-49.01a96.242,96.242,0,0,0,10.259-6.6,139.255,139.255,0,0,0,36.854-38.628,134.281,134.281,0,0,0,21.706-72.683q.011-.9.012-1.8V126.261A10.257,10.257,0,0,0,424.877,116Z" transform="translate(-230.764 -116.004)" fill="#432fa8"/>
+        </g>
+      </g>
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="342.514" cy="54.197" rx="342.514" ry="54.197" transform="translate(657.799 681.996)" opacity="0.096" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+</svg>
