@@ -27,6 +27,9 @@ module.exports = {
 				DEFAULT: '#555555',
 				light: '#e6e6ec',
 			},
+			fngGreen: {
+				DEFAULT: '#444F22'
+			}
 		},
 		extend: {
 			backgroundImage: theme => ({
