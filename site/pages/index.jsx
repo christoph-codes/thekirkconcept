@@ -3,27 +3,19 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Section from '../components/Section';
 import Page from '../components/templates/Page';
+import sendContact from './api/contactForm';
 import testfetch from './api/testfetch';
 
 export default function Home() {
-	// const [randomPup, setRandomPup] = useState('');
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [content, setContent] = useState('');
 
-	// const imgStyle = {
-	// 	width: '60%',
-	// 	margin: '0 auto',
-	// 	display: 'block',
-	// };
-
-	// const reFetch = () => {
-	// 	testfetch().then((data) => {
-	// 		setRandomPup(data);
-	// 	});
-	// };
-
-	// useEffect(() => {
-	// 	// console.log(excitedImg);
-	// 	reFetch();
-	// }, []);
+	const submitContact = (e) => {
+		e.preventDefault();
+		console.log(name, email, content);
+		sendContact();
+	}
 
 	return (
 		<Page>
@@ -43,6 +35,12 @@ export default function Home() {
 				<p className='text-gray-light my-3 uppercase'>
 					A Branding And Web Development Agency
 				</p>
+			</Section>
+			<Section bgimg='bg-gray-light'>
+					<input type="text" onChange={e => setName(e.target.value)} id="name" value={name}/>
+					<input type="text" onChange={e => setEmail(e.target.value)} id="email" value={email}/>
+					<input type="text" onChange={e => setContent(e.target.value)} id="content" value={content}/>
+					<button onClick={e => submitContact(e)} type="submit">Send</button>
 			</Section>
 			<section bgimg='bg-purple-900 w-full'>
 				<div className='flex container mx-auto my-20 gap-x-20'>
