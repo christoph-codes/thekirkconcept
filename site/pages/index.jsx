@@ -1,10 +1,10 @@
+import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Section from '../components/Section';
 import Page from '../components/templates/Page';
-import sendContact from './api/contactForm';
-import testfetch from './api/testfetch';
+import emailjs from 'emailjs-com';
 
 export default function Home() {
 	const [name, setName] = useState('');
@@ -13,9 +13,37 @@ export default function Home() {
 
 	const submitContact = (e) => {
 		e.preventDefault();
-		console.log(name, email, content);
-		sendContact();
-	}
+
+		axios.post('http://localhost:7000/contact', {
+			name,
+			email,
+			content
+		}).then(res => {
+			console.log('Successful Post', res.data)
+		}).catch(err => {
+			console.log('Error: ', err.message);
+		});
+
+		// const sendit = {
+		// 	name,
+		// 	email,
+		// 	content
+		// }
+
+		// emailjs
+		// 	.send(
+		// 		'service_otatdm8',
+		// 		'template_axzivdv',
+		// 		sendit,
+		// 		'user_AHy7KCu7UsDCJ5YzZxDbq',
+		// 	)
+		// 	.then((response) => {
+		// 		console.log('SUCCESS!', response.status, response.text);
+		// 	})
+		// 	.catch((error) => {
+		// 		console.log('FAILED...', error);
+		// 	});
+	};
 
 	return (
 		<Page>
@@ -23,7 +51,7 @@ export default function Home() {
 				<title>The Kirk Concept</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Section bgimg='bg-purple-900'>
+			<Section bgimg='bg-home-hero'>
 				<Image
 					src='/tkc_logo_floating.svg'
 					width={155}
@@ -37,19 +65,34 @@ export default function Home() {
 				</p>
 			</Section>
 			<Section bgimg='bg-gray-light'>
-					<input type="text" onChange={e => setName(e.target.value)} id="name" value={name}/>
-					<input type="text" onChange={e => setEmail(e.target.value)} id="email" value={email}/>
-					<input type="text" onChange={e => setContent(e.target.value)} id="content" value={content}/>
-					<button onClick={e => submitContact(e)} type="submit">Send</button>
+				<input
+					type='text'
+					onChange={(e) => setName(e.target.value)}
+					id='name'
+					value={name}
+				/>
+				<input
+					type='text'
+					onChange={(e) => setEmail(e.target.value)}
+					id='email'
+					value={email}
+				/>
+				<input
+					type='text'
+					onChange={(e) => setContent(e.target.value)}
+					id='content'
+					value={content}
+				/>
+				<button onClick={(e) => submitContact(e)} type='submit'>
+					Send
+				</button>
 			</Section>
 			<section bgimg='bg-purple-900 w-full'>
 				<div className='flex container mx-auto my-20 gap-x-20'>
 					<div className='w-1/3'>
 						<h2>Branding</h2>
-						<div className="service-list text-left">
-							<p className='text-gray-light my-3 uppercase'>
-								Brand Identity 
-							</p>
+						<div className='service-list text-left'>
+							<p className='text-gray-light my-3 uppercase'>Brand Identity</p>
 							<p className='text-gray-light my-3 uppercase'>Art Direction</p>
 							<p className='text-gray-light my-3 uppercase'>Logo Design</p>
 							<p className='text-gray-light my-3 uppercase'>Iconography</p>
@@ -59,10 +102,8 @@ export default function Home() {
 					</div>
 					<div className='w-1/3'>
 						<h2>Design</h2>
-						<div className="service-list text-left">
-							<p className='text-gray-light my-3 uppercase'>
-								Brand Identity 
-							</p>
+						<div className='service-list text-left'>
+							<p className='text-gray-light my-3 uppercase'>Brand Identity</p>
 							<p className='text-gray-light my-3 uppercase'>Art Direction</p>
 							<p className='text-gray-light my-3 uppercase'>Logo Design</p>
 							<p className='text-gray-light my-3 uppercase'>Iconography</p>
@@ -72,10 +113,8 @@ export default function Home() {
 					</div>
 					<div className='w-1/3'>
 						<h2>Web Development</h2>
-						<div className="service-list text-left">
-							<p className='text-gray-light my-3 uppercase'>
-								Brand Identity 
-							</p>
+						<div className='service-list text-left'>
+							<p className='text-gray-light my-3 uppercase'>Brand Identity</p>
 							<p className='text-gray-light my-3 uppercase'>Art Direction</p>
 							<p className='text-gray-light my-3 uppercase'>Logo Design</p>
 							<p className='text-gray-light my-3 uppercase'>Iconography</p>
@@ -98,21 +137,32 @@ export default function Home() {
 						/>
 					</div>
 					<div className='w-1/2 text-left'>
-						<h2 className="font-bold uppercase text-purple-light text-lg font-bold">Lazer Ladies</h2>
+						<h2 className='font-bold uppercase text-purple-light text-lg font-bold'>
+							Lazer Ladies
+						</h2>
 						<p className='text-gray-light my-3 uppercase text-4xl font-bold'>
-							"Graphic design and branding is on point!"<br/>
-							<span className='text-lg text-right text-purple-light font-light capitalize'>- Marylou Soto, Owner</span>
+							"Graphic design and branding is on point!"
+							<br />
+							<span className='text-lg text-right text-purple-light font-light capitalize'>
+								- Marylou Soto, Owner
+							</span>
 						</p>
 					</div>
 				</div>
 			</Section>
 			<Section bgimg='bg-gray-light'>
 				<div className='flex items-center justify-center'>
-				<div className='w-1/2 text-right pl-12'>
-						<h2 className="font-bold uppercase text-purple-light text-lg font-bold">Firefly Energy Solar</h2>
+					<div className='w-1/2 text-right pl-12'>
+						<h2 className='font-bold uppercase text-purple-light text-lg font-bold'>
+							Firefly Energy Solar
+						</h2>
 						<p className='text-purple my-3 uppercase text-4xl font-bold'>
-							"I Am thrilled with my new company logo and am proud to display it!"<br/>
-							<span className='text-lg text-right text-purple-light font-light capitalize'>- Jarrod Walters, Owner</span>
+							"I Am thrilled with my new company logo and am proud to display
+							it!"
+							<br />
+							<span className='text-lg text-right text-purple-light font-light capitalize'>
+								- Jarrod Walters, Owner
+							</span>
 						</p>
 					</div>
 					<div className='w-1/2'>
@@ -140,10 +190,16 @@ export default function Home() {
 						/>
 					</div>
 					<div className='w-1/2 text-left'>
-						<h2 className="font-bold uppercase text-purple-light text-lg font-bold">Lazer Ladies</h2>
+						<h2 className='font-bold uppercase text-purple-light text-lg font-bold'>
+							Lazer Ladies
+						</h2>
 						<p className='text-gray-light my-3 uppercase text-4xl font-bold'>
-							"Our new logo resonates better with the community of Veterans we serve."<br/>
-							<span className='text-lg text-right text-purple-light font-light capitalize'>- Marylou Soto, Owner</span>
+							"Our new logo resonates better with the community of Veterans we
+							serve."
+							<br />
+							<span className='text-lg text-right text-purple-light font-light capitalize'>
+								- Marylou Soto, Owner
+							</span>
 						</p>
 					</div>
 				</div>

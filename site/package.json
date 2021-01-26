@@ -10,6 +10,7 @@
   "dependencies": {
     "autoprefixer": "^10.2.0",
     "axios": "^0.21.1",
+    "emailjs-com": "^2.6.4",
     "next": "10.0.4",
     "nodemailer": "^6.4.17",
     "postcss": "^8.2.2",
@@ -19,7 +20,7 @@
     "sass": "^1.32.0",
     "tailwindcss": "^2.0.2"
   },
-  "browser":{
+  "browser": {
     "child_process": false
-    }  
+  }
 }

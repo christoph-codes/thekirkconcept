@@ -1,8 +1,26 @@
-import styles from './puppyfetch.module.scss';
-
+import {useState,useEffect} from 'react';
+import testfetch from '../pages/api/testfetch'
 const puppyfetch = ({ props }) => {
+	const [randomPup, setRandomPup] = useState('');
+
+	const imgStyle = {
+		width: '60%',
+		margin: '0 auto',
+		display: 'block',
+	};
+
+	const reFetch = () => {
+		testfetch().then((data) => {
+			setRandomPup(data);
+		});
+	};
+
+	useEffect(() => {
+		reFetch();
+	}, []);
+
      return (
-        <div className={styles.puppyfetch}>
+        <div>
             <h1>The Kirk Concept</h1>
 			<button onClick={reFetch}>Find new pup</button>
 			{randomPup !== '' && (
