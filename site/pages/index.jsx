@@ -1,49 +1,10 @@
 import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
 import Section from '../components/Section';
 import Page from '../components/templates/Page';
-import emailjs from 'emailjs-com';
 
 export default function Home() {
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [content, setContent] = useState('');
-
-	const submitContact = (e) => {
-		e.preventDefault();
-
-		axios.post('http://localhost:7000/contact', {
-			name,
-			email,
-			content
-		}).then(res => {
-			console.log('Successful Post', res.data)
-		}).catch(err => {
-			console.log('Error: ', err.message);
-		});
-
-		// const sendit = {
-		// 	name,
-		// 	email,
-		// 	content
-		// }
-
-		// emailjs
-		// 	.send(
-		// 		'service_otatdm8',
-		// 		'template_axzivdv',
-		// 		sendit,
-		// 		'user_AHy7KCu7UsDCJ5YzZxDbq',
-		// 	)
-		// 	.then((response) => {
-		// 		console.log('SUCCESS!', response.status, response.text);
-		// 	})
-		// 	.catch((error) => {
-		// 		console.log('FAILED...', error);
-		// 	});
-	};
 
 	return (
 		<Page>
@@ -63,29 +24,6 @@ export default function Home() {
 				<p className='text-gray-light my-3 uppercase'>
 					A Branding And Web Development Agency
 				</p>
-			</Section>
-			<Section bgimg='bg-gray-light'>
-				<input
-					type='text'
-					onChange={(e) => setName(e.target.value)}
-					id='name'
-					value={name}
-				/>
-				<input
-					type='text'
-					onChange={(e) => setEmail(e.target.value)}
-					id='email'
-					value={email}
-				/>
-				<input
-					type='text'
-					onChange={(e) => setContent(e.target.value)}
-					id='content'
-					value={content}
-				/>
-				<button onClick={(e) => submitContact(e)} type='submit'>
-					Send
-				</button>
 			</Section>
 			<section bgimg='bg-purple-900 w-full'>
 				<div className='flex container mx-auto my-20 gap-x-20'>
