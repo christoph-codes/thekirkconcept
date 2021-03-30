@@ -16,19 +16,14 @@ module.exports = {
 			green: colors.green,
 			red: colors.rose,
 			yellow: colors.amber,
-			purple: {
-				light: '#9966ff',
-				DEFAULT: '#432fa8',
-				lightest: ' #f2eff9',
-				lazers: '#432f8a'
+			primary: {
+				DEFAULT: '#e6fd36',
+				light: '#F3FE9B',
+				lightest: '#FDFFEB'
 			},
 			gray: {
-				dark: '#292929',
-				DEFAULT: '#555555',
-				light: '#e6e6ec',
-			},
-			fngGreen: {
-				DEFAULT: '#444F22'
+				DEFAULT: '#454545',
+				light: '#767676',
 			}
 		},
 		extend: {
@@ -41,9 +36,9 @@ module.exports = {
 			   }
 		},
 		fontFamily: {
-			sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],
-			display: ['Open Sans'],
-			body: ['Open Sans'],
+			sans: ['Heebo', 'ui-sans-serif', 'system-ui'],
+			display: ['Heebo'],
+			body: ['Heebo'],
 		},
 	},
 	variants: {
