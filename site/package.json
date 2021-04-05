@@ -2,6 +2,7 @@
   "name": "site",
   "version": "0.1.0",
   "private": true,
+  "author": "Christopher Jones",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,15 +11,18 @@
   "dependencies": {
     "autoprefixer": "^10.2.0",
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "dotenv": "^8.2.0",
     "emailjs-com": "^2.6.4",
     "next": "10.0.4",
     "nodemailer": "^6.4.17",
     "postcss": "^8.2.2",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
-    "sass": "^1.32.0",
-    "tailwindcss": "^2.0.2"
+    "sass": "^1.32.0"
   },
   "browser": {
     "child_process": false

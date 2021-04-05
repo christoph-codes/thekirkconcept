@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+.Header {
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	ul {
+		justify-content: flex-end;
+		display: flex;
+		list-style: none;
+		li {
+			margin-left: 2rem;
+			color: $white;
+			a {
+				color: white;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Section from '../components/Section';
 import Page from '../components/templates/Page';
+import contact from '../pages/api/contact';
 
 const Contact = () => {
 	const [name, setName] = useState('');
@@ -11,24 +12,40 @@ const Contact = () => {
 
 	const submitContact = (e) => {
 		e.preventDefault();
-		axios.post('http://localhost:7000/contact', {
-			name,
-			email,
-			content
-		}).then(res => {
-			console.log('Successful Post', res.data)
-		}).catch(err => {
-			console.log('Error: ', err.message);
+		contact({
+			method: 'POST',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				name: name,
+				email: email,
+				text: content,
+			}).then((data) => {
+				console.log(data);
+			}),
 		});
-
-    };
-    return (
+		// axios
+		// 	.post('http://localhost:7000/contact', {
+		// 		name,
+		// 		email,
+		// 		content,
+		// 	})
+		// 	.then((res) => {
+		// 		console.log('Successful Post', res.data);
+		// 	})
+		// 	.catch((err) => {
+		// 		console.log('Error: ', err.message);
+		// 	});
+	};
+	return (
 		<Page>
 			<Head>
 				<title>Contact The Kirk Concept</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Section bgimg='bg-gray-light'>
+			<Section bg='bg-gray'>
 				<input
 					type='text'
 					onChange={(e) => setName(e.target.value)}
@@ -53,6 +70,6 @@ const Contact = () => {
 			</Section>
 		</Page>
 	);
-}
+};
 
 export default Contact;

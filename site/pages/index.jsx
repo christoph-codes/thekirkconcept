@@ -1,25 +1,39 @@
-import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
+import Button from '../components/Button/Button';
 import Section from '../components/Section';
-import Page from '../components/templates/Page';
+import SubHero from '../components/SubHero/SubHero';
+import Page from '../templates/Page';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
-
 	return (
-		<Page>
+		<Page className={styles.Home}>
 			<Head>
 				<title>The Kirk Concept</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Section bg='bg-gray'>
-				<h1 className="text-4xl font-bold text-gray-light">We unlock brand<br/><span className="text-9xl font-bold text-white">dominance</span><span className="text-primary text-9xl font-bold ">.</span></h1>
-				<p className="text-2xl font-bold text-gray-light mb-5">branding. design systems. <span className="text-primary">app development.</span></p>
-				<Link href="/get-qualified">
-					<a className="rounded-full inline-block p-3 px-7 font-bold bg-primary">get started</a>
+			<Section className='home-hero bg-gray text-center align-items-center'>
+				<h1 className='fs-xl font-weight-bold text-white-50'>
+					We unlock brand
+					<br />
+					<span className='text-white fs-8xl nmt-2 d-block'>
+						dominance<span className='text-primary fs-8xl'>.</span>
+					</span>
+				</h1>
+				<p className='fs-md font-weight-bold text-white-50 mb-20 nmt-2'>
+					branding. design systems.{' '}
+					<span className='text-primary'>app development.</span>
+				</p>
+				<Link href='/get-qualified'>
+					<Button variant='primary' className='inline-block'>
+						get started
+					</Button>
 				</Link>
 			</Section>
+			<SubHero tagline='We have systems in place to birth excellence.'>
+				<p>this is awesome</p>
+			</SubHero>
 		</Page>
 	);
 }

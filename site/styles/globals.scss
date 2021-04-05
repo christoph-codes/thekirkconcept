@@ -1,5 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
 
+@import './_variables';
+
 * {
-  transition: 0.3s;
+	transition: 0.3s;
+	font-family: 'Heebo', sans-serif;
 }
+.nmt-1 {
+	margin-top: -1rem;
+}
+.nmt-2 {
+	margin-top: -2rem;
+}
+.nmt-3 {
+	margin-top: -3rem;
+}
+.nmt-4 {
+	margin-top: -4rem;
+}
+.fs-8xl {
+	font-size: 9rem !important;
+}
+.fs-7xl {
+	font-size: 8rem !important;
+}
+.fs-6xl {
+	font-size: 7rem !important;
+}
+.fs-5xl {
+	font-size: 6rem !important;
+}
+.fs-4xl {
+	font-size: 5rem !important;
+}
+.fs-3xl {
+	font-size: 4rem !important;
+}
+.fs-2xl {
+	font-size: 3.5rem !important;
+}
+.fs-xl {
+	font-size: 3rem !important;
+}
+.fs-lg {
+	font-size: 2.5rem !important;
+}
+.fs-md {
+	font-size: 2rem !important;
+}
+.fs-sm {
+	font-size: 1.5rem !important;
+}
+.fs-xs {
+	font-size: 1rem !important;
+}
+@import '~bootstrap/scss/bootstrap';

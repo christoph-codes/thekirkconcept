@@ -1,0 +1,187 @@
+$primary: #e2ff08;
+$gray: #454545;
+$white: #ffffff;
+$black: #000000;
+
+$theme-colors: (
+	'primary': $primary,
+	'gray': $gray,
+);
+
+$enable-responsive-font-sizes: true;
+
+//Spacing for margin & padding
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.0625,
+		),
+		2: (
+			$spacer * 0.125,
+		),
+		3: (
+			$spacer * 0.1875,
+		),
+		4: (
+			$spacer * 0.25,
+		),
+		5: (
+			$spacer * 0.3125,
+		),
+		6: (
+			$spacer * 0.375,
+		),
+		7: (
+			$spacer * 0.4375,
+		),
+		8: (
+			$spacer * 0.5,
+		),
+		9: (
+			$spacer * 0.5625,
+		),
+		10: (
+			$spacer * 0.625,
+		),
+		11: (
+			$spacer * 0.6875,
+		),
+		12: (
+			$spacer * 0.75,
+		),
+		13: (
+			$spacer * 0.8125,
+		),
+		14: (
+			$spacer * 0.875,
+		),
+		15: (
+			$spacer * 0.9375,
+		),
+		16: (
+			$spacer * 1,
+		),
+		17: (
+			$spacer * 1.0625,
+		),
+		18: (
+			$spacer * 1.125,
+		),
+		19: (
+			$spacer * 1.1875,
+		),
+		20: (
+			$spacer * 1.25,
+		),
+		21: (
+			$spacer * 1.3125,
+		),
+		22: (
+			$spacer * 1.375,
+		),
+		23: (
+			$spacer * 1.4375,
+		),
+		24: (
+			$spacer * 1.5,
+		),
+		25: (
+			$spacer * 1.5625,
+		),
+		26: (
+			$spacer * 1.625,
+		),
+		27: (
+			$spacer * 1.6875,
+		),
+		28: (
+			$spacer * 1.75,
+		),
+		29: (
+			$spacer * 1.8125,
+		),
+		30: (
+			$spacer * 1.875,
+		),
+		31: (
+			$spacer * 1.9375,
+		),
+		32: (
+			$spacer * 2,
+		),
+		35: (
+			$spacer * 2.1875,
+		),
+		40: (
+			$spacer * 2.5,
+		),
+		45: (
+			$spacer * 2.8125,
+		),
+		48: (
+			$spacer * 3,
+		),
+		50: (
+			$spacer * 3.125,
+		),
+		55: (
+			$spacer * 3.4375,
+		),
+		56: (
+			$spacer * 3.5,
+		),
+		60: (
+			$spacer * 3.75,
+		),
+		64: (
+			$spacer * 4,
+		),
+		65: (
+			$spacer * 4.0625,
+		),
+		70: (
+			$spacer * 4.375,
+		),
+		72: (
+			$spacer * 4.5,
+		),
+		75: (
+			$spacer * 4.6875,
+		),
+		80: (
+			$spacer * 5,
+		),
+		85: (
+			$spacer * 5.3125,
+		),
+		90: (
+			$spacer * 5.625,
+		),
+		95: (
+			$spacer * 5.9375,
+		),
+		100: (
+			$spacer * 6.25,
+		),
+		110: (
+			$spacer * 6.875,
+		),
+		120: (
+			$spacer * 7.5,
+		),
+		130: (
+			$spacer * 8.125,
+		),
+		140: (
+			$spacer * 8.75,
+		),
+		150: (
+			$spacer * 9.375,
+		),
+	),
+	$spacers
+);
