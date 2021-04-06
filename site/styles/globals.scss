@@ -53,5 +53,12 @@
 }
 .fs-xs {
 	font-size: 1rem !important;
+} 
+a {
+  font-weight: bold;
+  text-decoration: underline !important;
+  text-decoration-color: $primary !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 0.25rem !important;
 }
 @import '~bootstrap/scss/bootstrap';
