@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import PropTypes, { string } from 'prop-types';
 import styles from  './WordRiver.module.scss';
 
-const WordRiver = ({ words, colors }) => {
+const WordRiver = ({ words, colors, className }) => {
     const wordBuilder = (word,color) => {
-        return <span className="fs-4xl font-weight-bold" style={{ color }}>{word}</span>
+        return <span className="fs-4xl" style={{ color, fontWeight: 'bold' }}>{word}</span>
     }
     const wordLooper = () => {
         const pairs = [];
@@ -17,7 +17,7 @@ const WordRiver = ({ words, colors }) => {
     }
 
      return (
-        <article className={styles.WordRiver}>
+        <article className={`${styles.WordRiver} ${className}`}>
             <div className="river-container">
                 {wordLooper().map(group => {
                     return wordBuilder(group.word, group.color);
@@ -32,9 +32,11 @@ export default WordRiver;
 WordRiver.propTypes = {
     words: PropTypes.arrayOf(string),
     colors: PropTypes.arrayOf(string),
+    className: PropTypes.string
 }
 
 WordRiver.defaultProps = {
     words: [''],
     colors: [''],
+    className: '',
 }
