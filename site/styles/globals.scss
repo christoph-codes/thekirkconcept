@@ -53,12 +53,34 @@
 }
 .fs-xs {
 	font-size: 1rem !important;
-} 
+}
+.fw-light {
+	font-weight: lighter !important;
+}
+.mw-sm {
+	max-width: 24rem;
+	margin: 0 auto;
+}
+.mw-md {
+	max-width: 36rem;
+	margin: 0 auto;
+}
+.mw-lg {
+	max-width: 48rem;
+	margin: 0 auto;
+}
 a {
-  font-weight: bold;
-  text-decoration: underline !important;
-  text-decoration-color: $primary !important;
-  text-decoration-thickness: 3px !important;
-  text-underline-offset: 0.25rem !important;
+	font-weight: bold;
+	text-decoration: underline !important;
+	text-decoration-color: $primary !important;
+	text-decoration-thickness: 3px !important;
+	text-underline-offset: 0.25rem !important;
+}
+hr.primary.small-width {
+	height: 3px;
+	width: 80px;
+	margin: 2rem auto;
+	background: $primary;
+	border: none;
 }
 @import '~bootstrap/scss/bootstrap';

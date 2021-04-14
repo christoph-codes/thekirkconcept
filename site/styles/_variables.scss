@@ -1,11 +1,13 @@
 $primary: #e2ff08;
 $gray: #454545;
+$graylight: #f1f1f1;
 $white: #ffffff;
 $black: #000000;
 
 $theme-colors: (
 	'primary': $primary,
 	'gray': $gray,
+	'gray-light': $graylight,
 );
 
 $enable-responsive-font-sizes: true;
