@@ -7,9 +7,11 @@ const Button = ({ children, className, variant }) => {
 	const variantOutput = () => {
 		switch (variant) {
 			case 'primary':
-				return 'bg-primary text-gray';
+				return 'bg-primary text-gray-dark';
 			case 'primary-outline':
-				return 'outline-primary text-gray';
+				return 'outline-primary text-gray-dark';
+			case 'secondary':
+				return 'bg-gray-dark text-primary';
 
 			default:
 				break;

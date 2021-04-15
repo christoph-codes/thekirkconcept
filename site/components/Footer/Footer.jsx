@@ -16,7 +16,7 @@ import Link from 'next/link';
 const Footer = (props) => {
 	return (
 		<Section className='Footer align-items-center' columns height='3rem'>
-			<Col>
+			<Col sm={3}>
 				<Link href='https://facebook.com/thekirkconcept'>
 					<a className='mr-10'>
 						<FaFacebook color='#454545' size={18} />
@@ -48,9 +48,9 @@ const Footer = (props) => {
 					</a>
 				</Link>
 			</Col>
-			<Col className='text-right'>
-				Site made with <FaHeart color='#e2ff08' /> copyright © 2021 The
-				Kirk Concept. All rights reserved.{' '}
+			<Col className='text-right text-gray'>
+				Site made with <FaHeart color='#e2ff08' /> by The Kirk Concept.
+				Copyright © 2021. All rights reserved.{' '}
 			</Col>
 		</Section>
 	);

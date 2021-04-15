@@ -51,7 +51,7 @@ const Header = ({ props }) => {
 					</li>
 					<li className='text-white font-weight-bold'>
 						<Link href='/get-qualified'>
-							<a className='bg-primary rounded-pill px-25 py-10 text-gray font-bold'>
+							<a className='bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold'>
 								get qualified
 							</a>
 						</Link>

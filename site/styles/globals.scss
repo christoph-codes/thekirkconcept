@@ -83,4 +83,7 @@ hr.primary.small-width {
 	background: $primary;
 	border: none;
 }
+img {
+	max-width: 100%;
+}
 @import '~bootstrap/scss/bootstrap';

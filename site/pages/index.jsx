@@ -3,15 +3,17 @@ import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
 import Button from '../components/Button/Button';
 import Section from '../components/Section';
-import SubHero from '../components/SubHero/SubHero';
+import SubHero from '../components/SubHero';
 import Page from '../templates/Page';
 import styles from '../styles/Home.module.scss';
 import WordRiver from '../components/WordRiver';
-import CaseStudyCard from '../components/CaseStudyCard/CaseStudyCard';
+import CaseStudyCard from '../components/CaseStudyCard';
+import DominanceContact from '../components/DominanceContact';
 
 import svvc from '../utilities/caseStudies/svvc';
 import fng from '../utilities/caseStudies/fng';
 import pff from '../utilities/caseStudies/pff';
+import Tilt from 'react-tilt';
 
 const Home = () => {
 	return (
@@ -21,7 +23,7 @@ const Home = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Section
-				className={`${styles.homeHero} bg-gray text-center align-items-center`}
+				className={`${styles.homeHero} bg-gray-dark text-center align-items-center`}
 			>
 				<h1 className='fs-xl font-weight-bold text-white-50'>
 					We unlock brand
@@ -41,21 +43,31 @@ const Home = () => {
 				</Link>
 			</Section>
 			<SubHero tagline='We have systems in place to birth excellence.'>
-				<Col className='p-30 shadow bg-white rounded-lg text-gray'>
-					<h3 className='fs-sm font-weight-bold mb-20'>Branding</h3>
+				<Col
+					as={Tilt}
+					options={{ max: 15, scale: 1.05 }}
+					className='p-30 shadow bg-white rounded-lg text-gray'
+				>
+					<h3 className='fs-sm font-weight-bold text-gray-dark mb-20'>
+						Branding
+					</h3>
 					<p>
 						Brand dominance is only achieved with a clear and
 						purposeful brand strategy and visual connection that
 						resonates with your audience and industry.
 					</p>
 					<Link href='/branding'>
-						<a className='text-gray primary-underline'>
+						<a className='text-gray-dark primary-underline'>
 							Learn More
 						</a>
 					</Link>
 				</Col>
-				<Col className='p-30 shadow bg-white rounded-lg text-gray'>
-					<h3 className='fs-sm font-weight-bold mb-20'>
+				<Col
+					as={Tilt}
+					options={{ max: 15, scale: 1.05 }}
+					className='p-30 shadow bg-white rounded-lg text-gray'
+				>
+					<h3 className='fs-sm font-weight-bold mb-20 text-gray-dark'>
 						Design System
 					</h3>
 					<p>
@@ -64,13 +76,17 @@ const Home = () => {
 						equity on the digital level.
 					</p>
 					<Link href='/design-system'>
-						<a className='text-gray primary-underline'>
+						<a className='text-gray-dark primary-underline'>
 							Learn More
 						</a>
 					</Link>
 				</Col>
-				<Col className='p-30 shadow bg-white rounded-lg text-gray'>
-					<h3 className='fs-sm font-weight-bold mb-20'>
+				<Col
+					as={Tilt}
+					options={{ max: 15, scale: 1.05 }}
+					className='p-30 shadow bg-white rounded-lg text-gray'
+				>
+					<h3 className='fs-sm font-weight-bold mb-20 text-gray-dark'>
 						App Development
 					</h3>
 					<p>
@@ -79,7 +95,7 @@ const Home = () => {
 						product and a loyal customer.
 					</p>
 					<Link href='/development'>
-						<a className='text-gray primary-underline'>
+						<a className='text-gray-dark primary-underline'>
 							Learn More
 						</a>
 					</Link>
@@ -118,7 +134,7 @@ const Home = () => {
 			</Section>
 			<Section
 				containerClass='font-display'
-				className='text-center font-weight-light'
+				className='text-center font-weight-light pb-50'
 			>
 				<hr className='primary small-width' />
 				<p className='fw-light fs-sm mw-lg'>
@@ -129,12 +145,87 @@ const Home = () => {
 			</Section>
 			<Section
 				containerClass='font-display'
-				className='text-center font-weight-light bg-gray text-white'
+				className='text-center font-weight-light bg-gray text-white py-70'
 			>
+				<h2 className='text-center text-primary font-weight-bold'>
+					Featured dominance worthy brands
+				</h2>
 				<CaseStudyCard casestudy={svvc} />
 				<CaseStudyCard casestudy={fng} />
 				<CaseStudyCard casestudy={pff} />
+				<h2 className='text-center text-gray-dark font-weight-bold mt-30'>
+					Additional dominant brands we’ve worked with.
+				</h2>
+				<Row className='my-100 mx-auto mw-lg align-items-center'>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_kinemedix_logo.svg'
+								alt='Kinemedix Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_vegas_flag_logo.svg'
+								alt='Vegas Flag Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_mysologym_logo.svg'
+								alt='Mysologym Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_project_guardian_logo.svg'
+								alt='Project Guardian Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+				</Row>
+				<Row className='my-100 mx-auto mw-lg align-items-center'>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_firefly_energy_logo.svg'
+								alt='Firefly Energy Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_grubber_logo.svg'
+								alt='Grubber Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_icoa_logo.svg'
+								alt='Investment Club of America Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+					<Col md={3} xs={6}>
+						<Tilt>
+							<img
+								src='/logos/gray_pfl_logo.svg'
+								alt='PFL Custom Logo by The Kirk Concept'
+							/>
+						</Tilt>
+					</Col>
+				</Row>
 			</Section>
+			<DominanceContact />
 		</Page>
 	);
 };
