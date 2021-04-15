@@ -210,16 +210,16 @@ const Home = () => {
 					<Col md={3} xs={6}>
 						<Tilt>
 							<img
-								src='/logos/gray_icoa_logo.svg'
-								alt='Investment Club of America Custom Logo by The Kirk Concept'
+								src='/logos/gray_cheatsheet_logo.svg'
+								alt='Showbiz Cheatsheet Custom Logo by The Kirk Concept'
 							/>
 						</Tilt>
 					</Col>
 					<Col md={3} xs={6}>
 						<Tilt>
 							<img
-								src='/logos/gray_pfl_logo.svg'
-								alt='PFL Custom Logo by The Kirk Concept'
+								src='/logos/gray_the10_logo.svg'
+								alt='The 10 Jewelry Custom Logo by The Kirk Concept'
 							/>
 						</Tilt>
 					</Col>
