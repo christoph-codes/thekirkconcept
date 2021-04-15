@@ -7,8 +7,13 @@ import SubHero from '../components/SubHero/SubHero';
 import Page from '../templates/Page';
 import styles from '../styles/Home.module.scss';
 import WordRiver from '../components/WordRiver';
+import CaseStudyCard from '../components/CaseStudyCard/CaseStudyCard';
 
-export default function Home() {
+import svvc from '../utilities/caseStudies/svvc';
+import fng from '../utilities/caseStudies/fng';
+import pff from '../utilities/caseStudies/pff';
+
+const Home = () => {
 	return (
 		<Page className={styles.Home}>
 			<Head>
@@ -16,8 +21,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Section
-				height='90vh'
-				className='home-hero bg-gray text-center align-items-center'
+				className={`${styles.homeHero} bg-gray text-center align-items-center`}
 			>
 				<h1 className='fs-xl font-weight-bold text-white-50'>
 					We unlock brand
@@ -113,7 +117,6 @@ export default function Home() {
 				/>
 			</Section>
 			<Section
-				height='15rem'
 				containerClass='font-display'
 				className='text-center font-weight-light'
 			>
@@ -124,6 +127,16 @@ export default function Home() {
 					intentional web and mobile app experiences.
 				</p>
 			</Section>
+			<Section
+				containerClass='font-display'
+				className='text-center font-weight-light bg-gray text-white'
+			>
+				<CaseStudyCard casestudy={svvc} />
+				<CaseStudyCard casestudy={fng} />
+				<CaseStudyCard casestudy={pff} />
+			</Section>
 		</Page>
 	);
-}
+};
+
+export default Home;

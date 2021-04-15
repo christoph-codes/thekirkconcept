@@ -4,13 +4,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import styles from './Section.module.scss';
 
-const Section = ({ fullWidth,  className, columns, children, height, containerClass }) => {
+const Section = ({
+	fullWidth,
+	className,
+	columns,
+	children,
+	containerClass,
+}) => {
 	return (
-		<section
-		style={{ minHeight: height }}
-			className={`${styles.Section} d-flex ${className}`}
-		>
-			<Container className={containerClass} as='div' fluid={fullWidth || false}>
+		<section className={`${styles.Section} d-flex ${className}`}>
+			<Container
+				className={containerClass}
+				as='div'
+				fluid={fullWidth || false}
+			>
 				{columns ? <Row>{children}</Row> : children}
 			</Container>
 		</section>
@@ -24,7 +31,6 @@ Section.propTypes = {
 	className: PropTypes.string,
 	containerClass: PropTypes.string,
 	columns: PropTypes.bool,
-	height: PropTypes.string,
 };
 
 Section.defaultProps = {
@@ -32,5 +38,4 @@ Section.defaultProps = {
 	className: '',
 	containerClass: '',
 	columns: false,
-	height: '0px',
 };
