@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Btn from 'react-bootstrap/Button';
 import './Button.module.scss';
 
-const Button = ({ children, className, variant }) => {
+const Button = ({ children, className, variant, ...rest }) => {
 	const variantOutput = () => {
 		switch (variant) {
 			case 'primary':
@@ -20,6 +20,7 @@ const Button = ({ children, className, variant }) => {
 	return (
 		<Btn
 			className={`Button rounded-pill py-15 px-30 font-weight-bold ${className} ${variantOutput()}`}
+			{...rest}
 		>
 			{children}
 		</Btn>

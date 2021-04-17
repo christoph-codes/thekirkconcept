@@ -40,7 +40,7 @@ const Header = ({ props }) => {
 						</Link>
 					</li>
 					<li className='text-white px-5 font-weight-bold'>
-						<Link href='/what-we-do'>
+						<Link href='/whatwedo'>
 							<a>what we do</a>
 						</Link>
 					</li>

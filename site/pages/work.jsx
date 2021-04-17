@@ -32,6 +32,7 @@ const Work = () => {
 			</Head>
 			<Section
 				className={`${styles.workHero} bg-gray-dark text-center align-items-center`}
+				hero
 			>
 				<h1 className='fs-8xl font-weight-bold text-white'>
 					work<span className='text-primary'>.</span>

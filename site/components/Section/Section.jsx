@@ -10,9 +10,14 @@ const Section = ({
 	columns,
 	children,
 	containerClass,
+	hero,
 }) => {
 	return (
-		<section className={`${styles.Section} d-flex ${className}`}>
+		<section
+			className={`${styles.Section} ${
+				hero ? styles.hero : ''
+			} d-flex ${className}`}
+		>
 			<Container
 				className={containerClass}
 				as='div'

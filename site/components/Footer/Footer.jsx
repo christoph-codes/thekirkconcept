@@ -48,7 +48,7 @@ const Footer = (props) => {
 					</a>
 				</Link>
 			</Col>
-			<Col className='text-right text-gray'>
+			<Col className='text-right text-gray-dark'>
 				Site made with <FaHeart color='#e2ff08' /> by The Kirk Concept.
 				Copyright © 2021. All rights reserved.{' '}
 			</Col>

@@ -24,6 +24,7 @@ const Home = () => {
 			</Head>
 			<Section
 				className={`${styles.homeHero} bg-gray-dark text-center align-items-center`}
+				hero
 			>
 				<h1 className='fs-xl font-weight-bold text-white-50'>
 					We unlock brand
