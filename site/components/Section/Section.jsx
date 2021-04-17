@@ -11,9 +11,12 @@ const Section = ({
 	children,
 	containerClass,
 	hero,
+	bgOverlay,
+	...rest
 }) => {
 	return (
 		<section
+			{...rest}
 			className={`${styles.Section} ${
 				hero ? styles.hero : ''
 			} d-flex ${className}`}
@@ -25,6 +28,7 @@ const Section = ({
 			>
 				{columns ? <Row>{children}</Row> : children}
 			</Container>
+			{bgOverlay && <div className={styles.bgOverlay} />}
 		</section>
 	);
 };

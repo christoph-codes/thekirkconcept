@@ -49,6 +49,11 @@ const Header = ({ props }) => {
 							<a>contact</a>
 						</Link>
 					</li>
+					<li className='text-white px-5 font-weight-bold'>
+						<Link href='/blog'>
+							<a>blog</a>
+						</Link>
+					</li>
 					<li className='text-white font-weight-bold'>
 						<Link href='/get-qualified'>
 							<a className='bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold'>

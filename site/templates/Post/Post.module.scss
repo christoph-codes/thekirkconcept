@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.Post {
+	.PostSection {
+		height: 50vh;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: bold;
+		color: $gray-dark;
+	}
+	h2 {
+		font-size: 2rem;
+		font-weight: lighter;
+		color: $gray;
+	}
+	h3 {
+		font-size: 1rem;
+		font-weight: bold;
+		color: $primary;
+	}
+	p {
+		font-size: 1rem;
+		color: $gray;
+		line-height: 2.25;
+	}
+	a {
+		font-weight: bold;
+		color: $gray-dark;
+		&:hover {
+			color: $primary;
+		}
+	}
+	pre {
+		display: block;
+		font-size: 87.5%;
+		color: $primary;
+		background: $gray-dark;
+		padding: 2rem;
+		code {
+			word-wrap: normal;
+		}
+	}
+}
