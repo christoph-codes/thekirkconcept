@@ -40,18 +40,18 @@ const Page = ({
 					name='msapplication-config'
 				/>
 				<link
-					href='/favicons/apple-touch-icon.png'
+					href='/favicon@3x.png'
 					rel='apple-touch-icon'
 					sizes='180x180'
 				/>
 				<link
-					href='/favicons/favicon-32x32.png'
+					href='/favicon@2x.png'
 					rel='icon'
 					sizes='32x32'
 					type='image/png'
 				/>
 				<link
-					href='/favicons/favicon-16x16.png'
+					href='/favicon@3x.png'
 					rel='icon'
 					sizes='16x16'
 					type='image/png'
@@ -62,7 +62,7 @@ const Page = ({
 					href='/favicons/safari-pinned-tab.svg'
 					rel='mask-icon'
 				/>
-				<link href='/favicons/favicon.ico' rel='shortcut icon' />
+				<link href='/favicon.ico' rel='shortcut icon' />
 
 				{url && <link href={canonical} rel='canonical' />}
 				<meta content='en_US' property='og:locale' />

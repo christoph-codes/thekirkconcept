@@ -8,6 +8,16 @@ export const Input = ({ className, ...rest }) => {
 		/>
 	);
 };
+export const Dropdown = ({ className, children, ...rest }) => {
+	return (
+		<select
+			className={`${styles.Input} ${className} bg-gray-light rounded`}
+			{...rest}
+		>
+			{children}
+		</select>
+	);
+};
 export const TextArea = ({ className, children, ...rest }) => {
 	return (
 		<textarea

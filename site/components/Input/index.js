@@ -1,1 +1,1 @@
-export { Input as default, TextArea } from './Input';
+export { Input as default, TextArea, Dropdown } from './Input';
