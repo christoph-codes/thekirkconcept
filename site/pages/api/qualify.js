@@ -43,8 +43,8 @@ export default async (req, res) => {
 	try {
 		await mailchimp.lists.addListMember('d4f452d978', {
 			merge_fields: {
-				FNAME: fName,
-				LNAME: lName,
+				FNAME: fname,
+				LNAME: lname,
 				PHONE: phone,
 				INTEREST: upgrade,
 				BUDGET: budget,
