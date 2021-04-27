@@ -6,7 +6,6 @@ import { dateTime } from '../../utilities/helpers';
 import styles from './Post.module.scss';
 
 const Post = ({ children, meta, ...rest }) => {
-	console.log(meta.image);
 	return (
 		<Page
 			title={meta.title}
