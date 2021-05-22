@@ -5,37 +5,42 @@ import { Container } from 'react-bootstrap';
 import { dateTime } from '../../utilities/helpers';
 import styles from './Post.module.scss';
 
-const Post = ({ children, meta, ...rest }) => {
+const Post = ({ children, frontMatter, ...rest }) => {
 	return (
 		<Page
-			title={meta.title}
-			description={meta.description}
-			date={meta.date}
-			image={meta.image}
-			keywords={meta.keywords}
-			router={meta.router}
+			title={frontMatter.title}
+			description={frontMatter.description}
+			date={frontMatter.date}
+			image={frontMatter.image}
+			keywords={frontMatter.keywords}
+			slug={frontMatter.slug}
 			{...rest}
 			className={`${styles.Post}`}
 		>
 			<Section
 				className={`${styles.PostSection} bg-gray-dark text-center align-items-center`}
-				// style={{ backgroundImage: 'url(' + meta.image + ')' }}
 				style={{
-					backgroundImage: `url(${meta.image})`,
+					backgroundImage: `url(${frontMatter.image})`,
 				}}
 				bgOverlay
 			>
 				<h1 className='fs-2xl font-weight-bold text-white mt-50'>
-					{meta.title}
+					{frontMatter.title}
 					<span className='text-primary'>.</span>
 				</h1>
 			</Section>
 			<Container as='article' className='w-50 py-100'>
-				<h2 className='my-10 fs-sm'>{meta.description}</h2>
-				<small className='badge badge-primary'>
-					{dateTime(meta.date)}
-				</small>
+				<div className='d-flex justify-content-between'>
+					<small className='badge badge-primary'>
+						{dateTime(frontMatter.date)}
+					</small>
+					<small className='text-gray'>
+						Written by: Christopher Jones
+					</small>
+				</div>
 				<hr className='my-30' />
+				<h2 className='mt-10 mb-30 fs-sm'>{frontMatter.description}</h2>
+				<img src={frontMatter.image} alt={frontMatter.title} />
 				{children}
 			</Container>
 			<DominanceContact />

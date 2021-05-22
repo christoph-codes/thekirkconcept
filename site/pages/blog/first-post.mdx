@@ -1,18 +1,11 @@
-import Post from '../../templates/Post';
-
-export const meta = {
-	slug: '/first-post',
-	title: 'This is our first blog post',
-	description: 'Taking my first stab at NextJs and Markdown!',
-	image: '/images/first-blog-keyboard.jpg',
-	date: '2020-04-17',
-};
-
-<Post meta={meta}>
-
-# NextJs & Markdown
-
-![Drag Racing](/images/first-blog-keyboard.jpg)
+---
+    slug: '/first-post'
+    layout: 'Post/index'
+    title: 'NextJs & Markdown'
+    description: 'Taking my first stab at NextJs and Markdown!'
+    image: '/images/first-blog-keyboard.jpg'
+    date: '2020-04-17'
+---
 
 So... this is my first attempt at creating a blog with NextJs and using Markdown. I'm so used to creating a blog with Wordpress but as wordpress continues to bloat the internet with its massive infrastructure my goal is to simply reduce.
 
@@ -23,17 +16,13 @@ Setting up a blog is fairly easy with javascript but while using markdown and th
 All that it took for this page to be rendered with styling was the code block below. And then of course the markdown below it.
 
 ```javascript
-import Post from '../../templates/Post';
-
-export const meta = {
-	slug: '/first-post',
-	title: 'This is our first blog post',
-	description: 'Taking my first stab at NextJs and Markdown!',
-	image: '/images/first-blog-keyboard.jpg',
-	date: '2020-04-17',
-};
-
-<Post meta={meta}>
+---
+    layout: 'Post/index'
+    title: 'This is our first blog post'
+    description: 'Taking my first stab at NextJs and Markdown!'
+    image: '/images/first-blog-keyboard.jpg'
+    date: '2020-04-17'
+---
 ```
 
 The `meta object` that you see is just the meta data for the page for SEO purposes. and the Post component is what styles the entire page and we pass in that metadata into the post... and walah (However you spell it lol)!
@@ -41,5 +30,3 @@ The `meta object` that you see is just the meta data for the page for SEO purpos
 I didn't intend for this article to be long as it is only for testing but stay tuned for future articles as they will be talking about branding, development, and all that we do.
 
 👍🏾 Thanks for reading.
-
-</Post>

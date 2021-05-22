@@ -22,7 +22,22 @@
 		font-weight: bold;
 		color: $primary;
 	}
+	img {
+		border-radius: 10px;
+		// border: 2px $graylight solid;
+		margin-bottom: 2rem;
+		box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+	}
 	p {
+		font-size: 1rem;
+		color: $gray;
+		line-height: 2.25;
+		margin-bottom: 2rem;
+	}
+	ul {
+		margin-bottom: 2rem;
+	}
+	li {
 		font-size: 1rem;
 		color: $gray;
 		line-height: 2.25;

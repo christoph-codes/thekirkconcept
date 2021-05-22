@@ -1,46 +1,34 @@
-import Post from '../../templates/Post';
+---
+slug: '/children-mapping'
+layout: 'Post/index'
+title: 'Mapping through the children of a React Component'
+description: 'The brilliant idea of mapping through children came about when creating compound components.'
+image: '/images/children-mapping.png'
+date: '2021-04-27'
+---
 
-export const meta = {
-	slug: '/children-mapping',
-	title: 'Mapping through the children of a React Component',
-	description:
-		'The brilliant idea of mapping through children came about when creating compound components.',
-	image: '/images/map-from-pexels.jpg',
-	date: '2020-04-27',
+Made a discovery today and I just thought I'd share. This may or may not be a legendary breakthrough for some of you but it was for me. This post should be pretty short.
+
+## The Discovery
+
+I was working on an application today and I needed to create a custom slider component that takes divs with content in them but it should only render divs. I needed to prevent other html/js elements from being displayed inside of this slider so I can control the styling and the slide itself to remain consistent between one another.
+
+Typically, I would just create an object that holds the content and then create a template for each slide and map through them anytime I use the component.
+
+I had this bright idea that children in a React component takes all of the elements within an element and turns it into an array. We all know that if you have an array you can use all of the javascript built in functions to manipulate that array.
+
+Well in almost every React application I use the !(.map)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map] function in some place or form. So I gave it a try in my code!
+
+```jsx
+const CustomComponent = ({ title, children, ...rest }) => {
+	return (
+		<>
+			{children.map((child) => {
+				<div key={child.id}>{child}</div>;
+			})}
+		</>
+	);
 };
-
-<Post meta={meta}>
-
-# Mapping through children of a React component
-
-![Map from Pexels](/images/map-from-pexels.jpg)
-
-So... this is my first attempt at creating a blog with NextJs and using Markdown. I'm so used to creating a blog with Wordpress but as wordpress continues to bloat the internet with its massive infrastructure my goal is to simply reduce.
-
-## For The Record
-
-Setting up a blog is fairly easy with javascript but while using markdown and the server-side rendering capabilities with [NextJs](https://nextjs.org), there's definitely so configuring that has to be done. Once it is done I can say it's fairly easy to maintain.
-
-All that it took for this page to be rendered with styling was the code block below. And then of course the markdown below it.
-
-```javascript
-import Post from '../../templates/Post';
-
-export const meta = {
-	slug: '/first-post',
-	title: 'This is our first blog post',
-	description: 'Taking my first stab at NextJs and Markdown!',
-	image: '/images/first-blog-keyboard.jpg',
-	date: '2020-04-17',
-};
-
-<Post meta={meta}>
 ```
 
-The `meta object` that you see is just the meta data for the page for SEO purposes. and the Post component is what styles the entire page and we pass in that metadata into the post... and walah (However you spell it lol)!
-
-I didn't intend for this article to be long as it is only for testing but stay tuned for future articles as they will be talking about branding, development, and all that we do.
-
 👍🏾 Thanks for reading.
-
-</Post>
