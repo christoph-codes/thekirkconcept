@@ -11,7 +11,6 @@ import { dateTime } from '../../utilities/helpers';
 import styles from '../../styles/Blog.module.scss';
 
 const Blog = ({ posts }) => {
-	console.log('posts', posts);
 	return (
 		<Page
 			image
@@ -32,7 +31,6 @@ const Blog = ({ posts }) => {
 			</Section>
 			<SubHero tagline='Our top posts for your reading.'>
 				{posts.map((post) => {
-					console.log(post);
 					return (
 						<Col
 							as={Tilt}
@@ -77,7 +75,6 @@ export const getStaticProps = async () => {
 
 	const files = await Promise.all(
 		filenames.map(async (filename) => {
-			console.log('filename', filename === 'index.jsx');
 			if (filename !== 'index.jsx') {
 				const filePath = path.join(postsDirectory, filename);
 				const content = await fs.readFile(filePath, 'utf8');
@@ -93,13 +90,11 @@ export const getStaticProps = async () => {
 	);
 
 	const filteredPosts = files.filter((file) => {
-		console.log('post', file);
 		return file !== null;
 	});
 
 	const posts = filteredPosts
 		.map((file) => {
-			console.log(file.matter.data.date);
 			return {
 				path: `/blog/${file.filename.replace('.mdx', '')}`,
 				title: file.matter.data.title,
