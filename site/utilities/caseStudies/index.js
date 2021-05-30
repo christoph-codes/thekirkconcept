@@ -2,8 +2,10 @@ import fng from './fng';
 import svvc from './svvc';
 import pff from './pff';
 
-export const caseStudies = {
+const caseStudies = {
 	fng,
 	svvc,
 	pff,
 };
+
+export default caseStudies;

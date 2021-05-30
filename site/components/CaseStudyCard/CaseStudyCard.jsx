@@ -12,11 +12,11 @@ const CaseStudyCard = ({ casestudy }) => {
 					style={{ backgroundImage: `url(${casestudy.bgImg})` }}
 				>
 					<img
-						src={casestudy.logo}
+						src={casestudy.electricLogo}
 						alt={`${casestudy.name} Case Study with The Kirk Concept`}
 					/>
-					<Link href={casestudy.slug}>
-						<a className='casestudy-link'>View Case Study</a>
+					<Link href={`/case-study${casestudy.slug}`}>
+						<a className="casestudy-link">View Case Study</a>
 					</Link>
 				</article>
 			</Link>

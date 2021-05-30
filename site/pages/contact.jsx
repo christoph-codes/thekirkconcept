@@ -37,27 +37,28 @@ const Contact = () => {
 		<Page>
 			<Head>
 				<title>Contact The Kirk Concept</title>
-				<link rel='icon' href='/favicon.ico' />
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
 				className={`${styles.contact} bg-gray-dark text-center align-items-center`}
 				hero
+				bgImg="/bgs/contact_bg.png"
 			>
-				<h1 className='fs-8xl font-weight-bold text-white'>
-					contact<span className='text-primary'>.</span>
+				<h1 className="fs-8xl font-weight-bold text-white">
+					contact<span className="text-primary">.</span>
 				</h1>
-				<p className='fs-md font-weight-bold text-white-50 mb-20 nmt-2'>
+				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
 					If you have questions, we’d love to hear from you
 				</p>
 			</Section>
-			<SubHero tagline='hello@thekirkconcept.com'>
+			<SubHero tagline="hello@thekirkconcept.com">
 				<Col
 					as={Tilt}
 					sm={6}
 					options={{ max: 15, scale: 1.01 }}
-					className='p-30 shadow bg-white rounded-lg text-gray justify-self-center'
+					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
 				>
-					<h3 className='fs-sm font-weight-bold text-gray-dark mb-20'>
+					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 						Contact us for questions.
 					</h3>
 					<p>
@@ -66,34 +67,34 @@ const Contact = () => {
 					</p>
 					<form>
 						<Input
-							type='text'
+							type="text"
 							onChange={(e) => setName(e.target.value)}
-							placeholder='Full Name'
-							id='name'
+							placeholder="Full Name"
+							id="name"
 							value={name}
 						/>
 						<Input
-							type='text'
+							type="text"
 							onChange={(e) => setEmail(e.target.value)}
-							placeholder='Email'
-							id='email'
+							placeholder="Email"
+							id="email"
 							value={email}
 						/>
 						<TextArea
-							type='text'
+							type="text"
 							onChange={(e) => setContent(e.target.value)}
-							placeholder='Message'
-							id='content'
+							placeholder="Message"
+							id="content"
 							value={content}
 						/>
 						<Button
-							variant='primary'
-							type='submit'
+							variant="primary"
+							type="submit"
 							onClick={(e) => submitContact(e)}
 						>
 							Send
 						</Button>
-						<small className='d-block mt-20'>
+						<small className="d-block mt-20">
 							By submitting this form you are agreeing to someone
 							from our team reaching out to you to answer
 							questions and/or conduct business. We have to keep
@@ -104,7 +105,7 @@ const Contact = () => {
 				</Col>
 			</SubHero>
 			<Section>
-				<p className='text-center'>
+				<p className="text-center">
 					6440 Sky Pointe Dr.
 					<br />
 					Suite 140-422

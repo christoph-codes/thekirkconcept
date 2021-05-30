@@ -3,7 +3,7 @@ import styles from './Input.module.scss';
 export const Input = ({ className, ...rest }) => {
 	return (
 		<input
-			className={`${styles.Input} ${className} bg-gray-light rounded`}
+			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
 			{...rest}
 		/>
 	);
@@ -11,7 +11,7 @@ export const Input = ({ className, ...rest }) => {
 export const Dropdown = ({ className, children, ...rest }) => {
 	return (
 		<select
-			className={`${styles.Input} ${className} bg-gray-light rounded`}
+			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
 			{...rest}
 		>
 			{children}
@@ -21,7 +21,7 @@ export const Dropdown = ({ className, children, ...rest }) => {
 export const TextArea = ({ className, children, ...rest }) => {
 	return (
 		<textarea
-			className={`${styles.Input} ${className} bg-gray-light rounded`}
+			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
 			{...rest}
 		>
 			{children}

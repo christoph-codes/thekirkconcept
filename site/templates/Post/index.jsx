@@ -19,27 +19,25 @@ const Post = ({ children, frontMatter, ...rest }) => {
 		>
 			<Section
 				className={`${styles.PostSection} bg-gray-dark text-center align-items-center`}
-				style={{
-					backgroundImage: `url(${frontMatter.image})`,
-				}}
+				bgImg={frontMatter.image}
 				bgOverlay
 			>
-				<h1 className='fs-2xl font-weight-bold text-white mt-50'>
+				<h1 className="fs-2xl font-weight-bold text-white mt-50">
 					{frontMatter.title}
-					<span className='text-primary'>.</span>
+					<span className="text-primary">.</span>
 				</h1>
 			</Section>
-			<Container as='article' className='w-50 py-100'>
-				<div className='d-flex justify-content-between'>
-					<small className='badge badge-primary'>
+			<Container as="article" className="w-50 py-100">
+				<div className="d-flex justify-content-between">
+					<small className="badge badge-primary">
 						{dateTime(frontMatter.date)}
 					</small>
-					<small className='text-gray'>
+					<small className="text-gray">
 						Written by: Christopher Jones
 					</small>
 				</div>
-				<hr className='my-30' />
-				<h2 className='mt-10 mb-30 fs-sm'>{frontMatter.description}</h2>
+				<hr className="my-30" />
+				<h2 className="mt-10 mb-30 fs-sm">{frontMatter.description}</h2>
 				<img src={frontMatter.image} alt={frontMatter.title} />
 				{children}
 			</Container>

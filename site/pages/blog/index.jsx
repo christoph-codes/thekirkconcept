@@ -14,22 +14,23 @@ const Blog = ({ posts }) => {
 	return (
 		<Page
 			image
-			title='The Kirk Concept » Branding & App Development'
-			description='The Kirk Concept Official Blog » Branding & App Development'
-			keywords='blog, branding, web, app, development'
+			title="The Kirk Concept » Branding & App Development"
+			description="The Kirk Concept Official Blog » Branding & App Development"
+			keywords="blog, branding, web, app, development"
 		>
 			<Section
 				className={`${styles.Blog} bg-gray-dark text-center align-items-center`}
 				hero
+				bgImg="/bgs/blog_bg.png"
 			>
-				<h1 className='fs-8xl font-weight-bold text-white'>
-					blog<span className='text-primary'>.</span>
+				<h1 className="fs-8xl font-weight-bold text-white">
+					blog<span className="text-primary">.</span>
 				</h1>
-				<p className='fs-md font-weight-bold text-white-50 mb-20 nmt-2'>
+				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
 					Hoarding knowledge doesn't benefit anyone, so enjoy!
 				</p>
 			</Section>
-			<SubHero tagline='Our top posts for your reading.'>
+			<SubHero tagline="Our top posts for your reading.">
 				{posts.map((post) => {
 					return (
 						<Col
@@ -37,23 +38,23 @@ const Blog = ({ posts }) => {
 							options={{ max: 15, scale: 1.05 }}
 							sm={3}
 							key={post.path}
-							className='p-30 shadow bg-white rounded-lg text-gray'
+							className="p-30 shadow bg-white rounded-lg text-gray"
 						>
 							<Link href={post.path}>
-								<article className='d-flex flex-column align-items-start cursor-pointer'>
+								<article className="d-flex flex-column align-items-start cursor-pointer">
 									<img
 										src={post.image}
 										alt={post.title}
-										className='mb-20'
+										className="mb-20"
 									/>
-									<small className='badge badge-primary mb-10'>
+									<small className="badge badge-primary mb-10">
 										{dateTime(post.date)}
 									</small>
-									<h3 className='fs-sm font-weight-bold text-gray-dark'>
+									<h3 className="fs-sm font-weight-bold text-gray-dark">
 										{post.title}
 									</h3>
 									<Link href={post.path}>
-										<a className='text-gray-dark justify-self-end primary-underline mt-auto'>
+										<a className="text-gray-dark justify-self-end primary-underline mt-auto">
 											Read Now!
 										</a>
 									</Link>
@@ -86,7 +87,7 @@ export const getStaticProps = async () => {
 			} else {
 				return null;
 			}
-		}),
+		})
 	);
 
 	const filteredPosts = files.filter((file) => {

@@ -67,28 +67,29 @@ const Qualify = () => {
 		<Page>
 			<Head>
 				<title>Get Qualified » The Kirk Concept</title>
-				<link rel='icon' href='/favicon.ico' />
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
 				className={`${styles.Qualify} bg-gray-dark text-center align-items-center`}
 				hero
+				bgImg="/bgs/qualified_bg.png"
 			>
-				<h1 className='fs-8xl font-weight-bold text-white'>
-					get qualified<span className='text-primary'>.</span>
+				<h1 className="fs-8xl font-weight-bold text-white">
+					get qualified<span className="text-primary">.</span>
 				</h1>
-				<p className='fs-md font-weight-bold text-white-50 mb-20'>
+				<p className="fs-md font-weight-bold text-white-50 mb-20">
 					We only work with businesses that have been validated and
 					are serious about making a statement in their industry.
 				</p>
 			</Section>
-			<SubHero tagline='See if you qualify for brand dominance.'>
+			<SubHero tagline="See if you qualify for brand dominance.">
 				<Col
 					as={Tilt}
 					sm={6}
 					options={{ max: 15, scale: 1.01 }}
-					className='p-30 shadow bg-white rounded-lg text-gray justify-self-center'
+					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
 				>
-					<h3 className='fs-sm font-weight-bold text-gray-dark mb-20'>
+					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 						Let’s see how serious you are
 					</h3>
 					<p>
@@ -96,106 +97,106 @@ const Qualify = () => {
 						reach out to you via email!
 					</p>
 					<form>
-						<Row className='mx-0'>
+						<Row className="mx-0">
 							<Col
-								className='mr-10'
+								className="mr-10"
 								as={Input}
-								type='text'
+								type="text"
 								onChange={(e) => setFname(e.target.value)}
-								placeholder='First Name*'
-								id='fname'
+								placeholder="First Name*"
+								id="fname"
 								value={fname}
 								required
 							/>
 							<Col
-								className='ml-10'
+								className="ml-10"
 								as={Input}
-								type='text'
+								type="text"
 								onChange={(e) => setLname(e.target.value)}
-								placeholder='Last Name*'
-								id='lname'
+								placeholder="Last Name*"
+								id="lname"
 								value={lname}
 								required
 							/>
 						</Row>
 						<Input
-							type='website'
+							type="website"
 							onChange={(e) => setWebsite(e.target.value)}
-							placeholder='Website*'
-							id='website'
+							placeholder="Website*"
+							id="website"
 							value={website}
 						/>
 						<Input
-							type='text'
+							type="text"
 							onChange={(e) => setEmail(e.target.value)}
-							placeholder='Email*'
-							id='email'
+							placeholder="Email*"
+							id="email"
 							value={email}
 							required
 						/>
 						<Input
-							type='text'
+							type="text"
 							onChange={(e) => setPhone(e.target.value)}
-							placeholder='Phone Number'
-							id='phone'
+							placeholder="Phone Number"
+							id="phone"
 							value={phone}
 							required
 						/>
 						<Dropdown
-							type='text'
+							type="text"
 							onChange={(e) => setUpgrade(e.target.value)}
-							placeholder='What area would you like to upgrade?*'
-							id='upgrade'
+							placeholder="What area would you like to upgrade?*"
+							id="upgrade"
 							value={upgrade}
 							required
 						>
-							<option disabled value='Please Choose'>
+							<option disabled value="Please Choose">
 								What area would you like to upgrade?*
 							</option>
-							<option value='Branding'>Branding</option>
-							<option value='Design System'>Design System</option>
-							<option value='Web Development'>
+							<option value="Branding">Branding</option>
+							<option value="Design System">Design System</option>
+							<option value="Web Development">
 								Web Development
 							</option>
-							<option value='App Development'>
+							<option value="App Development">
 								App Development
 							</option>
 						</Dropdown>
 						<Dropdown
-							type='text'
+							type="text"
 							onChange={(e) => setBudget(e.target.value)}
-							placeholder='What is your budget?*'
-							id='budget'
+							placeholder="What is your budget?*"
+							id="budget"
 							value={budget}
 							required
 						>
-							<option disabled value='Please Choose'>
+							<option disabled value="Please Choose">
 								What is your budget?*
 							</option>
-							<option value='$10k'>{`$10k`}</option>
-							<option value='$10k - $25k'>{`$10k - $25k`}</option>
-							<option value='$25k - $50k'>{`$25k - $50k`}</option>
-							<option value='$50 - $100k'>
+							<option value="$10k">{`$10k`}</option>
+							<option value="$10k - $25k">{`$10k - $25k`}</option>
+							<option value="$25k - $50k">{`$25k - $50k`}</option>
+							<option value="$50 - $100k">
 								{`$50k - $100k`}
 							</option>
 						</Dropdown>
 						<TextArea
-							type='text'
+							type="text"
 							onChange={(e) =>
 								setAdditionalComments(e.target.value)
 							}
-							placeholder='Additional Comments'
-							id='additionalComments'
+							placeholder="Additional Comments"
+							id="additionalComments"
 							value={additionalComments}
 						/>
 						<Button
-							variant='primary'
-							type='submit'
+							variant="primary"
+							type="submit"
 							onClick={(e) => submitQualify(e)}
 						>
 							Submit
 						</Button>
-						<small className='d-block mt-20'>
+						<small className="d-block mt-20">
 							By submitting this form you are agreeing to someone
 							from our team reaching out to you to answer
 							questions and/or conduct business. We have to keep
@@ -206,7 +207,7 @@ const Qualify = () => {
 				</Col>
 			</SubHero>
 			<Section>
-				<p className='text-center'>
+				<p className="text-center">
 					6440 Sky Pointe Dr.
 					<br />
 					Suite 140-422 Las Vegas, NV 89131

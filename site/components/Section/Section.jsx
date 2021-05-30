@@ -11,21 +11,19 @@ const Section = ({
 	children,
 	containerClass,
 	hero,
+	bgImg,
 	bgOverlay,
 	...rest
 }) => {
 	return (
 		<section
 			{...rest}
+			style={{ backgroundImage: `url(${bgImg})` }}
 			className={`${styles.Section} ${
 				hero ? styles.hero : ''
 			} d-flex ${className}`}
 		>
-			<Container
-				className={containerClass}
-				as='div'
-				fluid={fullWidth || false}
-			>
+			<Container className={containerClass} fluid={fullWidth || false}>
 				{columns ? <Row>{children}</Row> : children}
 			</Container>
 			{bgOverlay && <div className={styles.bgOverlay} />}
