@@ -7,8 +7,6 @@ import Page from '../../templates/Page';
 import styles from '../../styles/Whatwedo.module.scss';
 import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
-import Button from 'components/Button/Button';
-import Link from 'next/link';
 
 const WhatWeDo = () => {
 	return (
