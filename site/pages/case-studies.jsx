@@ -16,20 +16,20 @@ import fng from '../utilities/caseStudies/fng';
 import pff from '../utilities/caseStudies/pff';
 import LogoCard from '../components/LogoCard';
 
-const Work = () => {
+const CaseStudies = () => {
 	return (
-		<Page className={styles.Work}>
+		<Page className={styles.CaseStudies}>
 			<Head>
-				<title>The Work Created by The Kirk Concept</title>
+				<title>The Case Studies Created by The Kirk Concept</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
-				className={`${styles.workHero} bg-gray-dark text-center align-items-center`}
+				className={`${styles.caseStudiesHero} bg-gray-dark text-center align-items-center`}
 				bgImg="/bgs/work_bg.png"
 				hero
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
-					work<span className="text-primary">.</span>
+					case studies<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
 					dominance speaks through our body of work.
@@ -84,7 +84,7 @@ const Work = () => {
 			</Section>
 			<Section className="text-center font-weight-light pb-50">
 				<h1 className="fs-lg font-weight-bold text-gray-dark mb-50">
-					More work
+					Brands we've worked with.
 				</h1>
 				<Row>
 					<Col xs={4}>
@@ -173,4 +173,4 @@ const Work = () => {
 	);
 };
 
-export default Work;
+export default CaseStudies;

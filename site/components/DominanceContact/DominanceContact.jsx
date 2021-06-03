@@ -8,15 +8,17 @@ const DominanceContact = (props) => {
 		<Section
 			className={`DominanceContact ${styles.DominanceContact} bg-primary text-center py-50`}
 		>
-			<h2 className='fs-6xl font-weight-bold mw-lg text-gray-dark'>
+			<h2 className="fs-6xl font-weight-bold mw-lg text-gray-dark">
 				dominance
 			</h2>
-			<p className='fs-sm mw-lg text-gray-dark'>
-				We only work with businesses that have been validated And are
-				serious about making a statement in their industry! Fill out our
-				questionnaire to see if you qualify for brand dominance.
+			<p className="fs-sm mw-lg text-gray-dark">
+				We love working with businesses that have been validated and are
+				serious about making a statement in their industry! If you are
+				interested in any of our services and want to see if we are a
+				great fit working together, fill out our questionnaire to see if
+				you are ready for brand dominance!
 			</p>
-			<Button variant='secondary' className='mt-20'>
+			<Button variant="secondary" className="mt-20">
 				Take Me There
 			</Button>
 		</Section>

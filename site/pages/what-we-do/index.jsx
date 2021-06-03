@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import { Row, Col } from 'react-bootstrap';
 import Tilt from 'react-tilt';
-import Section from '../components/Section';
-import SubHero from '../components/SubHero';
-import Page from '../templates/Page';
+import Section from '../../components/Section';
+import SubHero from '../../components/SubHero';
+import Page from '../../templates/Page';
 import styles from '../styles/Whatwedo.module.scss';
-import WordRiver from '../components/WordRiver';
-import DominanceContact from '../components/DominanceContact';
+import WordRiver from '../../components/WordRiver';
+import DominanceContact from '../../components/DominanceContact';
 
 const WhatWeDo = () => {
 	return (

@@ -21,42 +21,42 @@ const Header = ({ props }) => {
 			<header
 				className={`${styles.Header} position-absolute p-10 px-30 d-flex`}
 			>
-				<Link href='/'>
+				<Link href="/">
 					<a>
 						<Image
-							src='/logo_primary.svg'
+							src="/logo_primary.svg"
 							width={114}
 							height={76}
-							layout='intrinsic'
-							objectFit='cover'
-							alt='The Kirk Concept, We get companies excited about their brand.'
+							layout="intrinsic"
+							objectFit="cover"
+							alt="The Kirk Concept, We get companies excited about their brand."
 						/>
 					</a>
 				</Link>
-				<ul className='text-white d-none d-md-flex'>
-					<li className='text-white px-5 font-weight-bold'>
-						<Link href='/work'>
-							<a>work</a>
-						</Link>
-					</li>
-					<li className='text-white px-5 font-weight-bold'>
-						<Link href='/whatwedo'>
+				<ul className="text-white d-none d-md-flex">
+					<li className="text-white px-5 font-weight-bold">
+						<Link href="/whatwedo">
 							<a>what we do</a>
 						</Link>
 					</li>
-					<li className='text-white px-5 font-weight-bold'>
-						<Link href='/contact'>
+					<li className="text-white px-5 font-weight-bold">
+						<Link href="/case-studies">
+							<a>case studies</a>
+						</Link>
+					</li>
+					<li className="text-white px-5 font-weight-bold">
+						<Link href="/contact">
 							<a>contact</a>
 						</Link>
 					</li>
-					<li className='text-white px-5 font-weight-bold'>
-						<Link href='/blog'>
+					<li className="text-white px-5 font-weight-bold">
+						<Link href="/blog">
 							<a>blog</a>
 						</Link>
 					</li>
-					<li className='text-white font-weight-bold'>
-						<Link href='/qualify'>
-							<a className='bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold'>
+					<li className="text-white font-weight-bold">
+						<Link href="/qualify">
+							<a className="bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
 								get qualified
 							</a>
 						</Link>
@@ -69,50 +69,50 @@ const Header = ({ props }) => {
 				}`}
 			>
 				<button
-					className='absolute top-3 left-3 text-white'
+					className="absolute top-3 left-3 text-white"
 					onClick={() => setIsNavOpen(!isNavOpen)}
 				>
 					<CgCloseO size={24} />
 				</button>
-				<div className='navigation flex items-center justify-center h-full'>
-					<ul className='text-center py-3 md:inline-block'>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/'>
+				<div className="navigation flex items-center justify-center h-full">
+					<ul className="text-center py-3 md:inline-block">
+						<li className="py-3 text-xl text-white">
+							<Link href="/">
 								<a>Home</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/brands'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/brands">
 								<a>Brands</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/logo-design'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/logo-design">
 								<a>Logo Design</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/unlimited-graphic-design'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/unlimited-graphic-design">
 								<a>Unlimited Graphic Design</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/blog'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/blog">
 								<a>Blog</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/testimonials'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/testimonials">
 								<a>Testimonials</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/about'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/about">
 								<a>About</a>
 							</Link>
 						</li>
-						<li className='py-3 text-xl text-white'>
-							<Link href='/lets-talk'>
+						<li className="py-3 text-xl text-white">
+							<Link href="/lets-talk">
 								<a>Let's Talk</a>
 							</Link>
 						</li>
