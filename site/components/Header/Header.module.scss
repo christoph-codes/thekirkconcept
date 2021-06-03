@@ -1,3 +1,38 @@
-.mobileNav {
-    background: red;
+@import '../../styles/variables';
+.Header {
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+	ul {
+		justify-content: flex-end;
+		display: flex;
+		list-style: none;
+		li {
+			margin-left: 2rem;
+			color: $white;
+			a {
+				color: white;
+				&:hover
+				{
+					text-decoration: underline;
+					text-decoration-color: $primary;
+					text-decoration-thickness: 3px;
+					text-underline-offset: 0.25rem;
+				}
+				&.active {
+					text-decoration: underline;
+					text-decoration-color: $primary;
+					text-decoration-thickness: 3px;
+					text-underline-offset: 0.25rem;
+				}
+				&.headerButton {
+					&:hover {
+						text-decoration: none !important;
+					}
+				}
+				
+			}
+		}
+	}
 }

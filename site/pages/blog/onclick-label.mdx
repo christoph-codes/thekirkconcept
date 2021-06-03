@@ -1,0 +1,55 @@
+---
+    layout: 'Post/index'
+    title: 'onClick event fires the input twice'
+    description: 'onClick event listener is firing my functino twice, but WHY?!'
+    image: '/images/onclick-label.png'
+    date: '2021-05-22'
+---
+
+This week was a great week development wise but I came across an extremely interesting bug that I could not solve for the life of me. I will break down the scenario shortly but just know the solve for it is way too simple.
+
+## The Problem
+
+I needed to create a custom checkbox input component that hides the input to allow for a custom element to be displayed instead of the radio. Now accesibility rules say that you should always wrap your input's with a label so I did as so.
+
+```jsx
+<label htmlFor='option1' onClick={() => setValueOfInput(!valueOfInput)}>
+	<input type='checkbox' id='option1' className='hidden-input' />
+	{children}
+</label>
+```
+
+My goal was to toggle the value of the input onClick to mimic the same experience of a normal checkbox. When I ran my dev server I realized onClick the `setValueOfInput` function was firing twice and setting the value from `false` to `true` back to `false`.
+
+## Things I Tried
+
+My first thing to check were where all of my setter functions were being called and it was only on the label itself so it didn't make sense to me that it fired twice. I also checked the onClick event that it had a callback to wait for the event, in case it was firing on render and then firing again on click. And then of course I checked all of my useEffects to ensure nothing was forcing the onClick to fire on every change, all clear.
+
+**SO WHAT IN THE WORLD IS SETTING MY VARIABLE**
+
+## The solution
+
+After 2 hours of banging my head up against my monitor, I checked my code again and realized the onClick event listener was being applied to the label. Which the label itself doesn't have a value or "selected" value tied to it, so it looks for the input element that matches its "for" property and applies any event listeners to that input. So the onClick event with the function `setValueOfInput` was firing on the label because the label had the event listener and then it was firing again on the input which fired the same exact function again!
+
+So the corrected code looks like this:
+
+```jsx
+<label htmlFor='option1'>
+	<input
+		// Moved the onClick handler to the input!
+		onClick={() => setValueOfInput(!valueOfInput)}
+		type='checkbox'
+		id='option1'
+		className='hidden-input'
+	/>
+	{children}
+</label>
+```
+
+The reason this works is because the `htmlFor` property and the id it is tied to which binds them as the same element. If the label is now clicked it will fire the onClick of the input ONCE! Problem Solved.
+
+## Last Words
+
+I really hope this article saves you 2 hours of migrains and computer damage lol. This is something simple that I have learned the hard way for sure but this is how you learn right! Let me know if you experienced this or something similar.
+
+👍🏾 Thanks for reading.

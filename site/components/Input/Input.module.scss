@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.Input {
+	padding: 1rem;
+	border: none;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 1rem;
+	font-weight: lighter;
+	color: $gray-dark;
+	&::placeholder {
+		color: $gray;
+	}
+}

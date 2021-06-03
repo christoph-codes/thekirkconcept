@@ -1,0 +1,25 @@
+.CaseStudyCard {
+	max-width: 50rem;
+	margin: 3rem auto;
+	display: grid;
+	grid-template-areas:
+		'. . .'
+		'. main .'
+		'. . link';
+	grid-template-columns: 10rem 1fr 10rem;
+	grid-template-rows: 4rem 1fr 4rem;
+	justify-content: center;
+	align-items: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 26rem;
+	img {
+		justify-self: center;
+		grid-area: main;
+	}
+	a {
+		grid-area: link;
+		justify-self: center;
+	}
+}

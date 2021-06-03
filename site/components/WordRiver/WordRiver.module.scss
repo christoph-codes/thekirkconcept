@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+.WordRiver {
+	overflow: hidden;
+	> div {
+		width: 120%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		left: -10%;
+		right: 10%;
+		position: relative;
+		span {
+			margin: 0 1rem;
+			line-height: 1;
+			&:nth-of-type(4n + 1) {
+				filter: blur(4px);
+			}
+		}
+	}
+}

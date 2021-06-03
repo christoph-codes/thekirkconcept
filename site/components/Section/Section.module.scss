@@ -1,0 +1,23 @@
+.Section {
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem 0;
+	&.hero {
+		height: 90vh;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	* {
+		z-index: 2;
+	}
+	.bgOverlay {
+		background: rgba(0, 0, 0, 0.7);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+		height: inherit;
+		overflow: hidden;
+	}
+}
