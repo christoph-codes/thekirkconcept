@@ -13,9 +13,25 @@
 			color: $white;
 			a {
 				color: white;
-				&:hover {
-					text-decoration: none;
+				&:hover
+				{
+					text-decoration: underline;
+					text-decoration-color: $primary;
+					text-decoration-thickness: 3px;
+					text-underline-offset: 0.25rem;
 				}
+				&.active {
+					text-decoration: underline;
+					text-decoration-color: $primary;
+					text-decoration-thickness: 3px;
+					text-underline-offset: 0.25rem;
+				}
+				&.headerButton {
+					&:hover {
+						text-decoration: none !important;
+					}
+				}
+				
 			}
 		}
 	}

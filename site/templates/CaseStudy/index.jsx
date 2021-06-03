@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Col, Row, Container } from 'react-bootstrap';
 import Tilt from 'react-tilt';
 import Page from '../Page';
@@ -143,9 +144,9 @@ const CaseStudy = ({ caseStudy, ...rest }) => {
 					</Col>
 				</Row>
 				{caseStudy.website.created && (
-					<Button className="mt-50" href={caseStudy.website.url}>
-						Visit Website
-					</Button>
+					<Link href={caseStudy.website.url}><a target="_blank"><Button className="mt-50">
+					Visit Website
+				</Button></a></Link>
 				)}
 			</Section>
 			<DominanceContact />

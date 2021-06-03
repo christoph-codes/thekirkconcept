@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Section from '../Section';
 import Button from '../Button';
 import styles from './DominanceContact.module.scss';
@@ -18,9 +19,10 @@ const DominanceContact = (props) => {
 				great fit working together, fill out our questionnaire to see if
 				you are ready for brand dominance!
 			</p>
-			<Button variant="secondary" className="mt-20">
-				Take Me There
-			</Button>
+			<Link href="/qualify"><a><Button variant="secondary" className="mt-20">
+				Get qualified
+			</Button></a></Link>
+			
 		</Section>
 	);
 };

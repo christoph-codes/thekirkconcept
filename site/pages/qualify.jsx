@@ -78,8 +78,7 @@ const Qualify = () => {
 					get qualified<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20">
-					We only work with businesses that have been validated and
-					are serious about making a statement in their industry.
+				We love working with businesses that have been validated and are serious about making a statement in their industry
 				</p>
 			</Section>
 			<SubHero tagline="See if you qualify for brand dominance.">
@@ -217,7 +216,6 @@ const Qualify = () => {
 					hello@thekirkconcept.com
 				</p>
 			</Section>
-			<DominanceContact />
 		</Page>
 	);
 };

@@ -18,32 +18,32 @@ const Footer = (props) => {
 		<Section className='Footer align-items-center' columns height='3rem'>
 			<Col sm={3}>
 				<Link href='https://facebook.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaFacebook color='#454545' size={18} />
 					</a>
 				</Link>
 				<Link href='https://twitter.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaTwitter color='#454545' size={18} />
 					</a>
 				</Link>
 				<Link href='https://instagram.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaInstagram color='#454545' size={18} />
 					</a>
 				</Link>
 				<Link href='https://medium.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaMedium color='#454545' size={18} />
 					</a>
 				</Link>
 				<Link href='https://youtube.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaYoutube color='#454545' size={18} />
 					</a>
 				</Link>
 				<Link href='https://linkedin.com/thekirkconcept'>
-					<a className='mr-10'>
+					<a target="_blank" className='mr-10'>
 						<FaLinkedin color='#454545' size={18} />
 					</a>
 				</Link>

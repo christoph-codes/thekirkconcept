@@ -7,7 +7,7 @@ import { dateTime } from '../../utilities/helpers';
 const Page = ({
 	children,
 	date,
-	description,
+	description = 'The Kirk Concept, We unlock brand dominance through branding, design systems, and app development.',
 	image,
 	title = 'The Kirk Concept » Branding & App Development',
 	keywords,

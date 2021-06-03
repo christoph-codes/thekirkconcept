@@ -2,10 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { CgCloseO } from 'react-icons/cg';
+import NavLink from '../NavLink';
 import styles from './Header.module.scss';
 
 const Header = ({ props }) => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	
 
 	useEffect(() => {
 		// disabling scrolling when navigation is open
@@ -28,35 +30,34 @@ const Header = ({ props }) => {
 							width={114}
 							height={76}
 							layout="intrinsic"
-							objectFit="cover"
-							alt="The Kirk Concept, We get companies excited about their brand."
+							alt="The Kirk Concept, We unlock brand dominance through branding, design systems, and app development."
 						/>
 					</a>
 				</Link>
 				<ul className="text-white d-none d-md-flex">
 					<li className="text-white px-5 font-weight-bold">
-						<Link href="/whatwedo">
-							<a>what we do</a>
-						</Link>
+						<NavLink href="/what-we-do">
+							what we do
+						</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<Link href="/case-studies">
-							<a>case studies</a>
-						</Link>
+						<NavLink href="/case-study">
+							case studies
+						</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<Link href="/contact">
-							<a>contact</a>
-						</Link>
+						<NavLink href="/contact">
+							contact
+						</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<Link href="/blog">
-							<a>blog</a>
-						</Link>
+						<NavLink href="/blog">
+							blog
+						</NavLink>
 					</li>
 					<li className="text-white font-weight-bold">
 						<Link href="/qualify">
-							<a className="bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
+							<a className={`${styles.headerButton} bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold`}>
 								get qualified
 							</a>
 						</Link>

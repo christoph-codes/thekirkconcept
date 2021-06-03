@@ -1,20 +1,20 @@
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
 // import Tilt from 'react-tilt';
-import Button from '../components/Button/Button';
-import Section from '../components/Section';
-import SubHero from '../components/SubHero';
-import Page from '../templates/Page';
-import styles from '../styles/Work.module.scss';
-import WordRiver from '../components/WordRiver';
-import CaseStudyCard from '../components/CaseStudyCard';
-import DominanceContact from '../components/DominanceContact';
+// import Button from '../../components/Button/Button';
+import Section from '../../components/Section';
+import SubHero from '../../components/SubHero';
+import Page from '../../templates/Page';
+import styles from '../../styles/Work.module.scss';
+import WordRiver from '../../components/WordRiver';
+import CaseStudyCard from '../../components/CaseStudyCard';
+import DominanceContact from '../../components/DominanceContact';
 
-import svvc from '../utilities/caseStudies/svvc';
-import fng from '../utilities/caseStudies/fng';
-import pff from '../utilities/caseStudies/pff';
-import LogoCard from '../components/LogoCard';
+import svvc from '../../utilities/caseStudies/svvc';
+import fng from '../../utilities/caseStudies/fng';
+import pff from '../../utilities/caseStudies/pff';
+import LogoCard from '../../components/LogoCard';
 
 const CaseStudies = () => {
 	return (

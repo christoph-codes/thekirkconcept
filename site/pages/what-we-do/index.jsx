@@ -4,9 +4,11 @@ import Tilt from 'react-tilt';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
-import styles from '../styles/Whatwedo.module.scss';
+import styles from '../../styles/Whatwedo.module.scss';
 import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
+import Button from 'components/Button/Button';
+import Link from 'next/link';
 
 const WhatWeDo = () => {
 	return (
@@ -78,6 +80,8 @@ const WhatWeDo = () => {
 						<li>Native Mobile Apps</li>
 						<li>Component Libraries</li>
 					</ul>
+					{/* <Link href="/what-we-do/web-app-development"><a><Button>Learn More</Button></a></Link> */}
+					
 				</Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
