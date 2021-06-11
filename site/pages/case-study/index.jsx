@@ -87,79 +87,73 @@ const CaseStudies = () => {
 					Brands we've worked with.
 				</h1>
 				<Row>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_equippd_logo.svg"
 							logoAlt="Equippd Life Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_resorts_world_logo.svg"
 							logoAlt="Resorts World Las Vegas Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_kinemedix_logo.svg"
 							logoAlt="Kinemedix Logo"
 						/>
 					</Col>
-				</Row>
-				<Row>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_grubber_logo.svg"
 							logoAlt="Grubber App Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_project_guardian_logo.svg"
 							logoAlt="Project Guardian Las Vegas"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_cheatsheet_logo.svg"
 							logoAlt="Showbiz Cheatsheet Logo"
 						/>
 					</Col>
-				</Row>
-				<Row>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_firefly_energy_logo.svg"
 							logoAlt="Firefly Energy Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_the10_logo.svg"
 							logoAlt="The10 Jewelry Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_inthisorder_logo.svg"
 							logoAlt="InThisOrder Logo"
 						/>
 					</Col>
-				</Row>
-				<Row>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_mysologym_logo.svg"
 							logoAlt="Mysologym Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_icoa_logo.svg"
 							logoAlt="Investment Club of America Logo"
 						/>
 					</Col>
-					<Col xs={4}>
+					<Col sm={4} xs={6}>
 						<LogoCard
 							logoSrc="/logos/gray_vegas_flag_logo.svg"
 							logoAlt="Vegas Flag Logo"
