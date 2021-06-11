@@ -8,16 +8,17 @@ const Page = ({
 	children,
 	date,
 	description = 'The Kirk Concept, We unlock brand dominance through branding, design systems, and app development.',
-	image,
+	image = '/tkc-default-seo-image.png',
 	title = 'The Kirk Concept » Branding & App Development',
 	keywords,
-	router,
+	router,	
 	className,
 }) => {
-	const domain = 'https://thekirkconcept.com';
+	const domain = location.origin;
 	const url = router && router.asPath ? router.asPath : undefined;
 	const canonical = url && url === '/' ? domain : domain + url;
 	const featuredImage = domain + image;
+	console.log(featuredImage)
 	return (
 		<>
 			<Head>

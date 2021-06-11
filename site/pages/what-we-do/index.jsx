@@ -26,7 +26,7 @@ const WhatWeDo = () => {
 					what we do<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					We help companies with branding & digital product design
+					We help companies with branding & digital product development
 				</p>
 			</Section>
 			<SubHero tagline="Dominance comes with strategy, design, then development.">
