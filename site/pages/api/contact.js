@@ -1,43 +1,27 @@
 require('dotenv').config();
-const nodemailer = require('nodemailer');
 const { ContactTemplate } = require('../../emails/contact_template');
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const mailerEmail = process.env.MAILERUSERNAME;
-const mailerPassword = process.env.MAILERPASS;
+const contact = async (req, res) => {
+	const { emailDetails } = req.body;
 
-const contact = (req, res) => {
-	const { name, email, text } = req.body;
-
-	const transporter = nodemailer.createTransport({
-		service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
-		// host: process.env.MAILERHOST,
-		// port: process.env.MAILERPORT,
-		// secure: true
-		auth: {
-			user: mailerEmail,
-			pass: mailerPassword,
-		},
-	});
-
-	const message = {
-		from: email,
-		to: mailerEmail,
-		subject: `New TKC Website Contact Submission from ${req.body.name}`,
-		html: ContactTemplate(req.body),
-	};
-
-	transporter.sendMail(message, (err, data) => {
-		console.log('Message: ', message);
-		if (err) {
-			console.log(err);
-			res.send('error' + JSON.stringify(err));
-		} else {
-			console.log('mail send');
-			res.send('success');
-		}
-	});
-
-	console.log(name, email, text);
-	res.send('success');
+	const msg = {
+		to: 'hello@thekirkconcept.com', // Change to your recipient
+		from: 'hello@thekirkconcept.com', // Change to your verified sender
+		subject: 'Contact Submission from TKCWEB',
+		text: 'Make sure to reach out because you know you care!',
+		html: ContactTemplate(emailDetails),
+	  }
+	  await sgMail
+		.send(msg)
+		.then(() => {
+		  console.log('Email sent');
+		  res.json('everything sent')
+		})
+		.catch((error) => {
+		  console.error(error)
+		})
+	
 };
 export default contact;

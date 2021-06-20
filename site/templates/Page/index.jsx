@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { dateTime } from '../../utilities/helpers';
+// import seoImage from '../../public/images/tkc-default-seo-image.png';
 
 const Page = ({
 	children,
@@ -11,14 +13,14 @@ const Page = ({
 	image = '/tkc-default-seo-image.png',
 	title = 'The Kirk Concept » Branding & App Development',
 	keywords,
-	router,	
 	className,
 }) => {
-	const domain = location.origin;
+	const router = useRouter();
+	const domain = 'https://thekirkconcept.com';
 	const url = router && router.asPath ? router.asPath : undefined;
 	const canonical = url && url === '/' ? domain : domain + url;
-	const featuredImage = domain + image;
-	console.log(featuredImage)
+	// const featuredImage = domain + image;
+	// console.log(featuredImage);
 	return (
 		<>
 			<Head>
@@ -78,9 +80,9 @@ const Page = ({
 					content='t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc'
 					name='google-site-verification'
 				/> */}
-				{featuredImage && (
+				{image && (
 					<>
-						<meta content={featuredImage} property='og:image' />
+						<meta content={image} property='og:image' />
 						<meta content={description} property='og:image:alt' />
 					</>
 				)}
