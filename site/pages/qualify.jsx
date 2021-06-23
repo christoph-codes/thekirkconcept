@@ -22,33 +22,25 @@ const Qualify = () => {
 	const [upgrade, setUpgrade] = useState('Please Choose');
 	const [budget, setBudget] = useState('Please Choose');
 	const [additionalComments, setAdditionalComments] = useState('');
+	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
 
 	const submitQualify = (e) => {
 		e.preventDefault();
-		console.log({
-			fname,
-			lname,
-			phone,
-			email,
-			upgrade,
-			budget,
-			website,
-			additionalComments,
-		});
 		axios
 			.post('/api/qualify', {
-				fname,
-				lname,
-				phone,
-				email,
-				upgrade,
-				budget,
-				website,
-				additionalComments,
+				emailDetails: {
+					fname,
+					lname,
+					phone,
+					email,
+					upgrade,
+					budget,
+					website,
+					additionalComments,
+				}
 			})
 			.then((data) => {
 				if (data.status === 200) {
-					console.log('Response to a successful call', data);
 					return (
 						<h1>
 							Thank you for inquiring. Someone from our team will
@@ -83,11 +75,11 @@ const Qualify = () => {
 			</Section>
 			<SubHero tagline="See if you qualify for brand dominance.">
 				<Col
-					as={Tilt}
 					sm={6}
-					options={{ max: 15, scale: 1.01 }}
 					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
 				>
+					{successfulSubmission ? (
+					<>
 					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 						Let’s see how serious you are
 					</h3>
@@ -202,7 +194,16 @@ const Qualify = () => {
 							this info on file so we know who to respond to!
 							Thank you in advance.
 						</small>
-					</form>
+					</form></>
+					) : (
+						<div className="text-center">
+							<img className="mx-auto" src="/images/letsgettowork-siliconvalley.gif" alt="Thank you for your submission" />
+							<h4 className="mt-24">
+								You are awesome! We will get in touch with you shortly. In the meantime, check out our <Link href="/case-study"><a className="text-gray text-underline">case studies!</a></Link>
+							</h4>
+						</div>
+					)}
+					
 				</Col>
 			</SubHero>
 			<Section>

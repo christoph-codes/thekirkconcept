@@ -13,15 +13,13 @@ const contact = async (req, res) => {
 		text: 'Make sure to reach out because you know you care!',
 		html: ContactTemplate(emailDetails),
 	  }
-	  await sgMail
-		.send(msg)
+	  await sgMail.send(msg)
 		.then(() => {
 		  console.log('Email sent');
 		  res.json('everything sent')
 		})
 		.catch((error) => {
 		  console.error(error)
-		})
-	
+		});
 };
 export default contact;

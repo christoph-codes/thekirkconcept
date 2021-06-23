@@ -61,9 +61,7 @@ const Contact = () => {
 			</Section>
 			<SubHero tagline="hello@thekirkconcept.com">
 				<Col
-					as={Tilt}
 					sm={6}
-					options={{ max: 15, scale: 1.01 }}
 					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
 				>
 					{!successfulSubmission ? (
