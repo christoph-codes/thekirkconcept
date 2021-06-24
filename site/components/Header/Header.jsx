@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { CgCloseO } from 'react-icons/cg';
+import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 import NavLink from '../NavLink';
 import styles from './Header.module.scss';
 
@@ -63,18 +63,24 @@ const Header = ({ props }) => {
 						</Link>
 					</li>
 				</ul>
+				{!isNavOpen && <button
+					className={`text-white d-md-none d-flex bg-transparent border-0`}
+					onClick={() => setIsNavOpen(!isNavOpen)}
+				>
+					<AiOutlineMenu size={36} />
+				</button>}
+				{isNavOpen && <button
+					className="text-white d-md-none d-flex bg-transparent border-0"
+					onClick={() => setIsNavOpen(!isNavOpen)}
+				>
+					<AiOutlineCloseCircle size={36} />
+				</button>}
 			</header>
 			<div
-				className={`w-full h-full bg-purple z-50 transform ease-in-out ${
+				className={`h-100 bg-gray ${
 					!isNavOpen ? 'd-none' : 'd-flex'
 				}`}
 			>
-				<button
-					className="absolute top-3 left-3 text-white"
-					onClick={() => setIsNavOpen(!isNavOpen)}
-				>
-					<CgCloseO size={24} />
-				</button>
 				<div className="navigation flex items-center justify-center h-full">
 					<ul className="text-center py-3 md:inline-block">
 						<li className="py-3 text-xl text-white">

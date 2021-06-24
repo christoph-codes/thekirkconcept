@@ -36,7 +36,9 @@ const Blog = ({ posts }) => {
 						<Col
 							as={Tilt}
 							options={{ max: 15, scale: 1.05 }}
-							sm={3}
+							lg={3}
+							sm={5}
+							xs={9}
 							key={post.path}
 							className="p-30 shadow bg-white rounded-lg text-gray"
 						>

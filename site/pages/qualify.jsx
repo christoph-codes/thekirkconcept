@@ -41,6 +41,7 @@ const Qualify = () => {
 			})
 			.then((data) => {
 				if (data.status === 200) {
+					setSuccessfulSubmission(true);
 					return (
 						<h1>
 							Thank you for inquiring. Someone from our team will
@@ -78,7 +79,7 @@ const Qualify = () => {
 					sm={6}
 					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
 				>
-					{successfulSubmission ? (
+					{!successfulSubmission ? (
 					<>
 					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 						Let’s see how serious you are
