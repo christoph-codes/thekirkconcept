@@ -7,7 +7,7 @@ import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Button from '../../components/Button';
 import DominanceContact from '../../components/DominanceContact';
-import Card from 'components/Card';
+import Card from '../../components/Card';
 import styles from './CaseStudy.module.scss';
 
 const CaseStudy = ({ caseStudy, ...rest }) => {

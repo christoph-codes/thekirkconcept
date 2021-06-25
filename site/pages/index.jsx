@@ -9,10 +9,10 @@ import Page from '../templates/Page';
 import WordRiver from '../components/WordRiver';
 import CaseStudyCard from '../components/CaseStudyCard';
 import DominanceContact from '../components/DominanceContact';
+import Card from '../components/Card';
 import svvc from '../utilities/caseStudies/svvc';
 import fng from '../utilities/caseStudies/fng';
 import pff from '../utilities/caseStudies/pff';
-import Card from 'components/Card';
 import styles from '../styles/Home.module.scss';
 
 const Home = () => {

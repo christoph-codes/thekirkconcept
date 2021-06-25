@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
 import Tilt from 'react-tilt';
 import Section from '../../components/Section';
@@ -7,8 +6,7 @@ import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
 import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
-import Button from 'components/Button';
-import Card from 'components/Card';
+import Card from '../../components/Card';
 import styles from '../../styles/Whatwedo.module.scss';
 
 const WhatWeDo = () => {

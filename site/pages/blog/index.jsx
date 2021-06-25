@@ -7,7 +7,7 @@ import { Col } from 'react-bootstrap';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
-import Card from 'components/Card';
+import Card from '../../components/Card';
 import { dateTime } from '../../utilities/helpers';
 import styles from '../../styles/Blog.module.scss';
 

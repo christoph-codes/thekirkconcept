@@ -7,9 +7,8 @@ import Section from '../components/Section';
 import Page from '../templates/Page';
 import SubHero from '../components/SubHero';
 import Input, { TextArea, Dropdown } from '../components/Input';
-import Card from 'components/Card';
+import Card from '../components/Card';
 import Button from '../components/Button';
-import DominanceContact from '../components/DominanceContact';
 import styles from '../styles/Contact.module.scss';
 
 const Qualify = () => {

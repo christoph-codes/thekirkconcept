@@ -6,7 +6,7 @@ import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
 import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
-import Card from 'components/Card';
+import Card from '../../components/Card';
 
 const WebAppDevelopment = () => {
 	return (
