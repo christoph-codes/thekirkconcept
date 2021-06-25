@@ -10,11 +10,11 @@ import Section from '../components/Section';
 import Page from '../templates/Page';
 import SubHero from '../components/SubHero';
 import Input, { TextArea } from '../components/Input';
-
-import styles from '../styles/Contact.module.scss';
 import Button from '../components/Button';
 import DominanceContact from '../components/DominanceContact';
-import Card from 'components/Card/Card';
+import Card from 'components/Card';
+
+import styles from '../styles/Contact.module.scss';
 
 const Contact = () => {
 	const [name, setName] = useState('');

@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
+import Tilt from 'react-tilt';
 import { Col } from 'react-bootstrap';
 import Section from '../../components/Section';
-import Tilt from 'react-tilt';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
+import Card from 'components/Card';
 import { dateTime } from '../../utilities/helpers';
 import styles from '../../styles/Blog.module.scss';
-import Card from 'components/Card/Card';
 
 const Blog = ({ posts }) => {
 	return (

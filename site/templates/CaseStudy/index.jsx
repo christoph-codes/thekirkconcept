@@ -1,15 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Tilt from 'react-tilt';
 import Page from '../Page';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
-import Input, { TextArea } from '../../components/Input';
 import Button from '../../components/Button';
 import DominanceContact from '../../components/DominanceContact';
+import Card from 'components/Card';
 import styles from './CaseStudy.module.scss';
-import Card from 'components/Card/Card';
 
 const CaseStudy = ({ caseStudy, ...rest }) => {
 	return (

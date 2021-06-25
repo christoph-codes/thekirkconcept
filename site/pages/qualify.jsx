@@ -3,16 +3,14 @@ import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Col, Row } from 'react-bootstrap';
-import Tilt from 'react-tilt';
 import Section from '../components/Section';
 import Page from '../templates/Page';
 import SubHero from '../components/SubHero';
 import Input, { TextArea, Dropdown } from '../components/Input';
-
-import styles from '../styles/Contact.module.scss';
+import Card from 'components/Card';
 import Button from '../components/Button';
 import DominanceContact from '../components/DominanceContact';
-import Card from 'components/Card/Card';
+import styles from '../styles/Contact.module.scss';
 
 const Qualify = () => {
 	const [fname, setFname] = useState('');
