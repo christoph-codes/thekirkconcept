@@ -14,6 +14,7 @@ import svvc from '../utilities/caseStudies/svvc';
 import fng from '../utilities/caseStudies/fng';
 import pff from '../utilities/caseStudies/pff';
 import Tilt from 'react-tilt';
+import Card from 'components/Card/Card';
 
 const Home = () => {
 	return (
@@ -29,8 +30,8 @@ const Home = () => {
 				<h1 className="fs-xl font-weight-bold text-white-50">
 					We unlock brand
 					<br />
-					<span className="text-white fs-8xl nmt-2 d-block">
-						dominance<span className="text-primary fs-8xl">.</span>
+					<span className="text-white fs-8xl nmt-1 d-block">
+						dominance<span className="text-primary">.</span>
 					</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
@@ -44,68 +45,56 @@ const Home = () => {
 				</Link>
 			</Section>
 			<SubHero tagline="We have systems in place to birth excellence.">
-				<Col
-					as={Tilt}
-					sm
-					xs={10}
-					options={{ max: 15, scale: 1.05 }}
-					className="p-30 shadow bg-white rounded-lg text-gray"
-				>
-					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-						Branding
-					</h3>
-					<p>
-						Brand dominance is only achieved with a clear and
-						purposeful brand strategy and visual connection that
-						resonates with your audience and industry.
-					</p>
-					<Link href="/branding">
-						<a className="text-gray-dark primary-underline">
-							Learn More
-						</a>
-					</Link>
+				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Branding
+						</h3>
+						<p>
+							Brand dominance is only achieved with a clear and
+							purposeful brand strategy and visual connection that
+							resonates with your audience and industry.
+						</p>
+						<Link href="/branding">
+							<a className="text-gray-dark primary-underline">
+								Learn More
+							</a>
+						</Link>
+					</Card>
 				</Col>
-				<Col
-					sm
-					xs={10}
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					className="p-30 shadow bg-white rounded-lg text-gray"
-				>
-					<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
-						Design System
-					</h3>
-					<p>
-						A dominant design systems creates consistent experiences
-						across multiple mediums and platforms to establish brand
-						equity on the digital level.
-					</p>
-					<Link href="/design-system">
-						<a className="text-gray-dark primary-underline">
-							Learn More
-						</a>
-					</Link>
+				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
+							Design System
+						</h3>
+						<p>
+							A dominant design systems creates consistent
+							experiences across multiple mediums and platforms to
+							establish brand equity on the digital level.
+						</p>
+						<Link href="/design-system">
+							<a className="text-gray-dark primary-underline">
+								Learn More
+							</a>
+						</Link>
+					</Card>
 				</Col>
-				<Col
-					sm
-					xs={10}
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					className="p-30 shadow bg-white rounded-lg text-gray"
-				>
-					<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
-						App Development
-					</h3>
-					<p>
-						Mobile and web application development brings a dominant
-						brand to life through user experiences that connect a
-						product and a loyal customer.
-					</p>
-					<Link href="/development">
-						<a className="text-gray-dark primary-underline">
-							Learn More
-						</a>
-					</Link>
+				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
+							App Development
+						</h3>
+						<p>
+							Mobile and web application development brings a
+							dominant brand to life through user experiences that
+							connect a product and a loyal customer.
+						</p>
+						<Link href="/development">
+							<a className="text-gray-dark primary-underline">
+								Learn More
+							</a>
+						</Link>
+					</Card>
 				</Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
@@ -160,15 +149,15 @@ const Home = () => {
 				<CaseStudyCard casestudy={svvc} />
 				<CaseStudyCard casestudy={fng} />
 				<CaseStudyCard casestudy={pff} />
-				<h2 className="text-center text-gray-dark font-weight-bold mt-30">
+				<h2 className="text-center text-primary font-weight-bold mt-30">
 					Additional dominant brands we’ve worked with.
 				</h2>
 				<Row
-					md={3}
+					md={4}
 					xs={6}
-					className="my-100 mx-auto mw-lg align-items-center"
+					className="my-50 mx-auto mw-lg align-items-center"
 				>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_kinemedix_logo.svg"
@@ -176,7 +165,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_vegas_flag_logo.svg"
@@ -184,7 +173,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_mysologym_logo.svg"
@@ -192,7 +181,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_project_guardian_logo.svg"
@@ -200,7 +189,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_firefly_energy_logo.svg"
@@ -208,7 +197,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_grubber_logo.svg"
@@ -216,7 +205,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_cheatsheet_logo.svg"
@@ -224,7 +213,7 @@ const Home = () => {
 							/>
 						</Tilt>
 					</Col>
-					<Col className="p-30">
+					<Col xs={6} className={`p-md-30 ${styles.darkLogos}`}>
 						<Tilt>
 							<img
 								src="/logos/gray_the10_logo.svg"

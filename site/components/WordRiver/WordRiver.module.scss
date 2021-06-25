@@ -3,12 +3,18 @@
 	overflow: hidden;
 	> div {
 		width: 120%;
+		
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		left: -10%;
 		right: 10%;
 		position: relative;
+		@media(max-width: 48rem) {
+			width: 150%;
+			left: -25%;
+			right: 25%;
+		}
 		span {
 			margin: 0 1rem;
 			line-height: 1;

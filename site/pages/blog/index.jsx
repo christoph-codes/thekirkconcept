@@ -9,6 +9,7 @@ import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
 import { dateTime } from '../../utilities/helpers';
 import styles from '../../styles/Blog.module.scss';
+import Card from 'components/Card/Card';
 
 const Blog = ({ posts }) => {
 	return (
@@ -27,7 +28,7 @@ const Blog = ({ posts }) => {
 					blog<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					Hoarding knowledge doesn't benefit anyone, so enjoy!
+					Hoarding knowledge doesn&apos;t benefit anyone, so enjoy!
 				</p>
 			</Section>
 			<SubHero tagline="Our top posts for your reading.">
@@ -36,31 +37,33 @@ const Blog = ({ posts }) => {
 						<Col
 							as={Tilt}
 							options={{ max: 15, scale: 1.05 }}
-							lg={3}
+							lg={4}
 							sm={5}
-							xs={9}
+							xs={12}
 							key={post.path}
-							className="p-30 shadow bg-white rounded-lg text-gray"
+							className="mb-32 cursor-pointer"
 						>
 							<Link href={post.path}>
-								<article className="d-flex flex-column align-items-start cursor-pointer">
-									<img
-										src={post.image}
-										alt={post.title}
-										className="mb-20"
-									/>
-									<small className="badge badge-primary mb-10">
-										{dateTime(post.date)}
-									</small>
-									<h3 className="fs-sm font-weight-bold text-gray-dark">
-										{post.title}
-									</h3>
-									<Link href={post.path}>
-										<a className="text-gray-dark justify-self-end primary-underline mt-auto">
-											Read Now!
-										</a>
-									</Link>
-								</article>
+								<a>
+									<Card className="h-100">
+										<img
+											src={post.image}
+											alt={post.title}
+											className="mb-20"
+										/>
+										<small className="badge badge-primary mb-10">
+											{dateTime(post.date)}
+										</small>
+										<h3 className="fs-sm font-weight-bold text-gray-dark">
+											{post.title}
+										</h3>
+										<Link href={post.path}>
+											<a className="text-gray-dark justify-self-end primary-underline mt-auto">
+												Read Now!
+											</a>
+										</Link>
+									</Card>
+								</a>
 							</Link>
 						</Col>
 					);

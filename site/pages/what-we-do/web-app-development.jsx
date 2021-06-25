@@ -6,6 +6,7 @@ import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
 import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
+import Card from 'components/Card/Card';
 
 const WebAppDevelopment = () => {
 	return (
@@ -27,24 +28,21 @@ const WebAppDevelopment = () => {
 				</p>
 			</Section>
 			<SubHero tagline="App development that focuses on delivering amazing experiences.">
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={6}
-					className="p-30 shadow bg-white rounded-lg text-gray"
-				>
-					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-						What we solve
-					</h3>
-					<p>
-						We provide application solutions to make customer
-						experiences easier to use as well as internal teams to
-						become more efficient with day-to-day processes and
-						more. Our team focuses on creating solutions that are
-						responsive for all devices, consistent to maintain brand
-						cohesiveness, and flexible to adapt to ever changing
-						business growth.
-					</p>
+				<Col as={Tilt} options={{ max: 15, scale: 1.05 }} sm={6}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							What we solve
+						</h3>
+						<p>
+							We provide application solutions to make customer
+							experiences easier to use as well as internal teams
+							to become more efficient with day-to-day processes
+							and more. Our team focuses on creating solutions
+							that are responsive for all devices, consistent to
+							maintain brand cohesiveness, and flexible to adapt
+							to ever changing business growth.
+						</p>
+					</Card>
 				</Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">

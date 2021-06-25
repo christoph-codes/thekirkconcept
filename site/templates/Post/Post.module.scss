@@ -7,6 +7,17 @@
 		background-position: center;
 		background-attachment: fixed;
 	}
+	.postContent {
+		max-width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		@media(max-width: 48rem) {
+			max-width: 75%;
+		}
+		@media(max-width: 36rem) {
+			max-width: 90%;
+		}
+	}
 	h1 {
 		font-size: 3rem;
 		font-weight: bold;
@@ -33,6 +44,7 @@
 		color: $gray;
 		line-height: 2.25;
 		margin-bottom: 2rem;
+		word-break: break-word;
 	}
 	ul {
 		margin-bottom: 2rem;

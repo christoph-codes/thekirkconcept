@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import emailjs, {init} from 'emailjs-com';
+import emailjs, { init } from 'emailjs-com';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,6 +14,7 @@ import Input, { TextArea } from '../components/Input';
 import styles from '../styles/Contact.module.scss';
 import Button from '../components/Button';
 import DominanceContact from '../components/DominanceContact';
+import Card from 'components/Card/Card';
 
 const Contact = () => {
 	const [name, setName] = useState('');
@@ -24,18 +25,19 @@ const Contact = () => {
 	const submitContact = (e) => {
 		e.preventDefault();
 		const emailDetails = {
-			name,email,content,
-		}
+			name,
+			email,
+			content,
+		};
 		axios
 			.post('/api/contact', {
-				emailDetails
+				emailDetails,
 			})
 			.then((data) => {
-				if(data.status === 200) {
+				if (data.status === 200) {
 					console.log('ALL IS WELL ');
 					setSuccessfulSubmission(true);
 				}
-				
 			})
 			.catch((err) => {
 				console.log('Error on the front end:', err);
@@ -60,65 +62,77 @@ const Contact = () => {
 				</p>
 			</Section>
 			<SubHero tagline="hello@thekirkconcept.com">
-				<Col
-					sm={6}
-					className="p-30 shadow bg-white rounded-lg text-gray justify-self-center"
-				>
-					{!successfulSubmission ? (
-						<>
-					<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-						Contact us for questions.
-					</h3>
-					<p>
-						Please fill out the form below and a team member will
-						reach out to you via email!
-					</p>
-						<form>
-							<Input
-								type="text"
-								onChange={(e) => setName(e.target.value)}
-								placeholder="Full Name"
-								id="name"
-								value={name}
-							/>
-							<Input
-								type="text"
-								onChange={(e) => setEmail(e.target.value)}
-								placeholder="Email"
-								id="email"
-								value={email}
-							/>
-							<TextArea
-								type="text"
-								onChange={(e) => setContent(e.target.value)}
-								placeholder="Message"
-								id="content"
-								value={content}
-							/>
-							<Button
-								variant="primary"
-								type="submit"
-								onClick={(e) => submitContact(e)}
-							>
-								Send
-							</Button>
-							<small className="d-block mt-20">
-								By submitting this form you are agreeing to someone
-								from our team reaching out to you to answer
-								questions and/or conduct business. We have to keep
-								this info on file so we know who to respond to!
-								Thank you in advance.
-							</small>
-						</form>
-						</>
-					) : (
-						<>
-						<img src="/images/letsgettowork-siliconvalley.gif" alt="Thank you for your submission" />
-							<h4 className="mt-24">
-								You are awesome! We will get in touch with you shortly. In the meantime, go tell someone you love them!
-							</h4>
-						</>
-					)}
+				<Col sm={6}>
+					<Card>
+						{!successfulSubmission ? (
+							<>
+								<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+									Contact us for questions.
+								</h3>
+								<p>
+									Please fill out the form below and a team
+									member will reach out to you via email!
+								</p>
+								<form>
+									<Input
+										type="text"
+										onChange={(e) =>
+											setName(e.target.value)
+										}
+										placeholder="Full Name"
+										id="name"
+										value={name}
+									/>
+									<Input
+										type="text"
+										onChange={(e) =>
+											setEmail(e.target.value)
+										}
+										placeholder="Email"
+										id="email"
+										value={email}
+									/>
+									<TextArea
+										type="text"
+										onChange={(e) =>
+											setContent(e.target.value)
+										}
+										placeholder="Message"
+										id="content"
+										value={content}
+									/>
+									<Button
+										className="w-100"
+										variant="primary"
+										type="submit"
+										onClick={(e) => submitContact(e)}
+									>
+										Send
+									</Button>
+									<small className="d-block mt-20">
+										By submitting this form you are agreeing
+										to someone from our team reaching out to
+										you to answer questions and/or conduct
+										business. We have to keep this info on
+										file so we know who to respond to! Thank
+										you in advance.
+									</small>
+								</form>
+							</>
+						) : (
+							<>
+								<img
+									src="/images/letsgettowork-siliconvalley.gif"
+									alt="Thank you for your submission"
+								/>
+								<h4 className="mt-24">
+									You are awesome! We will get in touch with
+									you shortly. In the meantime, go tell
+									someone you love them!
+								</h4>
+							</>
+						)}
+					</Card>
 				</Col>
 			</SubHero>
 			<Section>

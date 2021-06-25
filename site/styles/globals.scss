@@ -10,6 +10,9 @@ html {
 }
 .nmt-1 {
 	margin-top: -1rem;
+	@media(max-width: 48rem) {
+		margin-top: 0;
+	}
 }
 .nmt-2 {
 	margin-top: -2rem;
@@ -24,8 +27,9 @@ html {
 	font-size: 9rem !important;
 	line-height: 1.25;
 	@media (max-width: 48rem) {
-		font-size: 5rem !important;
-		line-height: 1.5;
+		font-size: 4rem !important;
+		line-height: 1;
+		margin-bottom: 1rem;
 	}
 }
 .fs-7xl {
@@ -102,7 +106,7 @@ html {
 	font-size: 1rem !important;
 	line-height: 1.5;
 	@media (max-width: 48rem) {
-		font-size: 5rem !important;
+		font-size: 1rem !important;
 	}
 }
 

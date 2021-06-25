@@ -16,7 +16,11 @@ import Link from 'next/link';
 const Footer = (props) => {
 	return (
 		<Section className="Footer align-items-center" columns height="3rem">
-			<Col md xs={12} className="text-center text-md-left mb-16 mb-md-0">
+			<Col
+				md={4}
+				xs={12}
+				className="text-center text-md-left mb-16 mb-md-0"
+			>
 				<Link href="https://facebook.com/thekirkconcept">
 					<a target="_blank" className="mr-10">
 						<FaFacebook color="#454545" size={18} />
@@ -48,7 +52,11 @@ const Footer = (props) => {
 					</a>
 				</Link>
 			</Col>
-			<Col md xs={12} className="text-right text-gray-dark">
+			<Col
+				md
+				xs={12}
+				className="text-md-right text-center text-gray-dark"
+			>
 				Site made with <FaHeart color="#e2ff08" /> by The Kirk Concept.
 				Copyright © 2021. All rights reserved.{' '}
 			</Col>
