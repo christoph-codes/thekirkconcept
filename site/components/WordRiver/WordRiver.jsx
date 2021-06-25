@@ -3,9 +3,13 @@ import PropTypes, { string } from 'prop-types';
 import styles from './WordRiver.module.scss';
 
 const WordRiver = ({ words, colors, maxRows, className, ...rest }) => {
-	const wordBuilder = (word, color) => {
+	const wordBuilder = (word, color, index) => {
 		return (
-			<span className="fs-4xl" style={{ color, fontWeight: 'bold' }}>
+			<span
+				key={index}
+				className="fs-4xl"
+				style={{ color, fontWeight: 'bold' }}
+			>
 				{word}
 			</span>
 		);
