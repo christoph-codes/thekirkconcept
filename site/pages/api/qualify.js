@@ -12,14 +12,15 @@ const qualify = async (req, res) => {
 		subject: 'Qualify Submission from TKCWEB',
 		text: 'Someone is looking to work with TKC!',
 		html: QualifyTemplate(emailDetails),
-	  }
-	  await sgMail.send(msg)
+	};
+	await sgMail
+		.send(msg)
 		.then(() => {
-		  console.log('Email sent');
-		  res.json('everything sent');
+			console.log('Email sent');
+			res.json('everything sent');
 		})
 		.catch((error) => {
-		  console.error(error);
+			console.error(error);
 		});
 };
 export default qualify;

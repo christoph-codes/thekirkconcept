@@ -4,3 +4,4 @@ node_modules
 .env.build
 .env.local
 package-lock.json
+yarn.lock

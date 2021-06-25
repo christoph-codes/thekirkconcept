@@ -12,14 +12,15 @@ const contact = async (req, res) => {
 		subject: 'Contact Submission from TKCWEB',
 		text: 'Make sure to reach out because you know you care!',
 		html: ContactTemplate(emailDetails),
-	  }
-	  await sgMail.send(msg)
+	};
+	await sgMail
+		.send(msg)
 		.then(() => {
-		  console.log('Email sent');
-		  res.json('everything sent')
+			console.log('Email sent');
+			res.json('everything sent');
 		})
 		.catch((error) => {
-		  console.error(error)
+			console.error(error);
 		});
 };
 export default contact;

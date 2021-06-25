@@ -12,7 +12,7 @@ export default async (req, res) => {
 	const {
 		fname,
 		lname,
-        website,
+		website,
 		email,
 		phone,
 		upgrade,
@@ -28,7 +28,7 @@ export default async (req, res) => {
 		budget,
 		upgrade,
 		website,
-		additionalComments,
+		additionalComments
 	);
 
 	if (!email || !fname || !lname) {
