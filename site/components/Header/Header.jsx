@@ -1,13 +1,13 @@
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { CgCloseO } from 'react-icons/cg';
+import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 import NavLink from '../NavLink';
 import styles from './Header.module.scss';
 
 const Header = ({ props }) => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
-	
 
 	useEffect(() => {
 		// disabling scrolling when navigation is open
@@ -36,90 +36,105 @@ const Header = ({ props }) => {
 				</Link>
 				<ul className="text-white d-none d-md-flex">
 					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/what-we-do">
-							what we do
-						</NavLink>
+						<NavLink href="/what-we-do">what we do</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/case-study">
-							case studies
-						</NavLink>
+						<NavLink href="/case-study">case studies</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/contact">
-							contact
-						</NavLink>
+						<NavLink href="/blog">blog</NavLink>
 					</li>
 					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/blog">
-							blog
-						</NavLink>
+						<NavLink href="/contact">contact</NavLink>
 					</li>
+
 					<li className="text-white font-weight-bold">
 						<Link href="/qualify">
-							<a className={`${styles.headerButton} bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold`}>
+							<a
+								className={`${styles.headerButton} bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold`}
+							>
 								get qualified
 							</a>
 						</Link>
 					</li>
 				</ul>
+				{!isNavOpen && (
+					<button
+						className={`text-white d-md-none d-flex bg-transparent border-0`}
+						onClick={() => setIsNavOpen(!isNavOpen)}
+					>
+						<AiOutlineMenu size={36} />
+					</button>
+				)}
+				{isNavOpen && (
+					<button
+						className="text-white d-md-none d-flex bg-transparent border-0"
+						onClick={() => setIsNavOpen(!isNavOpen)}
+					>
+						<AiOutlineCloseCircle color="#767676" size={36} />
+					</button>
+				)}
 			</header>
-			<div
-				className={`w-full h-full bg-purple z-50 transform ease-in-out ${
-					!isNavOpen ? 'd-none' : 'd-flex'
+			<aside
+				className={`${
+					styles.SideNav
+				} h-100 d-flex align-content-center shadow ${
+					isNavOpen ? styles.isActive : ''
 				}`}
 			>
-				<button
-					className="absolute top-3 left-3 text-white"
-					onClick={() => setIsNavOpen(!isNavOpen)}
-				>
-					<CgCloseO size={24} />
-				</button>
-				<div className="navigation flex items-center justify-center h-full">
-					<ul className="text-center py-3 md:inline-block">
-						<li className="py-3 text-xl text-white">
-							<Link href="/">
-								<a>Home</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/brands">
-								<a>Brands</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/logo-design">
-								<a>Logo Design</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/unlimited-graphic-design">
-								<a>Unlimited Graphic Design</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/blog">
-								<a>Blog</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/testimonials">
-								<a>Testimonials</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/about">
-								<a>About</a>
-							</Link>
-						</li>
-						<li className="py-3 text-xl text-white">
-							<Link href="/lets-talk">
-								<a>Let's Talk</a>
-							</Link>
-						</li>
-					</ul>
-				</div>
-			</div>
+				<ul className="w-100">
+					<li>
+						<NavLink
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/"
+						>
+							home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/what-we-do"
+						>
+							what we do
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/case-study"
+						>
+							case studies
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/blog"
+						>
+							blog
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/contact"
+						>
+							contact
+						</NavLink>
+					</li>
+					<li>
+						<Link
+							onClick={() => setIsNavOpen(!isNavOpen)}
+							href="/qualify"
+						>
+							<a className="d-block text-center bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
+								get qualified
+							</a>
+						</Link>
+					</li>
+				</ul>
+			</aside>
 		</>
 	);
 };

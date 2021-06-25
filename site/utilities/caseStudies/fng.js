@@ -6,7 +6,7 @@ const fng = {
 	secondaryBgImg: '/bgs/fng-secondary-bg.png',
 	logo: '/logos/fng_logo.svg',
 	electricLogo: '/logos/electric_fng_logo.svg',
-	description: 'Forgotten Not Gone rebrand.',
+	description: 'Forgotten Not Gone Rebrand.',
 	brief: 'To create a dominant brand for Forgotten Not Gone, a leading non-profit that focuses on Suicide Prevention through Veteran Peer Support Outdoor Recreation. FNG was looking to create a memorable brand that is recognizeable to the entire veteran community but entice emotion for those who have a heart for our soldiers who has served. They wanted their brand to breath veteran and military ambiance along with caring aspect to bring about country-wide awareness.',
 	colors: {
 		primary: {

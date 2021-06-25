@@ -5,8 +5,8 @@ import styles from './CaseStudyCard.module.scss';
 
 const CaseStudyCard = ({ casestudy }) => {
 	return (
-		<Tilt options={{ scale: 1.1 }}>
-			<Link href={casestudy.slug}>
+		<Tilt options={{ max: 15, scale: 1.05 }}>
+			<Link href={`/case-study${casestudy.slug}`}>
 				<article
 					className={styles.CaseStudyCard}
 					style={{ backgroundImage: `url(${casestudy.bgImg})` }}

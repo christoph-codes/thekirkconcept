@@ -8,7 +8,7 @@ const svvc = {
 	secondaryBgImg: '/bgs/svvc-secondary-bg.png',
 	logo: '/logos/svvc-logo.svg',
 	electricLogo: '/logos/electric_svvc_logo.svg',
-	description: 'Southern Vegas Valley Contracting rebrand.',
+	description: 'Southern Vegas Valley Contracting Rebrand.',
 	brief: 'To create a dominant brand for Southern Vegas Valley Contracting, a high-end contracting business, that is looking to entice emotion and communicate a brand promise. They want their brand to communicate a feeling when coming in contact with marketing materials and their online presence.',
 	colors: {
 		primary: {

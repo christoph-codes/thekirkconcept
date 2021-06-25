@@ -14,9 +14,7 @@ const SubHero = ({ tagline, children, className }) => {
 				</h2>
 			</Section>
 			<Container className="nmt-2 mb-50">
-				<Row className="justify-content-center" style={{ gap: '2rem' }}>
-					{children}
-				</Row>
+				<Row className="justify-content-center">{children}</Row>
 			</Container>
 		</>
 	);

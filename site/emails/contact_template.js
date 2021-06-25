@@ -7,7 +7,7 @@ const ContactTemplate = (enteredData) => {
                 <h1>New Contact Submission from ${enteredData.name}</h1>
                 <p><b>Name</b><br/><span>${enteredData.name}</span></p>
                 <p><b>Email</b><br/><span>${enteredData.email}</span></p>
-                <p><b>Name</b><br/><span>${enteredData.content}</span></p>
+                <p><b>Content</b><br/><span>${enteredData.content}</span></p>
             </div>
         </body>
 

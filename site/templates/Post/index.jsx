@@ -27,7 +27,7 @@ const Post = ({ children, frontMatter, ...rest }) => {
 					<span className="text-primary">.</span>
 				</h1>
 			</Section>
-			<Container as="article" className="w-50 py-100">
+			<Container as="article" className={`${styles.postContent} py-100`}>
 				<div className="d-flex justify-content-between">
 					<small className="badge badge-primary">
 						{dateTime(frontMatter.date)}

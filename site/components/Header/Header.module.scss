@@ -36,3 +36,26 @@
 		}
 	}
 }
+.SideNav {
+	height: 100%;
+	position: absolute;
+	background: $gray-dark;
+	width: 75%;
+	z-index: 999;
+	visibility: hidden;
+	transform: translateX(-100%);
+	padding: 32px;
+	&.isActive {
+		visibility: visible;
+		transform: translateX(0%);
+	}
+	ul {
+		list-style-type: none;
+		padding: 0;
+		li {
+			text-align: center;
+			padding: 16px 0;
+			font-size: 18px;
+		}
+	}
+}

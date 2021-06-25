@@ -10,6 +10,9 @@ html {
 }
 .nmt-1 {
 	margin-top: -1rem;
+	@media(max-width: 48rem) {
+		margin-top: 0;
+	}
 }
 .nmt-2 {
 	margin-top: -2rem;
@@ -22,40 +25,91 @@ html {
 }
 .fs-8xl {
 	font-size: 9rem !important;
+	line-height: 1.25;
+	@media (max-width: 48rem) {
+		font-size: 4rem !important;
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
 }
 .fs-7xl {
 	font-size: 8rem !important;
+	line-height: 1;
+	@media (max-width: 48rem) {
+		font-size: 4.5rem !important;
+	}
 }
 .fs-6xl {
 	font-size: 7rem !important;
+	line-height: 1;
+	@media (max-width: 48rem) {
+		font-size: 4rem !important;
+	}
 }
 .fs-5xl {
 	font-size: 6rem !important;
+	line-height: 1;
+	@media (max-width: 48rem) {
+		font-size: 3.5rem !important;
+	}
 }
 .fs-4xl {
 	font-size: 5rem !important;
+	line-height: 1;
+	@media (max-width: 48rem) {
+		font-size: 3rem !important;
+	}
 }
 .fs-3xl {
 	font-size: 4rem !important;
+	line-height: 1;
+	@media (max-width: 48rem) {
+		font-size: 2.5rem !important;
+	}
 }
 .fs-2xl {
 	font-size: 3.5rem !important;
+	line-height: 1.125;
+	@media (max-width: 48rem) {
+		font-size: 2rem !important;
+	}
 }
 .fs-xl {
 	font-size: 3rem !important;
+	line-height: 1.125;
+	@media (max-width: 48rem) {
+		font-size: 1.75rem !important;
+	}
 }
 .fs-lg {
 	font-size: 2.5rem !important;
+	line-height: 1.25;
+	@media (max-width: 48rem) {
+		font-size: 1.5rem !important;
+	}
 }
 .fs-md {
 	font-size: 2rem !important;
+	line-height: 1.25;
+	@media (max-width: 48rem) {
+		font-size: 1.25rem !important;
+	}
 }
 .fs-sm {
 	font-size: 1.5rem !important;
+	line-height: 1.5;
+	@media (max-width: 48rem) {
+		font-size: 1rem !important;
+	}
 }
 .fs-xs {
 	font-size: 1rem !important;
+	line-height: 1.5;
+	@media (max-width: 48rem) {
+		font-size: 1rem !important;
+	}
 }
+
 .fw-light {
 	font-weight: lighter !important;
 }

@@ -6,6 +6,12 @@
 		height: 90vh;
 		background-size: cover;
 		background-attachment: fixed;
+		p {
+			@media(max-width: 48rem) {
+				margin-top: -16px;
+			}
+		}
+		
 	}
 	* {
 		z-index: 2;

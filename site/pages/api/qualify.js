@@ -1,62 +1,26 @@
 require('dotenv').config();
-const mailchimp = require('@mailchimp/mailchimp_marketing');
-const { ContactTemplate } = require('../../emails/contact_template');
+const { QualifyTemplate } = require('../../emails/qualify_template');
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-mailchimp.setConfig({
-	apiKey: process.env.MAILCHIMP_API_KEY,
-	server: process.env.MAILCHIMP_SERVER_PREFIX, // e.g. us1
-});
-const listId = process.env.MAILCHIMP_AUDIENCE_ID;
+const qualify = async (req, res) => {
+	const { emailDetails } = req.body;
 
-export default async (req, res) => {
-	const {
-		fname,
-		lname,
-		phone,
-		email,
-		upgrade,
-		budget,
-		website,
-		additionalComments,
-	} = req.body;
-	// Logging everything we received.
-	console.log(
-		fname,
-		lname,
-		phone,
-		email,
-		budget,
-		upgrade,
-		website,
-		additionalComments,
-	);
-
-	if (!email || !fname || !lname) {
-		console.log('Enter all the fields response.', res.status);
-		return res
-			.status(400)
-			.json({ error: 'First & Last Name and Email are required' });
-	}
-
-	console.log('mcid: ', listId);
-
-	try {
-		await mailchimp.lists.addListMember('d4f452d978', {
-			merge_fields: {
-				FNAME: fname,
-				LNAME: lname,
-				PHONE: phone,
-				INTEREST: upgrade,
-				BUDGET: budget,
-				WEBSITE: website,
-			},
-			status: 'subscribed',
+	const msg = {
+		to: 'hello@thekirkconcept.com', // Change to your recipient
+		from: 'hello@thekirkconcept.com', // Change to your verified sender
+		subject: 'Qualify Submission from TKCWEB',
+		text: 'Someone is looking to work with TKC!',
+		html: QualifyTemplate(emailDetails),
+	};
+	await sgMail
+		.send(msg)
+		.then(() => {
+			console.log('Email sent');
+			res.json('everything sent');
+		})
+		.catch((error) => {
+			console.error(error);
 		});
-
-		return res.status(200).json({ error: '' });
-	} catch (error) {
-		return res
-			.status(500)
-			.json({ error: error.message || error.toString() });
-	}
 };
+export default qualify;

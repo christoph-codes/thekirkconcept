@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+.NavLink {
+    color: $primary !important;
+    &.active {
+        color: white !important;
+    }
+}

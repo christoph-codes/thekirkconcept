@@ -1,0 +1,10 @@
+.Home {
+    .darkLogos {
+        @media(max-width: 48rem) {
+            height: 8rem;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

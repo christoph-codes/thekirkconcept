@@ -8,12 +8,20 @@
 		'. . link';
 	grid-template-columns: 10rem 1fr 10rem;
 	grid-template-rows: 4rem 1fr 4rem;
+	@media(max-width: 48rem) {
+		grid-template-columns: 1fr 4rem 1fr;
+		grid-template-rows: repeat(3, 4rem);
+	}
 	justify-content: center;
 	align-items: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 26rem;
+	@media (max-width: 48rem) {
+		height: auto;
+	}
+	border-radius: 1rem;
 	img {
 		justify-self: center;
 		grid-area: main;

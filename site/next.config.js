@@ -15,5 +15,5 @@ module.exports = composePlugings(
 			MAILCHIMP_SERVER_PREFIX: 'us7',
 			MAILCHIMP_AUDIENCE_ID: 'd4f452d978',
 		},
-	},
+	}
 );
