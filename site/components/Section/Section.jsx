@@ -13,15 +13,16 @@ const Section = ({
 	hero,
 	bgImg,
 	bgOverlay,
+	spacer,
 	...rest
 }) => {
 	return (
 		<section
-			{...rest}
 			style={{ backgroundImage: `url(${bgImg})` }}
-			className={`${styles.Section} ${
-				hero ? styles.hero : ''
-			} d-flex ${className}`}
+			className={`${styles.Section} ${hero ? styles.hero : ''} d-flex ${
+				spacer ? styles.spacer : ''
+			} ${className || ''}`}
+			{...rest}
 		>
 			<Container className={containerClass} fluid={fullWidth || false}>
 				{columns ? <Row>{children}</Row> : children}

@@ -9,8 +9,8 @@ const DominanceContact = (props) => {
 		<Section
 			className={`DominanceContact ${styles.DominanceContact} bg-primary text-center py-50`}
 		>
-			<h2 className="fs-6xl font-weight-bold mw-lg text-gray-dark">
-				dominance
+			<h2 className="fs-3xl mb-32 text-gray-dark">
+				ready for brand dominance?
 			</h2>
 			<p className="fs-sm mw-lg text-gray-dark">
 				We love working with businesses that have been validated and are
@@ -19,10 +19,13 @@ const DominanceContact = (props) => {
 				great fit working together, fill out our questionnaire to see if
 				you are ready for brand dominance!
 			</p>
-			<Link href="/qualify"><a><Button variant="secondary" className="mt-20">
-				Get qualified
-			</Button></a></Link>
-			
+			<Link href="/qualify">
+				<a>
+					<Button variant="secondary" className="mt-20">
+						get qualified
+					</Button>
+				</a>
+			</Link>
 		</Section>
 	);
 };
