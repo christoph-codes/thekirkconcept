@@ -145,7 +145,8 @@ p {
 }
 a {
 	font-weight: bold;
-	&.underlink {
+	&.link {
+		color: $gray-dark;
 		text-decoration: underline !important;
 		text-decoration-color: $primary !important;
 		text-decoration-thickness: 3px !important;

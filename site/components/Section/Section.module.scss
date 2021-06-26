@@ -17,6 +17,9 @@
 	&.spacer {
 		background-size: 100%;
 		height: 25rem;
+		@media(max-width: 48rem) {
+			background-size: cover;
+		}
 	}
 	* {
 		z-index: 2;

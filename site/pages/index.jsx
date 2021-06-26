@@ -55,9 +55,7 @@ const Home = () => {
 							resonates with your audience and industry.
 						</p>
 						<Link href="/what-we-do/branding">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
@@ -72,9 +70,7 @@ const Home = () => {
 							establish brand equity on the digital level.
 						</p>
 						<Link href="/what-we-do/design-systems">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
@@ -89,9 +85,7 @@ const Home = () => {
 							connect a product and a loyal customer.
 						</p>
 						<Link href="/what-we-do/web-app-development">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>

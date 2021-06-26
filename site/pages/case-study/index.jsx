@@ -1,8 +1,5 @@
 import Head from 'next/head';
-// import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
-// import Tilt from 'react-tilt';
-// import Button from '../../components/Button/Button';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
@@ -84,7 +81,7 @@ const CaseStudies = () => {
 			</Section>
 			<Section className="text-center font-weight-light pb-50">
 				<h1 className="fs-lg font-weight-bold text-gray-dark mb-50">
-					Brands we've worked with.
+					{`Brands we've worked with.`}
 				</h1>
 				<Row>
 					<Col sm={4} xs={6}>
