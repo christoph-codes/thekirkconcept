@@ -1,12 +1,17 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
 import Tilt from 'react-tilt';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
 import WordRiver from '../../components/WordRiver';
+import CaseStudyCard from '../../components/CaseStudyCard';
 import DominanceContact from '../../components/DominanceContact';
 import Card from '../../components/Card';
+import svvc from '../../utilities/caseStudies/svvc';
+import fng from '../../utilities/caseStudies/fng';
+import pff from '../../utilities/caseStudies/pff';
 import styles from '../../styles/Whatwedo.module.scss';
 
 const WhatWeDo = () => {
@@ -43,6 +48,9 @@ const WhatWeDo = () => {
 							<li>Visual Design</li>
 							<li>Brand Identity</li>
 						</ul>
+						<Link href="/what-we-do/branding">
+							<a className="link">Learn More</a>
+						</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -58,6 +66,9 @@ const WhatWeDo = () => {
 							<li>Asset Management</li>
 							<li>Testing</li>
 						</ul>
+						<Link href="/what-we-do/design-systems">
+							<a className="link">Learn More</a>
+						</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -73,7 +84,9 @@ const WhatWeDo = () => {
 							<li>Native Mobile Apps</li>
 							<li>Component Libraries</li>
 						</ul>
-						{/* <Link href="/what-we-do/web-app-development"><a><Button>Learn More</Button></a></Link> */}
+						<Link href="/what-we-do/web-app-development">
+							<a className="link">Learn More</a>
+						</Link>
 					</Card>
 				</Col>
 			</SubHero>
@@ -195,6 +208,14 @@ const WhatWeDo = () => {
 					</Col>
 				</Row>
 			</Section>
+
+			<SubHero tagline="Featured dominance worthy brands">
+				<Col className="nmt-4">
+					<CaseStudyCard casestudy={svvc} />
+					<CaseStudyCard casestudy={fng} />
+					<CaseStudyCard casestudy={pff} />
+				</Col>
+			</SubHero>
 
 			<DominanceContact />
 		</Page>

@@ -12,35 +12,35 @@ const WebAppDevelopment = () => {
 	return (
 		<Page>
 			<Head>
-				<title>Web Application Development | The Kirk Concept</title>
+				<title>Design Systems | The Kirk Concept</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}
 				hero
-				bgImg="/bgs/app_development_bg.png"
+				bgImg="/bgs/designsystem_bg.png"
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
-					custom web apps<span className="text-primary">.</span>
+					design systems<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					Mobile & Web App Development
+					custom design systems for brand consistency across mediums.
 				</p>
 			</Section>
 			<SubHero tagline="App development that focuses on delivering amazing experiences.">
 				<Col as={Tilt} options={{ max: 15, scale: 1.05 }} sm={6}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							What we solve
+							What is a design system?
 						</h3>
 						<p>
-							We provide application solutions to make customer
-							experiences easier to use as well as internal teams
-							to become more efficient with day-to-day processes
-							and more. Our team focuses on creating solutions
-							that are responsive for all devices, consistent to
-							maintain brand cohesiveness, and flexible to adapt
-							to ever changing business growth.
+							A design system is a group or library of designed
+							elements that are made to be reused throughout any
+							digital experience. It is created from the core
+							brand of any company or product and as each element
+							is paired with one another it builds an experience
+							that maintains consistency and is easily managed for
+							growth and flexibility.
 						</p>
 					</Card>
 				</Col>
@@ -76,59 +76,65 @@ const WebAppDevelopment = () => {
 
 			<Section
 				containerClass="font-display"
-				className="font-weight-light pb-50 mt-50"
+				className="font-weight-light py-64"
 			>
 				<Row>
 					<Col className="px-50 text-center justify-content-center">
 						<img
 							className="mb-50 px-100"
-							src="/icons/laptop-spot-icon.svg"
-							alt="Custom Laptop Spot Icon"
+							src="/icons/search-spot-icon.svg"
+							alt="Custom Search Spot Icon"
 						/>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Client Facing Software
+							1. Audit
 						</h3>
 						<p className="fw-light mw-lg">
-							We develop software as a service for startups or
-							dominant and growing businesses to improve customer
-							value and generate additional revenue.
+							To properly build a design system you must know
+							where to start building and what to build upon. Our
+							team will search your existing products,
+							applications, and web/app experiences to find common
+							design elements that can be replicated and group
+							them into buckets to address.
 						</p>
 					</Col>
 					<Col className="px-50 text-center justify-content-center">
 						<img
 							className="mb-50 px-100"
-							src="/icons/window-spot-icon.svg"
-							alt="Custom Window Spot Icon"
+							src="/icons/pen-spot-icon.svg"
+							alt="Custom Pen Spot Icon"
 						/>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Account Management Portals
+							2. Establish Language
 						</h3>
 						<p className="fw-light mw-lg">
-							We make account management easier to store and
-							update client information while maintaining
-							information safe and secure to relieve privacy
-							concerns.
+							Your design system language must be established and
+							communicated to all teams who will be using it.
+							Colors, typography, spacing, etc. must be consistent
+							as this step is critical for the maintainability and
+							governance of the design system.
 						</p>
 					</Col>
 					<Col className="px-50 text-center justify-content-center">
 						<img
 							className="mb-50 px-100"
-							src="/icons/shop-spot-icon.svg"
-							alt="Custom Shopping Spot Icon"
+							src="/icons/puzzle-spot-icon.svg"
+							alt="Custom Puzzle Spot Icon"
 						/>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Custom Ecommerce
+							3. Build & Document
 						</h3>
 						<p className="fw-light mw-lg">
-							We build custom, intuitive, and properly integrated
-							ecommerce solutions to add value and connect
-							directly with any merchant API that is used.
+							After your core elements are built you can stack and
+							group these elements into reuseable patterns for
+							future use. Then once this is established you must
+							document EVERY part of it into a library that
+							conveys your new system.
 						</p>
 					</Col>
 				</Row>
 			</Section>
 
-			<Section spacer bgImg="/bgs/inthisorder_bg@2x.png" />
+			<Section spacer bgImg="/bgs/customdesignsystem_bg@2x.png" />
 
 			<DominanceContact />
 		</Page>

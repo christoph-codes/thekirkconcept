@@ -29,15 +29,15 @@ const Home = () => {
 				<h1 className="fs-xl font-weight-bold text-white-50">
 					We unlock brand
 					<br />
-					<span className="text-white fs-8xl nmt-1 d-block">
+					<span className="text-white fs-8xl d-block">
 						dominance<span className="text-primary">.</span>
 					</span>
 				</h1>
-				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
+				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-4">
 					branding. design systems.{' '}
 					<span className="text-primary">app development.</span>
 				</p>
-				<Link href="/get-qualified">
+				<Link href="/qualify">
 					<Button variant="primary" className="inline-block">
 						get started
 					</Button>
@@ -54,27 +54,23 @@ const Home = () => {
 							purposeful brand strategy and visual connection that
 							resonates with your audience and industry.
 						</p>
-						<Link href="/branding">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+						<Link href="/what-we-do/branding">
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
 				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
-							Design System
+							Design Systems
 						</h3>
 						<p>
 							A dominant design systems creates consistent
 							experiences across multiple mediums and platforms to
 							establish brand equity on the digital level.
 						</p>
-						<Link href="/design-system">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+						<Link href="/what-we-do/design-systems">
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
@@ -88,10 +84,8 @@ const Home = () => {
 							dominant brand to life through user experiences that
 							connect a product and a loyal customer.
 						</p>
-						<Link href="/development">
-							<a className="text-gray-dark primary-underline">
-								Learn More
-							</a>
+						<Link href="/what-we-do/web-app-development">
+							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
