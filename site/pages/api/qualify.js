@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { QualifyTemplate } = require('../../emails/qualify_template');
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
 const qualify = async (req, res) => {
 	const { emailDetails } = req.body;
