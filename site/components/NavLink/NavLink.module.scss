@@ -1,7 +1,8 @@
 @import '../../styles/variables';
 .NavLink {
-    color: $primary !important;
-    &.active {
-        color: white !important;
-    }
+	color: $primary !important;
+	transition: 0.3;
+	&.active {
+		color: white !important;
+	}
 }

@@ -25,6 +25,7 @@ const Home = () => {
 			<Section
 				className={`${styles.homeHero} bg-gray-dark text-center align-items-center`}
 				hero
+				bgImg="/bgs/home_bg.png"
 			>
 				<h1 className="fs-xl font-weight-bold text-white-50">
 					We unlock brand
@@ -37,7 +38,7 @@ const Home = () => {
 					branding. design systems.{' '}
 					<span className="text-primary">app development.</span>
 				</p>
-				<Link href="/qualify">
+				<Link href="/get-started">
 					<Button variant="primary" className="inline-block">
 						get started
 					</Button>

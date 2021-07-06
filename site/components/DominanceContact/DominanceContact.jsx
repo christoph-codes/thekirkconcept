@@ -13,16 +13,15 @@ const DominanceContact = (props) => {
 				ready for brand dominance?
 			</h2>
 			<p className="fs-sm mw-lg text-gray-dark">
-				We love working with businesses that have been validated and are
+				{`We love working with businesses that have been validated and are
 				serious about making a statement in their industry! If you are
-				interested in any of our services and want to see if we are a
-				great fit working together, fill out our questionnaire to see if
-				you are ready for brand dominance!
+				interested in any of our services and want to see how we can
+				work together, fill out our questionnaire and let's get started!`}
 			</p>
-			<Link href="/qualify">
+			<Link href="/get-started">
 				<a>
 					<Button variant="secondary" className="mt-20">
-						get qualified
+						get started
 					</Button>
 				</a>
 			</Link>

@@ -1,30 +1,42 @@
 import styles from './Input.module.scss';
 
-export const Input = ({ className, ...rest }) => {
+export const Input = ({ className, name, label, ...rest }) => {
 	return (
-		<input
-			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
-			{...rest}
-		/>
+		<label className={`${styles.InputLabel}`} htmlFor={name}>
+			<span>{label}</span>
+			<input
+				className={`${styles.Input} ${className} bg-gray-lightest rounded`}
+				name={name}
+				{...rest}
+			/>
+		</label>
 	);
 };
-export const Dropdown = ({ className, children, ...rest }) => {
+export const Dropdown = ({ className, name, children, label, ...rest }) => {
 	return (
-		<select
-			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
-			{...rest}
-		>
-			{children}
-		</select>
+		<label className={`${styles.InputLabel}`} htmlFor={name}>
+			<span>{label}</span>
+			<select
+				className={`${styles.Input} ${className} bg-gray-lightest rounded`}
+				name={name}
+				{...rest}
+			>
+				{children}
+			</select>
+		</label>
 	);
 };
-export const TextArea = ({ className, children, ...rest }) => {
+export const TextArea = ({ className, name, children, label, ...rest }) => {
 	return (
-		<textarea
-			className={`${styles.Input} ${className} bg-gray-lightest rounded`}
-			{...rest}
-		>
-			{children}
-		</textarea>
+		<label className={`${styles.InputLabel}`} htmlFor={name}>
+			<span>{label}</span>
+			<textarea
+				className={`${styles.Input} ${className} bg-gray-lightest rounded`}
+				name={name}
+				{...rest}
+			>
+				{children}
+			</textarea>
+		</label>
 	);
 };

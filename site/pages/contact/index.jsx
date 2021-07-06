@@ -2,15 +2,15 @@ import { useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import { Col } from 'react-bootstrap';
-import Section from '../components/Section';
-import Page from '../templates/Page';
-import SubHero from '../components/SubHero';
-import Input, { TextArea } from '../components/Input';
-import Button from '../components/Button';
-import DominanceContact from '../components/DominanceContact';
-import Card from '../components/Card';
+import Section from '../../components/Section';
+import Page from '../../templates/Page';
+import SubHero from '../../components/SubHero';
+import Input, { TextArea } from '../../components/Input';
+import Button from '../../components/Button';
+import DominanceContact from '../../components/DominanceContact';
+import Card from '../../components/Card';
 
-import styles from '../styles/Contact.module.scss';
+import styles from '../../styles/Contact.module.scss';
 
 const Contact = () => {
 	const [name, setName] = useState('');
@@ -24,6 +24,7 @@ const Contact = () => {
 			name,
 			email,
 			content,
+			formType: 'Contact',
 		};
 		axios
 			.post('/api/contact', {
@@ -116,7 +117,7 @@ const Contact = () => {
 								</form>
 							</>
 						) : (
-							<>
+							<div className="text-center">
 								<img
 									src="/images/letsgettowork-siliconvalley.gif"
 									alt="Thank you for your submission"
@@ -126,7 +127,7 @@ const Contact = () => {
 									you shortly. In the meantime, go tell
 									someone you love them!
 								</h4>
-							</>
+							</div>
 						)}
 					</Card>
 				</Col>

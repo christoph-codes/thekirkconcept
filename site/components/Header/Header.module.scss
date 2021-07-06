@@ -3,22 +3,45 @@
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;
-	z-index: 2;
+	z-index: 10;
 	ul {
 		justify-content: flex-end;
 		display: flex;
 		list-style: none;
+		margin-bottom: 0;
 		li {
 			margin-left: 2rem;
 			color: $white;
 			a {
 				color: white;
-				&:hover
-				{
+				.dropdown {
+					display: none;
+					transition: 0.3;
+				}
+				&:hover {
 					text-decoration: underline;
 					text-decoration-color: $primary;
 					text-decoration-thickness: 3px;
 					text-underline-offset: 0.25rem;
+					.dropdown {
+						display: block;
+						position: absolute;
+						padding: 16px;
+						background: rgba(0, 0, 0, 0.7);
+						backdrop-filter: blur(1.5rem);
+						border-top: solid 3px $primary;
+						li {
+							margin: 0;
+							padding: 8px 0;
+							a {
+								color: $primary !important;
+								transition: 0.3s;
+								&:hover {
+									color: white !important;
+								}
+							}
+						}
+					}
 				}
 				&.active {
 					text-decoration: underline;
@@ -31,7 +54,6 @@
 						text-decoration: none !important;
 					}
 				}
-				
 			}
 		}
 	}
@@ -44,7 +66,8 @@
 	z-index: 999;
 	visibility: hidden;
 	transform: translateX(-100%);
-	padding: 32px;
+	padding: 16px 32px;
+	overflow: scroll;
 	&.isActive {
 		visibility: visible;
 		transform: translateX(0%);
@@ -53,9 +76,25 @@
 		list-style-type: none;
 		padding: 0;
 		li {
-			text-align: center;
-			padding: 16px 0;
+			padding: 8px 0;
 			font-size: 18px;
+			a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: none;
+					pointer-events: none;
+				}
+				ul {
+					padding-left: 32px;
+					li {
+						padding: 16px 0 0;
+						a {
+							font-weight: normal !important;
+							font-size: 16px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
