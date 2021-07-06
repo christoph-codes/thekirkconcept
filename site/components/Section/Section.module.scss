@@ -7,17 +7,19 @@
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+		@media (max-width: 48rem) {
+			background-position: top center;
+		}
 		p {
-			@media(max-width: 48rem) {
+			@media (max-width: 48rem) {
 				margin-top: -16px;
 			}
 		}
-		
 	}
 	&.spacer {
 		background-size: 100%;
 		height: 25rem;
-		@media(max-width: 48rem) {
+		@media (max-width: 48rem) {
 			background-size: cover;
 		}
 	}
