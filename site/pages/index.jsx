@@ -37,7 +37,7 @@ const Home = () => {
 					branding. design systems.{' '}
 					<span className="text-primary">app development.</span>
 				</p>
-				<Link href="/qualify">
+				<Link href="/get-started">
 					<Button variant="primary" className="inline-block">
 						get started
 					</Button>

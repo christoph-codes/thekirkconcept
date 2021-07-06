@@ -5,10 +5,20 @@ html {
 	font-size: 14px;
 }
 * {
-	transition: 0.3s;
 	font-family: 'Heebo', sans-serif;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
 	font-weight: 700 !important;
 	color: $gray-dark;
 }
@@ -18,7 +28,7 @@ p {
 }
 .nmt-1 {
 	margin-top: -1rem;
-	@media(max-width: 48rem) {
+	@media (max-width: 48rem) {
 		margin-top: 0;
 	}
 }
@@ -34,7 +44,7 @@ p {
 .fs-8xl {
 	font-size: 9rem !important;
 	line-height: 0.75;
-    margin-bottom: 60px;
+	margin-bottom: 60px;
 	@media (max-width: 48rem) {
 		font-size: 4rem !important;
 		line-height: 1;

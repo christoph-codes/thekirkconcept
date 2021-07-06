@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { BrandQuestionnaireTemplate } = require('../../emails/contact_template');
+const { EmailTemplate } = require('../../emails/email_template');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
@@ -12,13 +12,13 @@ const brandQuestionnaire = async (req, res) => {
 				from: 'hello@thekirkconcept.com', // Change to your verified sender
 				subject: 'Brand Questionnaire Submission from TKCWEB',
 				text: 'Make sure to reach out because you know you care!',
-				html: BrandQuestionnaireTemplate(emailDetails),
+				html: EmailTemplate(emailDetails),
 			};
 			await sgMail
 				.send(msg)
 				.then(() => {
-					console.log('Email sent');
-					res.json('everything sent');
+					console.log('Brand Questionnaire Email Sent');
+					res.json('Brand Questionnaire Sent');
 				})
 				.catch((error) => {
 					console.error(error);

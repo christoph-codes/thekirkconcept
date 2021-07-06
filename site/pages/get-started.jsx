@@ -11,7 +11,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import styles from '../styles/Contact.module.scss';
 
-const Qualify = () => {
+const GetStarted = () => {
 	const [fname, setFname] = useState('');
 	const [lname, setLname] = useState('');
 	const [phone, setPhone] = useState('');
@@ -22,10 +22,10 @@ const Qualify = () => {
 	const [additionalComments, setAdditionalComments] = useState('');
 	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
 
-	const submitQualify = (e) => {
+	const submitGetStarted = (e) => {
 		e.preventDefault();
 		axios
-			.post('/api/qualify', {
+			.post('/api/get-started', {
 				emailDetails: {
 					fname,
 					lname,
@@ -35,6 +35,7 @@ const Qualify = () => {
 					budget,
 					website,
 					additionalComments,
+					formType: 'Get Started',
 				},
 			})
 			.then((data) => {
@@ -57,24 +58,24 @@ const Qualify = () => {
 	return (
 		<Page>
 			<Head>
-				<title>Get Qualified » The Kirk Concept</title>
+				<title>Get Started » The Kirk Concept</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
-				className={`${styles.Qualify} bg-gray-dark text-center align-items-center`}
+				className={`${styles.GetStarted} bg-gray-dark text-center align-items-center`}
 				hero
 				bgImg="/bgs/qualified_bg.png"
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
-					get qualified<span className="text-primary">.</span>
+					get started<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20">
 					We love working with businesses that have been validated and
 					are serious about making a statement in their industry
 				</p>
 			</Section>
-			<SubHero tagline="See if you qualify for brand dominance.">
-				<Col sm={6}>
+			<SubHero tagline="get started on the path for brand dominance.">
+				<Col sm={8}>
 					<Card>
 						{!successfulSubmission ? (
 							<>
@@ -86,38 +87,42 @@ const Qualify = () => {
 									member will reach out to you via email!
 								</p>
 								<form>
-									<Row className="mx-0">
-										<Col
-											className="mr-10"
-											as={Input}
-											type="text"
-											onChange={(e) =>
-												setFname(e.target.value)
-											}
-											placeholder="First Name*"
-											id="fname"
-											value={fname}
-											required
-										/>
-										<Col
-											className="ml-10"
-											as={Input}
-											type="text"
-											onChange={(e) =>
-												setLname(e.target.value)
-											}
-											placeholder="Last Name*"
-											id="lname"
-											value={lname}
-											required
-										/>
+									<Row>
+										<Col>
+											<Input
+												type="text"
+												onChange={(e) =>
+													setFname(e.target.value)
+												}
+												label="First Name"
+												placeholder="Christoph"
+												id="fname"
+												value={fname}
+												required
+											/>
+										</Col>
+										<Col>
+											<Input
+												as={Input}
+												type="text"
+												onChange={(e) =>
+													setLname(e.target.value)
+												}
+												label="Last Name"
+												placeholder="Jones"
+												id="lname"
+												value={lname}
+												required
+											/>
+										</Col>
 									</Row>
 									<Input
 										type="website"
 										onChange={(e) =>
 											setWebsite(e.target.value)
 										}
-										placeholder="Website*"
+										label="Website"
+										placeholder="https://christophk.com"
 										id="website"
 										value={website}
 									/>
@@ -126,7 +131,8 @@ const Qualify = () => {
 										onChange={(e) =>
 											setEmail(e.target.value)
 										}
-										placeholder="Email*"
+										label="Email"
+										placeholder="hello@thekirkconcept.com"
 										id="email"
 										value={email}
 										required
@@ -136,7 +142,8 @@ const Qualify = () => {
 										onChange={(e) =>
 											setPhone(e.target.value)
 										}
-										placeholder="Phone Number"
+										label="Phone Number"
+										placeholder="(702)336-0322"
 										id="phone"
 										value={phone}
 										required
@@ -146,14 +153,14 @@ const Qualify = () => {
 										onChange={(e) =>
 											setUpgrade(e.target.value)
 										}
-										placeholder="What area would you like to upgrade?*"
+										label="What area would you like to upgrade?"
+										placeholder="Please Choose"
 										id="upgrade"
 										value={upgrade}
 										required
 									>
 										<option disabled value="Please Choose">
-											What area would you like to
-											upgrade?*
+											Please Choose
 										</option>
 										<option value="Branding">
 											Branding
@@ -173,13 +180,14 @@ const Qualify = () => {
 										onChange={(e) =>
 											setBudget(e.target.value)
 										}
-										placeholder="What is your budget?*"
+										label="What is your budget?"
+										placeholder="Please Choose"
 										id="budget"
 										value={budget}
 										required
 									>
 										<option disabled value="Please Choose">
-											What is your budget?*
+											Please Choose
 										</option>
 										<option value="$10k">{`$10k`}</option>
 										<option value="$10k - $25k">{`$10k - $25k`}</option>
@@ -195,7 +203,8 @@ const Qualify = () => {
 												e.target.value
 											)
 										}
-										placeholder="Additional Comments"
+										label="Additional Comments"
+										placeholder="If there are any additional details you would like to include, this is the place for it!"
 										id="additionalComments"
 										value={additionalComments}
 									/>
@@ -203,7 +212,7 @@ const Qualify = () => {
 										className="w-100"
 										variant="primary"
 										type="submit"
-										onClick={(e) => submitQualify(e)}
+										onClick={(e) => submitGetStarted(e)}
 									>
 										Submit
 									</Button>
@@ -253,4 +262,4 @@ const Qualify = () => {
 	);
 };
 
-export default Qualify;
+export default GetStarted;

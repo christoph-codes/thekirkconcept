@@ -2,15 +2,14 @@ import { useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import { Col } from 'react-bootstrap';
-import Section from '../components/Section';
-import Page from '../templates/Page';
-import SubHero from '../components/SubHero';
-import Input, { TextArea } from '../components/Input';
-import Button from '../components/Button';
-import DominanceContact from '../components/DominanceContact';
-import Card from '../components/Card';
+import Section from '../../components/Section';
+import Page from '../../templates/Page';
+import SubHero from '../../components/SubHero';
+import Input, { TextArea } from '../../components/Input';
+import Button from '../../components/Button';
+import Card from '../../components/Card';
 
-import styles from '../styles/Contact.module.scss';
+import styles from '../../styles/Contact.module.scss';
 
 const BrandingQuestionnaire = () => {
 	const [decisionMaker, setDecisionMaker] = useState('');
@@ -38,42 +37,43 @@ const BrandingQuestionnaire = () => {
 			primaryMessage,
 			idealCustomer,
 			additionalComments,
+			formType: 'Brand Questionnaire',
 		};
-		console.log(emailDetails);
-		// axios
-		// 	.post('/api/branding-questionnaire', {
-		// 		emailDetails,
-		// 	})
-		// 	.then((data) => {
-		// 		if (data.status === 200) {
-		// 			console.log('ALL IS WELL ');
-		// 			setSuccessfulSubmission(true);
-		// 		}
-		// 	})
-		// 	.catch((err) => {
-		// 		console.log('Error on the front end:', err);
-		// 	});
+		// console.log(Object.entries(emailDetails));
+		axios
+			.post('/api/brand-questionnaire', {
+				emailDetails,
+			})
+			.then((data) => {
+				if (data.status === 200) {
+					console.log('ALL IS WELL ');
+					setSuccessfulSubmission(true);
+				}
+			})
+			.catch((err) => {
+				console.log('Error on the front end:', err);
+			});
 	};
 	return (
 		<Page>
 			<Head>
-				<title>Contact The Kirk Concept</title>
+				<title>Brand Questionnaire for The Kirk Concept</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section
-				className={`${styles.contact} bg-gray-dark text-center align-items-center`}
+				className={`${styles.BrandQuestionnaire} bg-gray-dark text-center align-items-center`}
 				hero
-				bgImg="/bgs/contact_bg.png"
+				bgImg="/bgs/brand_questionnaire_bg.png"
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
 					brand questionnaire<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					Answer these questions and we can get started creating your
-					custom brand.
+					{`Answer these questions and let's get started creating your
+					custom brand.`}
 				</p>
 			</Section>
-			<SubHero tagline="hello@thekirkconcept.com">
+			<SubHero tagline="get started creating a dominant brand">
 				<Col sm={8}>
 					<Card>
 						{!successfulSubmission ? (
@@ -217,7 +217,7 @@ const BrandingQuestionnaire = () => {
 								</form>
 							</>
 						) : (
-							<>
+							<div className="text-center">
 								<img
 									src="/images/letsgettowork-siliconvalley.gif"
 									alt="Thank you for your submission"
@@ -227,7 +227,7 @@ const BrandingQuestionnaire = () => {
 									you shortly. In the meantime, go tell
 									someone you love them!
 								</h4>
-							</>
+							</div>
 						)}
 					</Card>
 				</Col>

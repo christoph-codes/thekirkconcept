@@ -9,6 +9,57 @@ import styles from './Header.module.scss';
 const Header = ({ props }) => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 
+	const siteLinks = [
+		{
+			label: 'what we do',
+			path: '/what-we-do',
+			children: [
+				{
+					label: 'logo design',
+					path: '/logo-design',
+				},
+				{
+					label: 'branding',
+					path: '/branding',
+				},
+				{
+					label: 'design systems',
+					path: '/design-systems',
+				},
+				{
+					label: 'web app development',
+					path: '/web-app-development',
+				},
+			],
+		},
+		{
+			label: 'case studies',
+			path: '/case-study',
+		},
+		{
+			label: 'blog',
+			path: '/blog',
+		},
+		{
+			label: 'testimonials',
+			path: '/testimonials',
+		},
+		{
+			label: 'contact',
+			path: '/contact',
+			children: [
+				{
+					label: 'brand questionnaire',
+					path: '/brand-questionnaire',
+				},
+				{
+					label: 'web questionnaire',
+					path: '/web-questionnaire',
+				},
+			],
+		},
+	];
+
 	useEffect(() => {
 		// disabling scrolling when navigation is open
 		if (isNavOpen === true) {
@@ -35,25 +86,45 @@ const Header = ({ props }) => {
 					</a>
 				</Link>
 				<ul className="text-white d-none d-md-flex">
-					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/what-we-do">what we do</NavLink>
-					</li>
-					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/case-study">case studies</NavLink>
-					</li>
-					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/blog">blog</NavLink>
-					</li>
-					<li className="text-white px-5 font-weight-bold">
-						<NavLink href="/contact">contact</NavLink>
-					</li>
+					{siteLinks.map((link, index) => {
+						return (
+							<li
+								key={index}
+								className="text-white px-5 font-weight-bold"
+							>
+								<NavLink href={link.path}>
+									{link.label}
+									{link.children && (
+										<ul className={styles.dropdown}>
+											{link.children.map(
+												(child, index) => {
+													return (
+														<li key={index}>
+															<NavLink
+																href={
+																	link.path +
+																	child.path
+																}
+															>
+																{child.label}
+															</NavLink>
+														</li>
+													);
+												}
+											)}
+										</ul>
+									)}
+								</NavLink>
+							</li>
+						);
+					})}
 
 					<li className="text-white font-weight-bold">
-						<Link href="/qualify">
+						<Link href="/get-started">
 							<a
 								className={`${styles.headerButton} bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold`}
 							>
-								get qualified
+								get started
 							</a>
 						</Link>
 					</li>
@@ -91,42 +162,39 @@ const Header = ({ props }) => {
 							home
 						</NavLink>
 					</li>
-					<li>
-						<NavLink
-							onClick={() => setIsNavOpen(!isNavOpen)}
-							href="/what-we-do"
-						>
-							what we do
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							onClick={() => setIsNavOpen(!isNavOpen)}
-							href="/case-study"
-						>
-							case studies
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							onClick={() => setIsNavOpen(!isNavOpen)}
-							href="/blog"
-						>
-							blog
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							onClick={() => setIsNavOpen(!isNavOpen)}
-							href="/contact"
-						>
-							contact
-						</NavLink>
-					</li>
+					{siteLinks.map((link, index) => {
+						return (
+							<li key={index}>
+								<NavLink href={link.path}>
+									{link.label}
+									{link.children && (
+										<ul className={styles.subLinks}>
+											{link.children.map(
+												(child, index) => {
+													return (
+														<li key={index}>
+															<NavLink
+																href={
+																	link.path +
+																	child.path
+																}
+															>
+																{child.label}
+															</NavLink>
+														</li>
+													);
+												}
+											)}
+										</ul>
+									)}
+								</NavLink>
+							</li>
+						);
+					})}
 					<li>
 						<Link
 							onClick={() => setIsNavOpen(!isNavOpen)}
-							href="/qualify"
+							href="/get-started"
 						>
 							<a className="d-block text-center bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
 								get qualified
