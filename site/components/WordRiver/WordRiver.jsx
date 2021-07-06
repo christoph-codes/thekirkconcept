@@ -27,8 +27,8 @@ const WordRiver = ({ words, colors, maxRows, className, ...rest }) => {
 	return (
 		<article className={`${styles.WordRiver} ${className}`} {...rest}>
 			<div className="river-container">
-				{wordLooper().map((group) => {
-					return wordBuilder(group.word, group.color);
+				{wordLooper().map((group, index) => {
+					return wordBuilder(group.word, group.color, index);
 				})}
 			</div>
 		</article>
