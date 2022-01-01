@@ -30,6 +30,10 @@ const Header = ({ props }) => {
 					label: 'web app development',
 					path: '/web-app-development',
 				},
+				{
+					label: 'website development',
+					path: '/website-development',
+				},
 			],
 		},
 		{
@@ -196,9 +200,9 @@ const Header = ({ props }) => {
 							onClick={() => setIsNavOpen(!isNavOpen)}
 							href="/get-started"
 						>
-							<a className="d-block text-center bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
+							<button className="d-block text-center bg-primary rounded-pill px-25 py-10 text-gray-dark font-bold">
 								get qualified
-							</a>
+							</button>
 						</Link>
 					</li>
 				</ul>
