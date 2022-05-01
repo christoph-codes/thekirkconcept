@@ -16,11 +16,11 @@ import styles from '../../styles/Whatwedo.module.scss';
 
 const WhatWeDo = () => {
 	return (
-		<Page className={styles.Whatwedo}>
-			<Head>
-				<title>What We Do | The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="What We Do | The Kirk Concept"
+			description="We help companies with branding & digital product development"
+			className={styles.Whatwedo}
+		>
 			<Section
 				className={`${styles.workHero} bg-gray-dark text-center align-items-center`}
 				hero

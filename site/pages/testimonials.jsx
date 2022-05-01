@@ -47,11 +47,10 @@ const Testimonials = ({ props }) => {
 		},
 	];
 	return (
-		<Page>
-			<Head>
-				<title>Testimonials for The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Testimonials for The Kirk Concept"
+			description="Testimonials to check out what our clients are saying about working with us."
+		>
 			<Section
 				className={`${styles.contact} bg-gray-dark text-center align-items-center`}
 				hero

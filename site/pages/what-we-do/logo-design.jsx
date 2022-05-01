@@ -11,11 +11,12 @@ import DominanceContact from '../../components/DominanceContact';
 
 const LogoDesign = ({ props }) => {
 	return (
-		<Page className={styles.LogoDesign}>
-			<Head>
-				<title>Custom Logo Design by The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Custom Logo Design by The Kirk Concept"
+			description="Get a customized logo for your business that you can be
+		excited about!"
+			className={styles.LogoDesign}
+		>
 			<Section
 				className={`${styles.WebQuestionnaire} bg-gray-dark text-center align-items-center`}
 				hero

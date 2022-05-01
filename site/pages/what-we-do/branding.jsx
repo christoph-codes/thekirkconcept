@@ -10,11 +10,13 @@ import Card from '../../components/Card';
 
 const WebAppDevelopment = () => {
 	return (
-		<Page>
-			<Head>
-				<title>Branding | The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Branding | The Kirk Concept"
+			description="We don’t recommend marketing without first
+			establishing a brand that can handle it. We
+			understand revenue is important to every business,
+			but revenue doesn’t sustain itself, branding does."
+		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}
 				hero

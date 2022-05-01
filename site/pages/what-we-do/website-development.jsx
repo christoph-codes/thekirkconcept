@@ -10,11 +10,10 @@ import Card from '../../components/Card';
 
 const WebsiteDevelopment = () => {
 	return (
-		<Page>
-			<Head>
-				<title>Website Development | The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Website Development | The Kirk Concept"
+			description="Custom website development & maintenance"
+		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}
 				hero
