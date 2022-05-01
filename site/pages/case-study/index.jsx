@@ -15,11 +15,11 @@ import LogoCard from '../../components/LogoCard';
 
 const CaseStudies = () => {
 	return (
-		<Page className={styles.CaseStudies}>
-			<Head>
-				<title>The Case Studies Created by The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="The Case Studies Created by The Kirk Concept"
+			description="Our case studies showcase dominance through a wonderful body of work."
+			className={styles.CaseStudies}
+		>
 			<Section
 				className={`${styles.caseStudiesHero} bg-gray-dark text-center align-items-center`}
 				bgImg="/bgs/work_bg.png"

@@ -55,11 +55,11 @@ const BrandingQuestionnaire = () => {
 			});
 	};
 	return (
-		<Page>
-			<Head>
-				<title>Brand Questionnaire for The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Brand Questionnaire for The Kirk Concept"
+			description={`Answer these questions and let's get started creating your
+		custom brand.`}
+		>
 			<Section
 				className={`${styles.BrandQuestionnaire} bg-gray-dark text-center align-items-center`}
 				hero

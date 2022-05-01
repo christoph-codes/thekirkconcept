@@ -41,11 +41,10 @@ const Contact = () => {
 			});
 	};
 	return (
-		<Page>
-			<Head>
-				<title>Contact The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Contact The Kirk Concept"
+			description="If you have questions, we’d love to hear from you"
+		>
 			<Section
 				className={`${styles.contact} bg-gray-dark text-center align-items-center`}
 				hero

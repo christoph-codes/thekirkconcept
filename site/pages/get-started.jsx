@@ -56,11 +56,10 @@ const GetStarted = () => {
 			});
 	};
 	return (
-		<Page>
-			<Head>
-				<title>Get Started » The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Get Started » The Kirk Concept"
+			description="We love working with businesses that have been validated and are serious about making a statement in their industry"
+		>
 			<Section
 				className={`${styles.GetStarted} bg-gray-dark text-center align-items-center`}
 				hero

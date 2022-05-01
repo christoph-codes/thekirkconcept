@@ -62,11 +62,11 @@ const WebQuestionnaire = () => {
 			});
 	};
 	return (
-		<Page>
-			<Head>
-				<title>Web Questionnaire for The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<Page
+			title="Web Questionnaire for The Kirk Concept"
+			description="Answer these questions and we can get started creating your
+		custom brand."
+		>
 			<Section
 				className={`${styles.WebQuestionnaire} bg-gray-dark text-center align-items-center`}
 				hero

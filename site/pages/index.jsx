@@ -18,10 +18,6 @@ import styles from '../styles/Home.module.scss';
 const Home = () => {
 	return (
 		<Page className={styles.Home}>
-			<Head>
-				<title>The Kirk Concept</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
 			<Section
 				className={`${styles.homeHero} bg-gray-dark text-center align-items-center`}
 				hero
