@@ -7,19 +7,19 @@ const Button = ({ children, className, variant, ...rest }) => {
 	const variantOutput = () => {
 		switch (variant) {
 			case 'primary':
-				return 'bg-primary text-gray-dark';
+				return 'bg-primary text-gray-dark rounded-pill';
 			case 'primary-outline':
-				return 'outline-primary text-gray-dark';
+				return 'outline-primary text-gray-dark rounded-pill';
 			case 'secondary':
-				return 'bg-gray-dark text-primary';
+				return 'bg-gray-dark text-primary rounded-pill';
 
 			default:
-				break;
+				return 'background-transparent text-gray-dark';
 		}
 	};
 	return (
 		<Btn
-			className={`Button rounded-pill py-15 px-30 font-weight-bold ${className} ${variantOutput()}`}
+			className={`Button py-15 px-30 font-weight-bold ${className} ${variantOutput()}`}
 			{...rest}
 		>
 			{children}

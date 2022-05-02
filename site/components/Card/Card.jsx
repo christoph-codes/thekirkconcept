@@ -5,7 +5,7 @@ const Card = ({ children, className, ...rest }) => {
 		<article
 			className={`${styles.Card} ${
 				className || ''
-			} p-30 shadow bg-white rounded-lg text-gray mb-md-0 mb-32`}
+			} p-30 shadow rounded-lg text-gray mb-md-0 mb-32`}
 			{...rest}
 		>
 			{children}

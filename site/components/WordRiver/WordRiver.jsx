@@ -45,6 +45,6 @@ WordRiver.propTypes = {
 
 WordRiver.defaultProps = {
 	words: [''],
-	colors: [''],
+	colors: ['#e6fd36', '#454545', '#A5A5A5'],
 	className: '',
 };
