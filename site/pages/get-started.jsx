@@ -21,39 +21,45 @@ const GetStarted = () => {
 	const [budget, setBudget] = useState('Please Choose');
 	const [additionalComments, setAdditionalComments] = useState('');
 	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
+	const [error, setError] = useState();
 
 	const submitGetStarted = (e) => {
 		e.preventDefault();
-		axios
-			.post('/api/get-started', {
-				emailDetails: {
-					fname,
-					lname,
-					phone,
-					email,
-					upgrade,
-					budget,
-					website,
-					additionalComments,
-					formType: 'Get Started',
-				},
-			})
-			.then((data) => {
-				if (data.status === 200) {
-					setSuccessfulSubmission(true);
-					return (
-						<h1>
-							Thank you for inquiring. Someone from our team will
-							be reaching out to you shortly!
-						</h1>
-					);
-				} else {
-					console.log('...Something went wrong.');
-				}
-			})
-			.catch((err) => {
-				console.log('Error on the front end: ', err);
-			});
+		if (fname && lname && email && upgrade && budget) {
+			axios
+				.post('/api/get-started', {
+					emailDetails: {
+						fname,
+						lname,
+						phone,
+						email,
+						upgrade,
+						budget,
+						website,
+						additionalComments,
+						formType: 'Get Started',
+					},
+				})
+				.then((data) => {
+					if (data.status === 200) {
+						setError();
+						setSuccessfulSubmission(true);
+						return (
+							<h1>
+								Thank you for inquiring. Someone from our team
+								will be reaching out to you shortly!
+							</h1>
+						);
+					} else {
+						setError('...Something went wrong.');
+					}
+				})
+				.catch((err) => {
+					setError('There was an error with your submission: ', err);
+				});
+		} else {
+			setError('You must enter all required fields.');
+		}
 	};
 	return (
 		<Page
@@ -85,7 +91,7 @@ const GetStarted = () => {
 									Please fill out the form below and a team
 									member will reach out to you via email!
 								</p>
-								<form>
+								<form onSubmit={submitGetStarted}>
 									<Row>
 										<Col>
 											<Input
@@ -145,7 +151,6 @@ const GetStarted = () => {
 										placeholder="(702)336-0322"
 										id="phone"
 										value={phone}
-										required
 									/>
 									<Dropdown
 										type="text"
@@ -211,7 +216,6 @@ const GetStarted = () => {
 										className="w-100"
 										variant="primary"
 										type="submit"
-										onClick={(e) => submitGetStarted(e)}
 									>
 										Submit
 									</Button>
