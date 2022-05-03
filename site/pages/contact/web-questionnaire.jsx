@@ -27,6 +27,7 @@ const WebQuestionnaire = () => {
 	const [competitors, setCompetitors] = useState('');
 	const [additionalComments, setAdditionalComments] = useState('');
 	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
+	const [error, setError] = useState();
 
 	const submitQuestionnaire = (e) => {
 		e.preventDefault();
@@ -46,20 +47,29 @@ const WebQuestionnaire = () => {
 			additionalComments,
 			formType: 'Web Questionnaire',
 		};
-
-		axios
-			.post('/api/web-questionnaire', {
-				emailDetails,
-			})
-			.then((data) => {
-				if (data.status === 200) {
-					console.log('ALL IS WELL ');
-					setSuccessfulSubmission(true);
-				}
-			})
-			.catch((err) => {
-				console.log('Error on the front end:', err);
-			});
+		if (
+			decisionMaker &&
+			businessName &&
+			email &&
+			businessDescription &&
+			websiteGoal
+		) {
+			axios
+				.post('/api/web-questionnaire', {
+					emailDetails,
+				})
+				.then((data) => {
+					if (data.status === 200) {
+						setError();
+						setSuccessfulSubmission(true);
+					}
+				})
+				.catch((err) => {
+					setError('Error on the front end:', err);
+				});
+		} else {
+			setError('You must enter required fields');
+		}
 	};
 	return (
 		<Page
@@ -93,7 +103,12 @@ const WebQuestionnaire = () => {
 									give us a better understanding of the brand
 									you want to create.
 								</p>
-								<form>
+								{error && (
+									<p className="py-8 px-16 border-top border-bottom border-danger text-center text-danger">
+										{error}
+									</p>
+								)}
+								<form onSubmit={submitQuestionnaire}>
 									<Input
 										type="text"
 										onChange={(e) =>
@@ -104,6 +119,7 @@ const WebQuestionnaire = () => {
 										name="decisionMaker"
 										id="decisionMaker"
 										value={decisionMaker}
+										required
 									/>
 									<Input
 										type="text"
@@ -115,6 +131,7 @@ const WebQuestionnaire = () => {
 										name="businessName"
 										id="businessName"
 										value={businessName}
+										required
 									/>
 									<Input
 										type="text"
@@ -126,6 +143,7 @@ const WebQuestionnaire = () => {
 										name="email"
 										id="email"
 										value={email}
+										required
 									/>
 									<Input
 										type="text"
@@ -150,6 +168,7 @@ const WebQuestionnaire = () => {
 										name="businessDescription"
 										id="businessDescription"
 										value={businessDescription}
+										required
 									/>
 									<TextArea
 										type="text"
@@ -161,6 +180,7 @@ const WebQuestionnaire = () => {
 										name="websiteGoal"
 										id="websiteGoal"
 										value={websiteGoal}
+										required
 									/>
 									<Input
 										type="text"
@@ -258,7 +278,6 @@ const WebQuestionnaire = () => {
 										className="w-100"
 										variant="primary"
 										type="submit"
-										onClick={(e) => submitQuestionnaire(e)}
 									>
 										Send
 									</Button>

@@ -17,6 +17,7 @@ const Contact = () => {
 	const [email, setEmail] = useState('');
 	const [content, setContent] = useState('');
 	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
+	const [error, setError] = useState();
 
 	const submitContact = (e) => {
 		e.preventDefault();
@@ -26,19 +27,26 @@ const Contact = () => {
 			content,
 			formType: 'Contact',
 		};
-		axios
-			.post('/api/contact', {
-				emailDetails,
-			})
-			.then((data) => {
-				if (data.status === 200) {
-					console.log('ALL IS WELL ');
-					setSuccessfulSubmission(true);
-				}
-			})
-			.catch((err) => {
-				console.log('Error on the front end:', err);
-			});
+		if (name && email && content) {
+			setError();
+			axios
+				.post('/api/contact', {
+					emailDetails,
+				})
+				.then((data) => {
+					if (data.status === 200) {
+						setError();
+						setSuccessfulSubmission(true);
+					}
+				})
+				.catch((err) => {
+					setSuccessfulSubmission(false);
+					setError('Error on the front end:', err);
+				});
+		} else {
+			setSuccessfulSubmission(false);
+			setError('All fields must be entered.');
+		}
 	};
 	return (
 		<Page
@@ -69,7 +77,12 @@ const Contact = () => {
 									Please fill out the form below and a team
 									member will reach out to you via email!
 								</p>
-								<form>
+								{error && (
+									<p className="py-8 px-16 border-top border-bottom border-danger text-center text-danger">
+										{error}
+									</p>
+								)}
+								<form onSubmit={submitContact}>
 									<Input
 										type="text"
 										onChange={(e) =>
@@ -78,6 +91,7 @@ const Contact = () => {
 										placeholder="Full Name"
 										id="name"
 										value={name}
+										required
 									/>
 									<Input
 										type="text"
@@ -87,6 +101,7 @@ const Contact = () => {
 										placeholder="Email"
 										id="email"
 										value={email}
+										required
 									/>
 									<TextArea
 										type="text"
@@ -96,12 +111,12 @@ const Contact = () => {
 										placeholder="Message"
 										id="content"
 										value={content}
+										required
 									/>
 									<Button
 										className="w-100"
 										variant="primary"
 										type="submit"
-										onClick={(e) => submitContact(e)}
 									>
 										Send
 									</Button>

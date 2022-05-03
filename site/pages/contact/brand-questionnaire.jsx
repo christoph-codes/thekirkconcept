@@ -23,6 +23,7 @@ const BrandingQuestionnaire = () => {
 	const [idealCustomer, setIdealCustomer] = useState('');
 	const [additionalComments, setAdditionalComments] = useState('');
 	const [successfulSubmission, setSuccessfulSubmission] = useState(false);
+	const [error, setError] = useState();
 
 	const submitQuestionnaire = (e) => {
 		e.preventDefault();
@@ -39,20 +40,23 @@ const BrandingQuestionnaire = () => {
 			additionalComments,
 			formType: 'Brand Questionnaire',
 		};
-		// console.log(Object.entries(emailDetails));
-		axios
-			.post('/api/brand-questionnaire', {
-				emailDetails,
-			})
-			.then((data) => {
-				if (data.status === 200) {
-					console.log('ALL IS WELL ');
-					setSuccessfulSubmission(true);
-				}
-			})
-			.catch((err) => {
-				console.log('Error on the front end:', err);
-			});
+		if (decisionMaker && businessName && email && businessDescription) {
+			axios
+				.post('/api/brand-questionnaire', {
+					emailDetails,
+				})
+				.then((data) => {
+					if (data.status === 200) {
+						setError();
+						setSuccessfulSubmission(true);
+					}
+				})
+				.catch((err) => {
+					setError('Error on the front end:', err);
+				});
+		} else {
+			setError('You must enter all required fields.');
+		}
 	};
 	return (
 		<Page
@@ -86,7 +90,12 @@ const BrandingQuestionnaire = () => {
 									give us a better understanding of the brand
 									you want to create.
 								</p>
-								<form>
+								{error && (
+									<p className="py-8 px-16 border-top border-bottom border-danger text-center text-danger">
+										{error}
+									</p>
+								)}
+								<form onSubmit={submitQuestionnaire}>
 									<Input
 										type="text"
 										onChange={(e) =>
@@ -97,6 +106,7 @@ const BrandingQuestionnaire = () => {
 										name="decisionMaker"
 										id="decisionMaker"
 										value={decisionMaker}
+										required
 									/>
 									<Input
 										type="text"
@@ -108,6 +118,7 @@ const BrandingQuestionnaire = () => {
 										name="businessName"
 										id="businessName"
 										value={businessName}
+										required
 									/>
 									<Input
 										type="text"
@@ -119,6 +130,7 @@ const BrandingQuestionnaire = () => {
 										name="email"
 										id="email"
 										value={email}
+										required
 									/>
 									<TextArea
 										type="text"
@@ -132,6 +144,7 @@ const BrandingQuestionnaire = () => {
 										name="businessDescription"
 										id="businessDescription"
 										value={businessDescription}
+										required
 									/>
 									<Input
 										type="text"
@@ -202,7 +215,6 @@ const BrandingQuestionnaire = () => {
 										className="w-100"
 										variant="primary"
 										type="submit"
-										onClick={(e) => submitQuestionnaire(e)}
 									>
 										Send
 									</Button>
