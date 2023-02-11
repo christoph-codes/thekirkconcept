@@ -145,9 +145,7 @@ const Consulting = () => {
 					unlock your brand's full potential with The Kirk Concept.`}
 				</p>
 			</Section>
-
 			<Section spacer bgImg="/bgs/consulting2_bg.png" />
-
 			<DominanceContact />
 		</Page>
 	);
