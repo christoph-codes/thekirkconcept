@@ -15,10 +15,6 @@ const Header = ({ props }) => {
 			path: '/services',
 			children: [
 				{
-					label: 'logo design',
-					path: '/logo-design',
-				},
-				{
 					label: 'branding',
 					path: '/branding',
 				},
@@ -27,16 +23,20 @@ const Header = ({ props }) => {
 					path: '/website-development',
 				},
 				{
+					label: 'software development',
+					path: '/software-development',
+				},
+				{
+					label: 'logo design',
+					path: '/logo-design',
+				},
+				{
 					label: 'consulting',
 					path: '/consulting',
 				},
 				{
 					label: 'content writing',
 					path: '/content-writing',
-				},
-				{
-					label: 'software development',
-					path: '/software-development',
 				},
 			],
 		},
