@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
 import Tilt from 'react-tilt';
@@ -17,8 +16,8 @@ import styles from '../../styles/Whatwedo.module.scss';
 const WhatWeDo = () => {
 	return (
 		<Page
-			title="What We Do | The Kirk Concept"
-			description="We help companies with branding & digital product development"
+			title="Services | The Kirk Concept"
+			description="Services offered by The Kirk Concept include logo design, branding, website development and software development."
 			className={styles.Whatwedo}
 		>
 			<Section
@@ -27,7 +26,7 @@ const WhatWeDo = () => {
 				bgImg="/bgs/whatwedo_bg.png"
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
-					what we do<span className="text-primary">.</span>
+					services<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
 					We help companies with branding & digital product
@@ -38,17 +37,35 @@ const WhatWeDo = () => {
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Logo Design
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Unique</li>
+							<li>Visual Identity</li>
+							<li>Typography</li>
+							<li>Iconography</li>
+							<li>Color Palette</li>
+							<li>Imagery</li>
+						</ul>
+						<Link href="/services/logo-design">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Branding
 						</h3>
 						<ul className={styles.cardList}>
 							<li>Audit</li>
 							<li>Research</li>
-							<li>Strategy</li>
+							<li>Brand Strategy</li>
 							<li>Messaging</li>
-							<li>Visual Design</li>
+							<li>Logo Design</li>
 							<li>Brand Identity</li>
 						</ul>
-						<Link href="/what-we-do/branding">
+						<Link href="/services/branding">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
@@ -56,40 +73,81 @@ const WhatWeDo = () => {
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Design Systems
+							Website Development
 						</h3>
 						<ul className={styles.cardList}>
-							<li>Design Audit</li>
-							<li>UI/UX</li>
-							<li>Prototyping</li>
-							<li>Visual Guidelines</li>
-							<li>Asset Management</li>
-							<li>Testing</li>
+							<li>Responsive Design</li>
+							<li>Search Engine Optimization</li>
+							<li>Dynamic Content</li>
+							<li>Custom Design</li>
+							<li>User Friendly</li>
+							<li>High Performance</li>
 						</ul>
-						<Link href="/what-we-do/design-systems">
-							<a className="link">Learn More</a>
-						</Link>
-					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
-					<Card>
-						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Development
-						</h3>
-						<ul className={styles.cardList}>
-							<li>HTML/CSS/JS</li>
-							<li>React/Vue</li>
-							<li>Node/API builds</li>
-							<li>Web Applications</li>
-							<li>Native Mobile Apps</li>
-							<li>Component Libraries</li>
-						</ul>
-						<Link href="/what-we-do/web-app-development">
+						<Link href="/services/website-development">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
 				</Col>
 			</SubHero>
+			<Section
+				className={`${styles.workHero} align-items-center pt-0`}
+				columns
+			>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Consulting
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Website Audit & Analysis</li>
+							<li>Branding & Design Recommendations</li>
+							<li>Marketing Plans</li>
+							<li>SEO Strategy</li>
+							<li>Content Enhancements</li>
+							<li>Functionality Assessment</li>
+						</ul>
+						<Link href="/services/consulting">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Content Writing
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Blog Post Writing</li>
+							<li>Website Copy</li>
+							<li>Product Descriptions</li>
+							<li>Email Marketing</li>
+							<li>Social Media Posts</li>
+							<li>Ad Content Writing</li>
+						</ul>
+						<Link href="/services/content-writing">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Software Development
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Custom Development</li>
+							<li>Web Applications</li>
+							<li>Native Mobile Applications</li>
+							<li>User-Friendly Interfaces</li>
+							<li>Scalable Platforms</li>
+							<li>Testing & Quality Assurance</li>
+						</ul>
+						<Link href="/services/software-development">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
+			</Section>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver
 					words={[
