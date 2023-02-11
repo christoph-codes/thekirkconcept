@@ -12,9 +12,8 @@ import DominanceContact from '../../components/DominanceContact';
 const LogoDesign = ({ props }) => {
 	return (
 		<Page
-			title="Custom Logo Design by The Kirk Concept"
-			description="Get a customized logo for your business that you can be
-		excited about!"
+			title="Logo Design » The Kirk Concept"
+			description="Dominate your industry with our expert logo design services."
 			className={styles.LogoDesign}
 		>
 			<Section
@@ -26,11 +25,10 @@ const LogoDesign = ({ props }) => {
 					logo design<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					Get a customized logo for your business that you can be
-					excited about!
+					Dominate your industry with our expert logo design services.
 				</p>
 			</Section>
-			<SubHero tagline="custom logos for your business">
+			<SubHero tagline="Unlock your brand's full potential with an awesome logo">
 				<Col sm={8}>
 					<Card>
 						<h3>
@@ -140,29 +138,61 @@ const LogoDesign = ({ props }) => {
 						/>
 					</Col>
 				</Row>
-				<Row className="mb-60">
-					<Col>
-						<div className="text-center bg-gray-dark p-32 rounded-lg">
-							<h3 className="text-primary">
-								the proof is in the process
-							</h3>
-							<p className="text-white">
-								We start every logo design at the research phase
-								with a logo questionnaire. Next, the rounds of
-								pencil and digital sketches begin. We will
-								finalize the layout of the logo you like best.
-								In addition, we’ll go through rounds of
-								revisions until the final logo is standing above
-								all. You will receive a primary and secondary
-								logo, custom colors, and fonts. All of this will
-								be packaged in a logo/brand guideline book. You
-								will hold tight to this book like the bible to
-								your new logo.
-							</p>
-						</div>
+			</Container>
+			<Section
+				containerClass="font-display"
+				className="font-weight-light py-64"
+			>
+				<h2 className="text-center mb-32 h1">Our Process</h2>
+				<Row>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/search-spot-icon.svg"
+							alt="Custom Search Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							1. Discovery
+						</h3>
+						<p className="fw-light mw-lg">
+							Our team will work with you to understand your
+							business, values, target audience, and desired look
+							and feel for your logo.
+						</p>
+					</Col>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/pen-spot-icon.svg"
+							alt="Custom Pen Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							2. Design & Conceptualize
+						</h3>
+						<p className="fw-light mw-lg">
+							Our expert designers will create multiple logo
+							design concepts and directions for you to choose
+							from.
+						</p>
+					</Col>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/puzzle-spot-icon.svg"
+							alt="Custom Puzzle Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							3. Package & Deliver
+						</h3>
+						<p className="fw-light mw-lg">
+							Once approved, the final logo(s) will be packaged in
+							all required sizes and delivered to you in various
+							file formats for use across different platforms and
+							mediums.
+						</p>
 					</Col>
 				</Row>
-			</Container>
+			</Section>
 			<DominanceContact />
 		</Page>
 	);
