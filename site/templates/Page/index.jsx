@@ -75,12 +75,9 @@ const Page = ({
 					content='t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc'
 					name='google-site-verification'
 				/> */}
-				{image && (
-					<>
-						<meta content={image} property="og:image" />
-						<meta content={description} property="og:image:alt" />
-					</>
-				)}
+				<meta content={image} property="og:image" />
+				<meta content={description} property="og:image:alt" />
+
 				{date && (
 					<>
 						<meta content="article" property="og:type" />

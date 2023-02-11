@@ -14,7 +14,6 @@ import styles from '../../styles/Blog.module.scss';
 const Blog = ({ posts }) => {
 	return (
 		<Page
-			image
 			title="The Kirk Concept » Branding & App Development"
 			description="The Kirk Concept Official Blog » Branding & App Development"
 			keywords="blog, branding, web, app, development"
