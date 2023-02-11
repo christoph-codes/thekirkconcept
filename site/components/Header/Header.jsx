@@ -89,7 +89,7 @@ const Header = ({ props }) => {
 							width={114}
 							height={76}
 							layout="intrinsic"
-							alt="The Kirk Concept, We unlock brand dominance through branding, design systems, and app development."
+							alt="The Kirk Concept, We unlock brand dominance through branding, website development, and software development."
 						/>
 					</a>
 				</Link>

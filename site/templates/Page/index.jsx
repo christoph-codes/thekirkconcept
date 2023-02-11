@@ -8,9 +8,9 @@ import { dateTime } from '../../utilities/helpers';
 const Page = ({
 	children,
 	date,
-	description = 'The Kirk Concept, We unlock brand dominance through branding, design systems, and app development.',
-	image = '/tkc-default-seo-image.png',
 	title = 'The Kirk Concept » Branding & App Development',
+	description = 'TKC exists to establish industry visual dominance for SMB’s through impeccable branding, cohesive website development, and intentional software application experiences.',
+	image = '/tkc-default-seo-image.png',
 	keywords,
 	className,
 }) => {

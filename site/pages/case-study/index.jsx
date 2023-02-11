@@ -75,8 +75,8 @@ const CaseStudies = () => {
 				<hr className="primary small-width" />
 				<p className="fw-light fs-sm mw-lg">
 					TKC exists to establish industry visual dominance for SMB’s
-					through impeccable branding, cohesive design systems, and
-					intentional web and mobile app experiences.
+					through impeccable branding, cohesive website development,
+					and intentional software application experiences.
 				</p>
 			</Section>
 			<Section className="text-center font-weight-light pb-50">

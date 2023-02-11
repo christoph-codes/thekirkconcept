@@ -31,7 +31,7 @@ const Home = () => {
 					</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-4">
-					branding. design systems.{' '}
+					branding. web development.{' '}
 					<span className="text-primary">app development.</span>
 				</p>
 				<Link href="/get-started">
@@ -125,8 +125,8 @@ const Home = () => {
 				<hr className="primary small-width" />
 				<p className="fw-light fs-sm mw-lg">
 					TKC exists to establish industry visual dominance for SMB’s
-					through impeccable branding, cohesive design systems, and
-					intentional web and mobile app experiences.
+					through impeccable branding, cohesive website development,
+					and intentional software application experiences.
 				</p>
 			</Section>
 			<Section
