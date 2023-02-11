@@ -13,6 +13,7 @@ const WebsiteDevelopment = () => {
 		<Page
 			title="Website Development | The Kirk Concept"
 			description="Custom website development & maintenance"
+			image="/bgs/website_development2_bg.png"
 		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}

@@ -13,6 +13,7 @@ const ContentWriting = () => {
 		<Page
 			title="Content Writing | The Kirk Concept"
 			description="Elevate your online presence with our expert content writing service."
+			image="/bgs/content_writing2_bg.png"
 		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}

@@ -37,24 +37,6 @@ const WhatWeDo = () => {
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Logo Design
-						</h3>
-						<ul className={styles.cardList}>
-							<li>Unique</li>
-							<li>Visual Identity</li>
-							<li>Typography</li>
-							<li>Iconography</li>
-							<li>Color Palette</li>
-							<li>Imagery</li>
-						</ul>
-						<Link href="/services/logo-design">
-							<a className="link">Learn More</a>
-						</Link>
-					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
-					<Card>
-						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Branding
 						</h3>
 						<ul className={styles.cardList}>
@@ -88,11 +70,47 @@ const WhatWeDo = () => {
 						</Link>
 					</Card>
 				</Col>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Software Development
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Custom Development</li>
+							<li>Web Applications</li>
+							<li>Native Mobile Applications</li>
+							<li>User-Friendly Interfaces</li>
+							<li>Scalable Platforms</li>
+							<li>Testing & Quality Assurance</li>
+						</ul>
+						<Link href="/services/software-development">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
 			</SubHero>
 			<Section
 				className={`${styles.workHero} align-items-center pt-0`}
 				columns
 			>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Logo Design
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Unique</li>
+							<li>Visual Identity</li>
+							<li>Typography</li>
+							<li>Iconography</li>
+							<li>Color Palette</li>
+							<li>Imagery</li>
+						</ul>
+						<Link href="/services/logo-design">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
@@ -125,24 +143,6 @@ const WhatWeDo = () => {
 							<li>Ad Content Writing</li>
 						</ul>
 						<Link href="/services/content-writing">
-							<a className="link">Learn More</a>
-						</Link>
-					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
-					<Card>
-						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Software Development
-						</h3>
-						<ul className={styles.cardList}>
-							<li>Custom Development</li>
-							<li>Web Applications</li>
-							<li>Native Mobile Applications</li>
-							<li>User-Friendly Interfaces</li>
-							<li>Scalable Platforms</li>
-							<li>Testing & Quality Assurance</li>
-						</ul>
-						<Link href="/services/software-development">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
@@ -180,7 +180,7 @@ const WhatWeDo = () => {
 				/>
 			</Section>
 
-			<Section
+			{/* <Section
 				containerClass="font-display"
 				className="font-weight-light pb-50 mt-50 text-md-left text-center"
 			>
@@ -265,7 +265,7 @@ const WhatWeDo = () => {
 						</p>
 					</Col>
 				</Row>
-			</Section>
+			</Section> */}
 
 			<SubHero tagline="Featured dominance worthy brands">
 				<Col className="nmt-4">

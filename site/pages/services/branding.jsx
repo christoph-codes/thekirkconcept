@@ -12,10 +12,8 @@ const WebAppDevelopment = () => {
 	return (
 		<Page
 			title="Branding | The Kirk Concept"
-			description="We don’t recommend marketing without first
-			establishing a brand that can handle it. We
-			understand revenue is important to every business,
-			but revenue doesn’t sustain itself, branding does."
+			description="Our branding service provides strategy and design to create a unique, effective, and marketable brand for your business."
+			image="/bgs/bombmethod_bg.png"
 		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}
@@ -26,20 +24,25 @@ const WebAppDevelopment = () => {
 					branding<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					create a brand worth marketing.
+					Our branding service provides strategy and design to create
+					a unique, effective, and marketable brand for your business.
 				</p>
 			</Section>
 			<SubHero tagline="Marketing without a brand is a missed opportunity.">
 				<Col as={Tilt} options={{ max: 15, scale: 1.05 }} sm={6}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
-							Dominant Branding Sustains
+							What is branding?
 						</h3>
 						<p>
-							We don’t recommend marketing without first
-							establishing a brand that can handle it. We
-							understand revenue is important to every business,
-							but revenue doesn’t sustain itself, branding does.
+							Branding is a strategic approach to creating and
+							representing a unique and effective brand for your
+							business. Our team of experts will work with you to
+							develop a visual identity, messaging, and tone of
+							voice that accurately reflects your business and
+							resonates with your target audience. The result is a
+							cohesive and consistent brand that drives growth and
+							success.
 						</p>
 					</Card>
 				</Col>
@@ -68,28 +71,80 @@ const WebAppDevelopment = () => {
 				/>
 			</Section>
 
-			<Section className="pb-50 mt-50">
-				<Row className="justify-content-center">
-					<Col sm={6}>
-						<h2>Our detailed Approach To branding</h2>
-						<p>
-							We’ve developed a detail-oriented and thorough
-							approach to branding that delivers a trustworthy and
-							timeless brand that lasts. Our goal is not only to
-							create a brand, but align your company beliefs and
-							values to the brand. When a business creates a
-							personality that directly communicates their
-							customers needs and values, it has found the sweet
-							spot between company intentions and customer goals.{' '}
+			<Section
+				containerClass="font-display"
+				className="font-weight-light py-64"
+			>
+				<h2 className="text-center mb-32 h1">Our Process</h2>
+				<Row>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/search-spot-icon.svg"
+							alt="Custom Search Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							1. Research
+						</h3>
+						<p className="fw-light mw-lg">
+							We gather information about your business, assessing
+							your current brand, defining your brand goals, and
+							gathering input from key stakeholders to develop a
+							comprehensive understanding of your brand. This
+							information is used to inform the development of a
+							refined brand.
 						</p>
-						<p>
-							We ONLY work with companies that are passionate
-							about communicating their brand across all mediums
-							and ultimately lead to customer retention and
-							loyalty.
+					</Col>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/pen-spot-icon.svg"
+							alt="Custom Pen Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							2. Brand Strategy Development
+						</h3>
+						<p className="fw-light mw-lg">
+							Based on the consultation, our team will develop a
+							comprehensive brand strategy that includes the
+							visual elements of your brand (such as a logo, color
+							palette, and typography) as well as messaging, tone
+							of voice, and brand positioning.
+						</p>
+					</Col>
+					<Col className="px-50 text-center justify-content-center">
+						<img
+							className="mb-50 px-100"
+							src="/icons/puzzle-spot-icon.svg"
+							alt="Custom Puzzle Spot Icon"
+						/>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							3. Implementation & Delivery
+						</h3>
+						<p className="fw-light mw-lg">
+							{`Our team will work with you to execute the brand
+							strategy, including creating the visual elements of
+							your brand and developing messaging and tone of
+							voice guidelines. We'll provide ongoing support to
+							ensure that your brand is consistently represented
+							across all channels and is aligned with your
+							business goals and target audience.`}
 						</p>
 					</Col>
 				</Row>
+			</Section>
+
+			<Section>
+				<p className="text-center">
+					{`We know that great content is the foundation of a successful
+					online presence. And we also know that most people hate
+					writing. That's why we've got a team of creative wordsmiths
+					who live for crafting killer content that will keep your
+					audience engaged and coming back for more. So, whether you need blog posts, product descriptions, or
+					website copy, The Kirk Concept's got you covered. And the
+					best part? You won't have to lift a finger (except to click
+					"submit").`}
+				</p>
 			</Section>
 
 			<Section spacer bgImg="/bgs/bombmethod_bg.png" />
@@ -97,7 +152,7 @@ const WebAppDevelopment = () => {
 			<Section className="pb-50 mt-50">
 				<Row className="justify-content-center">
 					<Col sm={6}>
-						<h2>What you can Expect working With our team</h2>
+						<h2>What you can expect working with our team</h2>
 						<p>
 							Our process is extremely simple. To establish a
 							clear understanding of your existing brand equity we

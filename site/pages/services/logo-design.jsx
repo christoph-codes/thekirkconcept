@@ -14,6 +14,7 @@ const LogoDesign = ({ props }) => {
 		<Page
 			title="Logo Design » The Kirk Concept"
 			description="Dominate your industry with our expert logo design services."
+			image="/bgs/logo_design2_bg.png"
 			className={styles.LogoDesign}
 		>
 			<Section

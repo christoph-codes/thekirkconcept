@@ -11,8 +11,9 @@ import Card from '../../components/Card';
 const WebAppDevelopment = () => {
 	return (
 		<Page
-			title="Web Application Development | The Kirk Concept"
+			title="Software Development"
 			description="Custom Web Application and Mobile Application Development"
+			image="/bgs/software_development2_bg.png"
 		>
 			<Section
 				className={`bg-gray-dark text-center align-items-center`}
@@ -127,7 +128,23 @@ const WebAppDevelopment = () => {
 				</Row>
 			</Section>
 
-			<Section spacer bgImg="/bgs/inthisorder_bg@2x.png" />
+			<Section spacer bgImg="/bgs/software_development2_bg.png" />
+
+			<Section>
+				<p className="text-center mt-16">
+					{`Unlock the full potential of your business with The Kirk
+					Concept's expert software development services. Our team of
+					professionals will work with you to understand your needs,
+					identify opportunities for growth, and develop a
+					comprehensive software solution that drives results.
+					Our software development services are designed to deliver
+					custom solutions that meet your unique business needs.
+					Whether you need a custom application, a mobile solution, or
+					an integration with existing systems, our team has the
+					expertise to deliver a solution that meets your requirements
+					and exceeds your expectations.`}
+				</p>
+			</Section>
 
 			<DominanceContact />
 		</Page>
