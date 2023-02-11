@@ -260,7 +260,9 @@ const GetStarted = () => {
 				<p className="text-center">
 					6440 Sky Pointe Dr.
 					<br />
-					Suite 140-422 Las Vegas, NV 89131
+					Suite 140-273
+					<br />
+					Las Vegas, NV 89131
 					<br />
 					702.336.0322
 					<br />
