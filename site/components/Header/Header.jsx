@@ -11,8 +11,8 @@ const Header = ({ props }) => {
 
 	const siteLinks = [
 		{
-			label: 'what we do',
-			path: '/what-we-do',
+			label: 'services',
+			path: '/services',
 			children: [
 				{
 					label: 'logo design',
@@ -23,16 +23,20 @@ const Header = ({ props }) => {
 					path: '/branding',
 				},
 				{
-					label: 'design systems',
-					path: '/design-systems',
-				},
-				{
-					label: 'web app development',
-					path: '/web-app-development',
-				},
-				{
 					label: 'website development',
 					path: '/website-development',
+				},
+				{
+					label: 'consulting',
+					path: '/consulting',
+				},
+				{
+					label: 'content writing',
+					path: '/content-writing',
+				},
+				{
+					label: 'software development',
+					path: '/software-development',
 				},
 			],
 		},
