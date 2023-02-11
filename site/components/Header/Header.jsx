@@ -11,28 +11,32 @@ const Header = ({ props }) => {
 
 	const siteLinks = [
 		{
-			label: 'what we do',
-			path: '/what-we-do',
+			label: 'services',
+			path: '/services',
 			children: [
-				{
-					label: 'logo design',
-					path: '/logo-design',
-				},
 				{
 					label: 'branding',
 					path: '/branding',
 				},
 				{
-					label: 'design systems',
-					path: '/design-systems',
-				},
-				{
-					label: 'web app development',
-					path: '/web-app-development',
-				},
-				{
 					label: 'website development',
 					path: '/website-development',
+				},
+				{
+					label: 'software development',
+					path: '/software-development',
+				},
+				{
+					label: 'logo design',
+					path: '/logo-design',
+				},
+				{
+					label: 'consulting',
+					path: '/consulting',
+				},
+				{
+					label: 'content writing',
+					path: '/content-writing',
 				},
 			],
 		},
@@ -85,7 +89,7 @@ const Header = ({ props }) => {
 							width={114}
 							height={76}
 							layout="intrinsic"
-							alt="The Kirk Concept, We unlock brand dominance through branding, design systems, and app development."
+							alt="The Kirk Concept, We unlock brand dominance through branding, website development, and software development."
 						/>
 					</a>
 				</Link>

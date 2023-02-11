@@ -169,14 +169,20 @@ const GetStarted = () => {
 										<option value="Branding">
 											Branding
 										</option>
-										<option value="Design System">
-											Design System
+										<option value="Website Development">
+											Website Development
 										</option>
-										<option value="Web Development">
-											Web Development
+										<option value="Software Development">
+											Software Development
 										</option>
-										<option value="App Development">
-											App Development
+										<option value="Logo Design">
+											Logo Design
+										</option>
+										<option value="Consulting">
+											Consulting
+										</option>
+										<option value="Content Writing">
+											Content Writing
 										</option>
 									</Dropdown>
 									<Dropdown
@@ -254,7 +260,9 @@ const GetStarted = () => {
 				<p className="text-center">
 					6440 Sky Pointe Dr.
 					<br />
-					Suite 140-422 Las Vegas, NV 89131
+					Suite 140-273
+					<br />
+					Las Vegas, NV 89131
 					<br />
 					702.336.0322
 					<br />

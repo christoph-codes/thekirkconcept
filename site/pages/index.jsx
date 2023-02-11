@@ -31,7 +31,7 @@ const Home = () => {
 					</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-4">
-					branding. design systems.{' '}
+					branding. web development.{' '}
 					<span className="text-primary">app development.</span>
 				</p>
 				<Link href="/get-started">
@@ -47,11 +47,11 @@ const Home = () => {
 							Branding
 						</h3>
 						<p>
-							Brand dominance is only achieved with a clear and
-							purposeful brand strategy and visual connection that
-							resonates with your audience and industry.
+							Branding is a strategic approach to creating and
+							representing a unique and effective brand for your
+							business.
 						</p>
-						<Link href="/what-we-do/branding">
+						<Link href="/services/branding">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
@@ -59,14 +59,14 @@ const Home = () => {
 				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
-							Design Systems
+							Website Development
 						</h3>
 						<p>
-							A dominant design systems creates consistent
-							experiences across multiple mediums and platforms to
-							establish brand equity on the digital level.
+							Websites are an awesome and mandatory way to
+							showcase your brand with this forever growing trend
+							of the internet.
 						</p>
-						<Link href="/what-we-do/design-systems">
+						<Link href="/services/website-development">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
@@ -74,14 +74,14 @@ const Home = () => {
 				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
-							App Development
+							Software Development
 						</h3>
 						<p>
-							Mobile and web application development brings a
-							dominant brand to life through user experiences that
-							connect a product and a loyal customer.
+							Websites are an awesome and mandatory way to
+							showcase your brand with this forever growing trend
+							of the internet.
 						</p>
-						<Link href="/what-we-do/web-app-development">
+						<Link href="/services/software-development">
 							<a className="link">Learn More</a>
 						</Link>
 					</Card>
@@ -125,8 +125,8 @@ const Home = () => {
 				<hr className="primary small-width" />
 				<p className="fw-light fs-sm mw-lg">
 					TKC exists to establish industry visual dominance for SMB’s
-					through impeccable branding, cohesive design systems, and
-					intentional web and mobile app experiences.
+					through impeccable branding, cohesive website development,
+					and intentional software application experiences.
 				</p>
 			</Section>
 			<Section

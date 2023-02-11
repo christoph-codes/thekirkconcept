@@ -1,17 +1,16 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { dateTime } from '../../utilities/helpers';
-// import seoImage from '../../public/images/tkc-default-seo-image.png';
 
 const Page = ({
 	children,
 	date,
-	description = 'The Kirk Concept, We unlock brand dominance through branding, design systems, and app development.',
-	image = '/tkc-default-seo-image.png',
 	title = 'The Kirk Concept » Branding & App Development',
+	description = 'TKC exists to establish industry visual dominance for SMB’s through impeccable branding, cohesive website development, and intentional software application experiences.',
+	image = '/tkc-default-seo-image.png',
 	keywords,
 	className,
 }) => {
@@ -19,89 +18,82 @@ const Page = ({
 	const domain = 'https://thekirkconcept.com';
 	const url = router && router.asPath ? router.asPath : undefined;
 	const canonical = url && url === '/' ? domain : domain + url;
-	// const featuredImage = domain + image;
-	// console.log(featuredImage);
 	return (
 		<>
 			<Head>
 				<title>{title}</title>
-				<meta charSet='utf-8' />
-				<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
+				<meta content={description} name="description" />
+				<meta charSet="utf-8" />
+				<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 				<meta
-					content='width=device-width, initial-scale=1'
-					name='viewport'
+					content="width=device-width, initial-scale=1"
+					name="viewport"
 				/>
-				{description && (
-					<meta content={description} name='description' />
-				)}
-				{keywords && <meta content={keywords} name='keywords' />}
-				<meta content='follow, index' name='robots' />
-				<meta content='#ffffff' name='theme-color' />
-				<meta content='#ffffff' name='msapplication-TileColor' />
+				{keywords && <meta content={keywords} name="keywords" />}
+				<meta content="follow, index" name="robots" />
+				<meta content="#ffffff" name="theme-color" />
+				<meta content="#ffffff" name="msapplication-TileColor" />
 				<meta
-					content='/favicons/browserconfig.xml'
-					name='msapplication-config'
+					content="/favicons/browserconfig.xml"
+					name="msapplication-config"
 				/>
 				<link
-					href='/favicon@3x.png'
-					rel='apple-touch-icon'
-					sizes='180x180'
+					href="/favicon@3x.png"
+					rel="apple-touch-icon"
+					sizes="180x180"
 				/>
 				<link
-					href='/favicon@2x.png'
-					rel='icon'
-					sizes='32x32'
-					type='image/png'
+					href="/favicon@2x.png"
+					rel="icon"
+					sizes="32x32"
+					type="image/png"
 				/>
 				<link
-					href='/favicon@3x.png'
-					rel='icon'
-					sizes='16x16'
-					type='image/png'
+					href="/favicon@3x.png"
+					rel="icon"
+					sizes="16x16"
+					type="image/png"
 				/>
-				<link href='/favicons/site.webmanifest' rel='manifest' />
+				<link href="/favicons/site.webmanifest" rel="manifest" />
 				<link
-					color='#5bbad5'
-					href='/favicons/safari-pinned-tab.svg'
-					rel='mask-icon'
+					color="#5bbad5"
+					href="/favicons/safari-pinned-tab.svg"
+					rel="mask-icon"
 				/>
-				<link href='/favicon.ico' rel='shortcut icon' />
+				<link href="/favicon.ico" rel="shortcut icon" />
 
-				{url && <link href={canonical} rel='canonical' />}
-				<meta content='en_US' property='og:locale' />
-				<meta content={title} property='og:title' />
-				<meta content={description} property='og:description' />
-				<meta content={canonical} property='og:url' />
+				{url && <link href={canonical} rel="canonical" />}
+				<meta content="en_US" property="og:locale" />
+				<meta content={title} property="og:title" />
+				<meta content={description} property="og:description" />
+				<meta content={canonical} property="og:url" />
 				<meta
-					content='Christopher Kirk Jones'
-					property='article:author'
+					content="Christopher Kirk Jones"
+					property="article:author"
 				/>
 				{/* <meta
 					content='t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc'
 					name='google-site-verification'
 				/> */}
-				{image && (
-					<>
-						<meta content={image} property='og:image' />
-						<meta content={description} property='og:image:alt' />
-					</>
-				)}
+				<meta content={image} property="og:image" />
+				<meta content={description} property="og:image:alt" />
+
 				{date && (
 					<>
-						<meta content='article' property='og:type' />
+						<meta content="article" property="og:type" />
 						<meta
 							content={dateTime(date)}
-							property='article:published_time'
+							property="article:published_time"
 						/>
 					</>
 				)}
-				<meta content='summary_large_image' name='twitter:card' />
-				<meta content='@thekirkconcept' name='twitter:site' />
-				<meta content='@thekirkconcept' name='twitter:creator' />
+				<meta content="summary_large_image" name="twitter:card" />
+				<meta content="@thekirkconcept" name="twitter:site" />
+				<meta content="@thekirkconcept" name="twitter:creator" />
 			</Head>
 			<div className={`Page ${className}`}>
 				<Header />
-				<main className='content'>{children}</main>
+				<main className="content">{children}</main>
 				<Footer />
 			</div>
 		</>
