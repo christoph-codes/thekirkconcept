@@ -20,10 +20,10 @@ const WebAppDevelopment = () => {
 				bgImg="/bgs/app_development_bg.png"
 			>
 				<h1 className="fs-8xl font-weight-bold text-white">
-					custom web apps<span className="text-primary">.</span>
+					software development<span className="text-primary">.</span>
 				</h1>
 				<p className="fs-md font-weight-bold text-white-50 mb-20 nmt-2">
-					Mobile & Web App Development
+					Mobile & Web Application Development
 				</p>
 			</Section>
 			<SubHero tagline="App development that focuses on delivering amazing experiences.">

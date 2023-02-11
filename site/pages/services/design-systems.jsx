@@ -8,7 +8,7 @@ import WordRiver from '../../components/WordRiver';
 import DominanceContact from '../../components/DominanceContact';
 import Card from '../../components/Card';
 
-const WebAppDevelopment = () => {
+const DesignSystems = () => {
 	return (
 		<Page
 			title="Design Systems | The Kirk Concept"
@@ -140,4 +140,4 @@ const WebAppDevelopment = () => {
 	);
 };
 
-export default WebAppDevelopment;
+export default DesignSystems;
