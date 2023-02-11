@@ -169,14 +169,20 @@ const GetStarted = () => {
 										<option value="Branding">
 											Branding
 										</option>
-										<option value="Design System">
-											Design System
+										<option value="Website Development">
+											Website Development
 										</option>
-										<option value="Web Development">
-											Web Development
+										<option value="Software Development">
+											Software Development
 										</option>
-										<option value="App Development">
-											App Development
+										<option value="Logo Design">
+											Logo Design
+										</option>
+										<option value="Consulting">
+											Consulting
+										</option>
+										<option value="Content Writing">
+											Content Writing
 										</option>
 									</Dropdown>
 									<Dropdown
