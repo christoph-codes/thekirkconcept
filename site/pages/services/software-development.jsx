@@ -11,7 +11,7 @@ import Card from '../../components/Card';
 const WebAppDevelopment = () => {
 	return (
 		<Page
-			title="Software Development"
+			title="Software Development | The Kirk Concept"
 			description="Custom Web Application and Mobile Application Development"
 			image="/bgs/software_development2_bg.png"
 		>

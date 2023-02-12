@@ -10,6 +10,7 @@ const Section = ({
 	columns,
 	children,
 	containerClass,
+	rowClass,
 	hero,
 	bgImg,
 	bgOverlay,
@@ -25,7 +26,11 @@ const Section = ({
 			{...rest}
 		>
 			<Container className={containerClass} fluid={fullWidth || false}>
-				{columns ? <Row>{children}</Row> : children}
+				{columns ? (
+					<Row className={rowClass}>{children}</Row>
+				) : (
+					children
+				)}
 			</Container>
 			{bgOverlay && <div className={styles.bgOverlay} />}
 		</section>

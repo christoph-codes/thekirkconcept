@@ -38,6 +38,10 @@ const Header = ({ props }) => {
 					label: 'content writing',
 					path: '/content-writing',
 				},
+				{
+					label: 'video production',
+					path: '/video-production',
+				},
 			],
 		},
 		{

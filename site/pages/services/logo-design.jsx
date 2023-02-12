@@ -12,7 +12,7 @@ import DominanceContact from '../../components/DominanceContact';
 const LogoDesign = ({ props }) => {
 	return (
 		<Page
-			title="Logo Design » The Kirk Concept"
+			title="Logo Design | The Kirk Concept"
 			description="Dominate your industry with our expert logo design services."
 			image="/bgs/logo_design2_bg.png"
 			className={styles.LogoDesign}
