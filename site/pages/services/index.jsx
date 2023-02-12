@@ -148,6 +148,30 @@ const WhatWeDo = () => {
 					</Card>
 				</Col>
 			</Section>
+			<Section
+				className={`${styles.workHero} align-items-center pt-0`}
+				columns
+				rowClass="justify-content-center"
+			>
+				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+					<Card>
+						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
+							Video Production
+						</h3>
+						<ul className={styles.cardList}>
+							<li>Interviews</li>
+							<li>Promotional</li>
+							<li>Commercials</li>
+							<li>Special Event</li>
+							<li>Social Media Videos</li>
+							<li>Testimonials</li>
+						</ul>
+						<Link href="/services/logo-design">
+							<a className="link">Learn More</a>
+						</Link>
+					</Card>
+				</Col>
+			</Section>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver
 					words={[
@@ -179,93 +203,6 @@ const WhatWeDo = () => {
 					colors={['#A5A5A5', '#454545', '#e6fd36']}
 				/>
 			</Section>
-
-			{/* <Section
-				containerClass="font-display"
-				className="font-weight-light pb-50 mt-50 text-md-left text-center"
-			>
-				<Row className="w-75 mx-auto mb-32">
-					<Col sm="auto" className="d-flex align-items-center">
-						<img
-							className={`mx-sm-0 mx-auto ${styles.serviceImage}`}
-							src="/images/visual-identity.png"
-							alt="Visual Identity custom graphic"
-						/>
-					</Col>
-					<Col>
-						<h3 className="fs-sm font-weight-bold text-gray-dark my-20">
-							Strategy establishes a foundation that can be built
-							upon
-						</h3>
-						<p className="fw-light fs-xs">
-							Brand strategy starts with research, then leads to
-							positioning following brand messaging and
-							development.
-						</p>
-					</Col>
-				</Row>
-				<Row className="w-75 mx-auto mb-32">
-					<Col sm="auto" className="d-flex align-items-center">
-						<img
-							className={`mx-sm-0 mx-auto ${styles.serviceImage}`}
-							src="/images/strategy-foundation.png"
-							alt="Strategy Foundation custom graphic"
-						/>
-					</Col>
-					<Col>
-						<h3 className="fs-sm font-weight-bold text-gray-dark my-20">
-							Visual identity is only properly built from a solid
-							foundation
-						</h3>
-						<p className="fw-light fs-xs">
-							Logos, colors, fonts, and imagery, should all stem
-							from the strategy of the brand to clearly paint the
-							picture for the future.
-						</p>
-					</Col>
-				</Row>
-				<Row className="w-75 mx-auto mb-32">
-					<Col sm="auto" className="d-flex align-items-center">
-						<img
-							className={`mx-sm-0 mx-auto ${styles.serviceImage}`}
-							src="/images/design-system.png"
-							alt="Design System custom graphic"
-						/>
-					</Col>
-					<Col>
-						<h3 className="fs-sm font-weight-bold text-gray-dark my-20">
-							Design Systems maintain brand equity and ensure
-							quality assurance
-						</h3>
-						<p className="fw-light fs-xs">
-							A consistent brand across all mediums and platforms
-							ensure sustainability and brand endurance as time
-							progresses.
-						</p>
-					</Col>
-				</Row>
-				<Row className="w-75 mx-auto mb-32">
-					<Col sm="auto" className="d-flex align-items-center">
-						<img
-							className={`mx-sm-0 mx-auto ${styles.serviceImage}`}
-							src="/images/brand-to-life.png"
-							alt="Bringing a brand to life custom graphic"
-						/>
-					</Col>
-					<Col>
-						<h3 className="fs-sm font-weight-bold text-gray-dark my-20">
-							Bring the brand to life as an experience through web
-							and mobile apps
-						</h3>
-						<p className="fw-light fs-xs">
-							A brand that lives and breathes into an application
-							ties the company personality to a tangible
-							experience to associate with a brand. So make sure
-							it is good!
-						</p>
-					</Col>
-				</Row>
-			</Section> */}
 
 			<SubHero tagline="Featured dominance worthy brands">
 				<Col className="nmt-4">
