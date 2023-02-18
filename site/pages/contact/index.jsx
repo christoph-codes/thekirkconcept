@@ -50,8 +50,8 @@ const Contact = () => {
 	};
 	return (
 		<Page
-			title="Contact The Kirk Concept"
-			description="If you have questions, we’d love to hear from you"
+			title="Contact » The Kirk Concept"
+			description="Contact The Kirk Concept today if you have questions, we’d love to hear from you."
 		>
 			<Section
 				className={`${styles.contact} bg-gray-dark text-center align-items-center`}
