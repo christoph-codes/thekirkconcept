@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Button from '../components/Button/Button';
 import Section from '../components/Section';
 import SubHero from '../components/SubHero';
@@ -41,7 +41,7 @@ const Home = () => {
 				</Link>
 			</Section>
 			<SubHero tagline="We have systems in place to birth excellence.">
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Branding
@@ -53,8 +53,8 @@ const Home = () => {
 						</p>
 						<Link href="/services/branding" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
 							Website Development
@@ -66,8 +66,8 @@ const Home = () => {
 						</p>
 						<Link href="/services/website-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
 							Software Development
@@ -79,7 +79,7 @@ const Home = () => {
 						</p>
 						<Link href="/services/software-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver
