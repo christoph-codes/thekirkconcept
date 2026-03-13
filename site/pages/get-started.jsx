@@ -245,11 +245,8 @@ const GetStarted = () => {
 								<h4 className="mt-24">
 									You are awesome! We will get in touch with
 									you shortly. In the meantime, check out our{' '}
-									<Link href="/case-study">
-										<a className="text-gray text-underline">
-											case studies!
-										</a>
-									</Link>
+									<Link href="/case-study" className="text-gray text-underline">case studies!
+										</Link>
 								</h4>
 							</div>
 						)}

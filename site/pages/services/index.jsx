@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
 				</p>
 			</Section>
 			<SubHero tagline="Dominance comes with strategy, design, then development.">
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Branding
@@ -47,12 +47,10 @@ const WhatWeDo = () => {
 							<li>Logo Design</li>
 							<li>Brand Identity</li>
 						</ul>
-						<Link href="/services/branding">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/branding" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Website Development
@@ -65,12 +63,10 @@ const WhatWeDo = () => {
 							<li>User Friendly</li>
 							<li>High Performance</li>
 						</ul>
-						<Link href="/services/website-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/website-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Software Development
@@ -83,17 +79,15 @@ const WhatWeDo = () => {
 							<li>Scalable Platforms</li>
 							<li>Testing & Quality Assurance</li>
 						</ul>
-						<Link href="/services/software-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/software-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section
 				className={`${styles.workHero} align-items-center pt-0`}
 				columns
 			>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Logo Design
@@ -106,12 +100,10 @@ const WhatWeDo = () => {
 							<li>Color Palette</li>
 							<li>Imagery</li>
 						</ul>
-						<Link href="/services/logo-design">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/logo-design" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Consulting
@@ -124,12 +116,10 @@ const WhatWeDo = () => {
 							<li>Content Enhancements</li>
 							<li>Functionality Assessment</li>
 						</ul>
-						<Link href="/services/consulting">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/consulting" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Content Writing
@@ -142,18 +132,16 @@ const WhatWeDo = () => {
 							<li>Social Media Posts</li>
 							<li>Ad Content Writing</li>
 						</ul>
-						<Link href="/services/content-writing">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/content-writing" className="link">Learn More</Link>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</Section>
 			<Section
 				className={`${styles.workHero} align-items-center pt-0`}
 				columns
 				rowClass="justify-content-center"
 			>
-				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
+				<Col md={4}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Video Production
@@ -166,11 +154,9 @@ const WhatWeDo = () => {
 							<li>Social Media Videos</li>
 							<li>Testimonials</li>
 						</ul>
-						<Link href="/services/logo-design">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/logo-design" className="link">Learn More</Link>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</Section>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver

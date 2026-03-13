@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Row, Col } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Button from '../components/Button/Button';
 import Section from '../components/Section';
 import SubHero from '../components/SubHero';
@@ -41,7 +41,7 @@ const Home = () => {
 				</Link>
 			</Section>
 			<SubHero tagline="We have systems in place to birth excellence.">
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							Branding
@@ -51,12 +51,10 @@ const Home = () => {
 							representing a unique and effective brand for your
 							business.
 						</p>
-						<Link href="/services/branding">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/branding" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
 							Website Development
@@ -66,12 +64,10 @@ const Home = () => {
 							showcase your brand with this forever growing trend
 							of the internet.
 						</p>
-						<Link href="/services/website-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/website-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
-				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
+				</Tilt></Col>
+				<Col sm><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold mb-20 text-gray-dark">
 							Software Development
@@ -81,11 +77,9 @@ const Home = () => {
 							showcase your brand with this forever growing trend
 							of the internet.
 						</p>
-						<Link href="/services/software-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/software-development" className="link">Learn More</Link>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver
@@ -133,13 +127,13 @@ const Home = () => {
 				containerClass="font-display"
 				className="text-center font-weight-light bg-gray text-white py-70"
 			>
-				<h2 className="text-center text-primary font-weight-bold">
+				<h2 className="text-center text-white font-weight-bold">
 					Featured dominance worthy brands
 				</h2>
 				<CaseStudyCard casestudy={svvc} />
 				<CaseStudyCard casestudy={fng} />
 				<CaseStudyCard casestudy={pff} />
-				<h2 className="text-center text-primary font-weight-bold mt-30">
+				<h2 className="text-center text-white font-weight-bold mt-30">
 					Additional dominant brands we’ve worked with.
 				</h2>
 				<Row

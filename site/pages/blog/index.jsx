@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
-import Tilt from 'react-tilt';
 import { Col } from 'react-bootstrap';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
@@ -34,35 +33,29 @@ const Blog = ({ posts }) => {
 				{posts.map((post) => {
 					return (
 						<Col
-							as={Tilt}
-							options={{ max: 15, scale: 1.05 }}
 							lg={4}
 							sm={5}
 							xs={12}
 							key={post.path}
 							className="mb-32 cursor-pointer"
 						>
-							<Link href={post.path}>
-								<a>
-									<Card className="h-100">
-										<img
-											src={post.image}
-											alt={post.title}
-											className="mb-20"
-										/>
-										<small className="badge badge-primary mb-10">
-											{dateTime(post.date)}
-										</small>
-										<h3 className="fs-sm font-weight-bold text-gray-dark">
-											{post.title}
-										</h3>
-										<Link href={post.path}>
-											<a className="text-gray-dark justify-self-end primary-underline mt-auto">
-												Read Now!
-											</a>
-										</Link>
-									</Card>
-								</a>
+							<Link href={post.path} style={{ textDecoration: 'none' }}>
+								<Card className="h-100">
+									<img
+										src={post.image}
+										alt={post.title}
+										className="mb-20"
+									/>
+									<small className="badge badge-primary mb-10">
+										{dateTime(post.date)}
+									</small>
+									<h3 className="fs-sm font-weight-bold text-gray-dark">
+										{post.title}
+									</h3>
+									<span className="text-gray-dark justify-self-end primary-underline mt-auto">
+										Read Now!
+									</span>
+								</Card>
 							</Link>
 						</Col>
 					);
@@ -75,12 +68,13 @@ const Blog = ({ posts }) => {
 export default Blog;
 
 export const getStaticProps = async () => {
-	const postsDirectory = path.join(process.cwd(), 'pages/blog');
+	const postsDirectory = path.join(process.cwd(), 'content/blog');
 	const filenames = await fs.readdir(postsDirectory);
 
 	const files = await Promise.all(
-		filenames.map(async (filename) => {
-			if (filename !== 'index.jsx') {
+		filenames
+			.filter((filename) => filename.endsWith('.mdx'))
+			.map(async (filename) => {
 				const filePath = path.join(postsDirectory, filename);
 				const content = await fs.readFile(filePath, 'utf8');
 				const matter = grayMatter(content);
@@ -88,31 +82,24 @@ export const getStaticProps = async () => {
 					filename,
 					matter,
 				};
-			} else {
-				return null;
-			}
-		})
+			})
 	);
 
-	const filteredPosts = files.filter((file) => {
-		return file !== null;
-	});
-
-	const posts = filteredPosts
+	const posts = files
 		.map((file) => {
 			return {
 				path: `/blog/${file.filename.replace('.mdx', '')}`,
 				title: file.matter.data.title,
 				description: file.matter.data.description,
 				image: file.matter.data.image,
-				date: file.matter.data.date,
+				date: file.matter.data.date
+					? String(file.matter.data.date)
+					: null,
 			};
 		})
 		.sort((a, b) => {
 			return new Date(b.date) - new Date(a.date);
 		});
-
-	// const sortedPosts = posts;
 
 	return {
 		props: {

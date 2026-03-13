@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Row, Col } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
@@ -29,7 +29,7 @@ const ContentWriting = () => {
 				</p>
 			</Section>
 			<SubHero tagline="Unleash the power of words.">
-				<Col as={Tilt} options={{ max: 15, scale: 1.05 }} sm={6}>
+				<Col sm={6}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							What is a content writing?
@@ -44,7 +44,7 @@ const ContentWriting = () => {
                             with your audience and propels your business forward.`}
 						</p>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver

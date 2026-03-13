@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Col, Row } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Page from '../Page';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
@@ -33,14 +33,14 @@ const CaseStudy = ({ caseStudy, ...rest }) => {
 				</h1>
 			</Section>
 			<SubHero tagline={caseStudy.description}>
-				<Col as={Tilt} sm={9} options={{ max: 15, scale: 1.01 }}>
+				<Col sm={9}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.01}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							brief
 						</h3>
 						<p>{caseStudy.brief}</p>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section>
 				<div className="mw-lg">

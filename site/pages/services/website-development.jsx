@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Row, Col } from 'react-bootstrap';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import Section from '../../components/Section';
 import SubHero from '../../components/SubHero';
 import Page from '../../templates/Page';
@@ -28,7 +28,7 @@ const WebsiteDevelopment = () => {
 				</p>
 			</Section>
 			<SubHero tagline="Custom Website Design & Development For Your Business">
-				<Col as={Tilt} options={{ max: 15, scale: 1.05 }} sm={6}>
+				<Col sm={6}><Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
 					<Card>
 						<h3 className="fs-sm font-weight-bold text-gray-dark mb-20">
 							The Web
@@ -44,7 +44,7 @@ const WebsiteDevelopment = () => {
 							is good.
 						</p>
 					</Card>
-				</Col>
+				</Tilt></Col>
 			</SubHero>
 			<Section fullWidth className="py-50" containerClass="px-0">
 				<WordRiver
@@ -144,68 +144,50 @@ const WebsiteDevelopment = () => {
 			</Section>
 
 			<SubHero tagline="Check out our latest website development work">
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img src="/images/svvc-website.png" alt="SVVC Website" />
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img src="/images/svvc-website.png" alt="SVVC Website" />
+					</Tilt>
 				</Col>
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img
-						src="/images/equippd-website.png"
-						alt="Equippd Website"
-					/>
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img
+							src="/images/equippd-website.png"
+							alt="Equippd Website"
+						/>
+					</Tilt>
 				</Col>
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img
-						src="/images/labelle-website.png"
-						alt="LaBelle Terre Website"
-					/>
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img
+							src="/images/labelle-website.png"
+							alt="LaBelle Terre Website"
+						/>
+					</Tilt>
 				</Col>
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img
-						src="/images/ito-website.png"
-						alt="Inthisorder Website"
-					/>
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img
+							src="/images/ito-website.png"
+							alt="Inthisorder Website"
+						/>
+					</Tilt>
 				</Col>
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img
-						src="/images/kikstarterz-website.png"
-						alt="Kikstarterz Website"
-					/>
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img
+							src="/images/kikstarterz-website.png"
+							alt="Kikstarterz Website"
+						/>
+					</Tilt>
 				</Col>
-				<Col
-					as={Tilt}
-					options={{ max: 15, scale: 1.05 }}
-					sm={4}
-					className="mb-30"
-				>
-					<img
-						src="/images/nextbill-website.png"
-						alt="The Next Bill Website"
-					/>
+				<Col sm={4} className="mb-30">
+					<Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05}>
+						<img
+							src="/images/nextbill-website.png"
+							alt="The Next Bill Website"
+						/>
+					</Tilt>
 				</Col>
 			</SubHero>
 
