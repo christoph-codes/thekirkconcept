@@ -127,13 +127,13 @@ const Home = () => {
 				containerClass="font-display"
 				className="text-center font-weight-light bg-gray text-white py-70"
 			>
-				<h2 className="text-center text-primary font-weight-bold">
+				<h2 className="text-center text-white font-weight-bold">
 					Featured dominance worthy brands
 				</h2>
 				<CaseStudyCard casestudy={svvc} />
 				<CaseStudyCard casestudy={fng} />
 				<CaseStudyCard casestudy={pff} />
-				<h2 className="text-center text-primary font-weight-bold mt-30">
+				<h2 className="text-center text-white font-weight-bold mt-30">
 					Additional dominant brands we’ve worked with.
 				</h2>
 				<Row
