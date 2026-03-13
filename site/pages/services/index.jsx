@@ -47,9 +47,7 @@ const WhatWeDo = () => {
 							<li>Logo Design</li>
 							<li>Brand Identity</li>
 						</ul>
-						<Link href="/services/branding">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/branding" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -65,9 +63,7 @@ const WhatWeDo = () => {
 							<li>User Friendly</li>
 							<li>High Performance</li>
 						</ul>
-						<Link href="/services/website-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/website-development" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -83,9 +79,7 @@ const WhatWeDo = () => {
 							<li>Scalable Platforms</li>
 							<li>Testing & Quality Assurance</li>
 						</ul>
-						<Link href="/services/software-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/software-development" className="link">Learn More</Link>
 					</Card>
 				</Col>
 			</SubHero>
@@ -106,9 +100,7 @@ const WhatWeDo = () => {
 							<li>Color Palette</li>
 							<li>Imagery</li>
 						</ul>
-						<Link href="/services/logo-design">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/logo-design" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -124,9 +116,7 @@ const WhatWeDo = () => {
 							<li>Content Enhancements</li>
 							<li>Functionality Assessment</li>
 						</ul>
-						<Link href="/services/consulting">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/consulting" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col md={4} as={Tilt} options={{ max: 15, scale: 1.05 }}>
@@ -142,9 +132,7 @@ const WhatWeDo = () => {
 							<li>Social Media Posts</li>
 							<li>Ad Content Writing</li>
 						</ul>
-						<Link href="/services/content-writing">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/content-writing" className="link">Learn More</Link>
 					</Card>
 				</Col>
 			</Section>
@@ -166,9 +154,7 @@ const WhatWeDo = () => {
 							<li>Social Media Videos</li>
 							<li>Testimonials</li>
 						</ul>
-						<Link href="/services/logo-design">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/logo-design" className="link">Learn More</Link>
 					</Card>
 				</Col>
 			</Section>

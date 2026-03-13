@@ -1,8 +1,4 @@
-const composePlugings = require('next-compose-plugins');
-const mdxEnhanced = require('next-mdx-enhanced');
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-module.exports = composePlugings([
-	mdxEnhanced({
-		layoutPath: './templates',
-	}),
-]);
+module.exports = nextConfig;

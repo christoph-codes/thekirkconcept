@@ -51,9 +51,7 @@ const Home = () => {
 							representing a unique and effective brand for your
 							business.
 						</p>
-						<Link href="/services/branding">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/branding" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
@@ -66,9 +64,7 @@ const Home = () => {
 							showcase your brand with this forever growing trend
 							of the internet.
 						</p>
-						<Link href="/services/website-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/website-development" className="link">Learn More</Link>
 					</Card>
 				</Col>
 				<Col as={Tilt} sm options={{ max: 15, scale: 1.05 }}>
@@ -81,9 +77,7 @@ const Home = () => {
 							showcase your brand with this forever growing trend
 							of the internet.
 						</p>
-						<Link href="/services/software-development">
-							<a className="link">Learn More</a>
-						</Link>
+						<Link href="/services/software-development" className="link">Learn More</Link>
 					</Card>
 				</Col>
 			</SubHero>
